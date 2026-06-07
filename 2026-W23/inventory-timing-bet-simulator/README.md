@@ -16,6 +16,11 @@ Each SKU returns:
 - Scenario timing-risk score
 - Recommended action
 
+The app opens on a landing screen with two paths:
+
+- `Simulator`: the editable SKU portfolio and scenario comparison.
+- `Operator guide`: the tutorial explaining the inputs, outputs, scenarios, and reason codes.
+
 ## Local Run
 
 This is a static app with no backend and no package install.
@@ -37,6 +42,8 @@ You can also open `index.html` directly in a browser.
 ## Tutorial
 
 Use the simulator as a structured inventory meeting tool. It is not trying to forecast demand. It is trying to explain why inventory exists and how that reason changes under different operating conditions.
+
+From the landing screen, choose `Simulator` if you already know the values you want to test. Choose `Operator guide` if you want to understand the model before editing the table.
 
 ### 1. Start with the SKU portfolio
 

@@ -29,67 +29,103 @@
         </div>
       </section>
 
-      <section class="scenario-strip" aria-labelledby="scenario-title">
-        <div>
-          <p class="kicker">Scenario lens</p>
-          <h2 id="scenario-title">Compare portfolio scenarios.</h2>
+      <nav class="view-tabs" aria-label="Application views">
+        <button class="view-tab is-active" type="button" data-view-target="landing">Start</button>
+        <button class="view-tab" type="button" data-view-target="simulator">Simulator</button>
+        <button class="view-tab" type="button" data-view-target="guide">Guide</button>
+      </nav>
+
+      <section class="view landing-view is-active" id="view-landing" data-view="landing" aria-labelledby="landing-title">
+        <div class="landing-copy">
+          <p class="kicker">Start here</p>
+          <h2 id="landing-title">Choose how you want to work the inventory timing bet.</h2>
+          <p>
+            Use the simulator when you already have SKU inputs to test. Use the operator guide when you want the
+            definitions, reading rules, and scenario logic before changing values.
+          </p>
+          <div class="landing-actions">
+            <button class="primary-action" type="button" data-view-target="simulator">Open simulator</button>
+            <button class="secondary-action" type="button" data-view-target="guide">Read operator guide</button>
+          </div>
         </div>
-        <div class="scenario-actions" id="scenarioActions" aria-label="Scenario selection"></div>
+
+        <div class="landing-options" aria-label="Entry options">
+          <article>
+            <span>01</span>
+            <h3>Simulate the portfolio</h3>
+            <p>Edit ABC/XYZ, demand, tariff, freight, supplier, and capital signals. Then compare baseline risk to the selected scenario.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Learn the model</h3>
+            <p>Review what each value means, how service targets and cost tolerance work, and how to interpret actions.</p>
+          </article>
+        </div>
       </section>
 
-      <section class="workspace" aria-label="ABC XYZ inventory portfolio simulator">
-        <section class="portfolio-panel" aria-labelledby="portfolio-title">
-          <div class="panel-heading">
-            <div>
-              <p class="kicker">Editable portfolio</p>
-              <h2 id="portfolio-title">SKU timing-risk board</h2>
-            </div>
-            <button class="ghost-button" id="resetPortfolio" type="button">Reset sample</button>
+      <section class="view" id="view-simulator" data-view="simulator" aria-labelledby="simulator-view-title" hidden>
+        <section class="scenario-strip" aria-labelledby="scenario-title">
+          <div>
+            <p class="kicker">Scenario lens</p>
+            <h2 id="simulator-view-title">Compare portfolio scenarios.</h2>
           </div>
-
-          <div class="portfolio-table" id="portfolioTable"></div>
+          <div class="scenario-actions" id="scenarioActions" aria-label="Scenario selection"></div>
         </section>
 
-        <aside class="readout" aria-live="polite">
-          <div class="position-header">
-            <p>Selected scenario</p>
-            <h2 id="selectedScenario">Soft landing</h2>
-            <span id="scenarioBadge">Freight and tariff pressure fade</span>
-          </div>
-
-          <div class="summary-grid" id="summaryGrid"></div>
-
-          <div class="reason-summary">
-            <div class="mini-heading">
-              <span>Baseline reason mix</span>
-              <strong id="portfolioValue">$0</strong>
+        <section class="workspace" aria-label="ABC XYZ inventory portfolio simulator">
+          <section class="portfolio-panel" aria-labelledby="portfolio-title">
+            <div class="panel-heading">
+              <div>
+                <p class="kicker">Editable portfolio</p>
+                <h2 id="portfolio-title">SKU timing-risk board</h2>
+              </div>
+              <button class="ghost-button" id="resetPortfolio" type="button">Reset sample</button>
             </div>
-            <div class="bars" id="reasonBars"></div>
-          </div>
 
-          <div class="recommendation">
-            <span>Portfolio read</span>
-            <strong id="portfolioRecommendation">Review the exposed tail</strong>
-            <p id="portfolioRationale">
-              Scenario impact is concentrated where low predictability and high exposure meet high days on hand.
-            </p>
+            <div class="portfolio-table" id="portfolioTable"></div>
+          </section>
+
+          <aside class="readout" aria-live="polite">
+            <div class="position-header">
+              <p>Selected scenario</p>
+              <h2 id="selectedScenario">Soft landing</h2>
+              <span id="scenarioBadge">Freight and tariff pressure fade</span>
+            </div>
+
+            <div class="summary-grid" id="summaryGrid"></div>
+
+            <div class="reason-summary">
+              <div class="mini-heading">
+                <span>Baseline reason mix</span>
+                <strong id="portfolioValue">$0</strong>
+              </div>
+              <div class="bars" id="reasonBars"></div>
+            </div>
+
+            <div class="recommendation">
+              <span>Portfolio read</span>
+              <strong id="portfolioRecommendation">Review the exposed tail</strong>
+              <p id="portfolioRationale">
+                Scenario impact is concentrated where low predictability and high exposure meet high days on hand.
+              </p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="logic-note" aria-labelledby="logic-title">
+          <div>
+            <p class="kicker">Policy logic</p>
+            <h2 id="logic-title">ABC/XYZ sets the service promise before the scenario tests the timing bet.</h2>
           </div>
-        </aside>
+          <p>
+            A-items and predictable X demand receive the strongest service protection and cost tolerance. Lower-value
+            or volatile segments carry tighter tolerance, so the same tariff, freight, or supplier shock can produce a
+            different recommendation across the portfolio.
+          </p>
+        </section>
       </section>
 
-      <section class="logic-note" aria-labelledby="logic-title">
-        <div>
-          <p class="kicker">Policy logic</p>
-          <h2 id="logic-title">ABC/XYZ sets the service promise before the scenario tests the timing bet.</h2>
-        </div>
-        <p>
-          A-items and predictable X demand receive the strongest service protection and cost tolerance. Lower-value
-          or volatile segments carry tighter tolerance, so the same tariff, freight, or supplier shock can produce a
-          different recommendation across the portfolio.
-        </p>
-      </section>
-
-      <section class="guide" aria-labelledby="guide-title">
+      <section class="view guide" id="view-guide" data-view="guide" aria-labelledby="guide-title" hidden>
         <div class="guide-heading">
           <p class="kicker">Operator guide</p>
           <h2 id="guide-title">How to run and read the simulation</h2>

@@ -8,6 +8,8 @@ const reasonBars = document.querySelector("#reasonBars");
 const portfolioRecommendation = document.querySelector("#portfolioRecommendation");
 const portfolioRationale = document.querySelector("#portfolioRationale");
 const resetPortfolio = document.querySelector("#resetPortfolio");
+const viewTabs = document.querySelectorAll("[data-view-target]");
+const views = document.querySelectorAll("[data-view]");
 
 const reasonLabels = {
   service: "Service Buffer",
@@ -151,6 +153,7 @@ const samplePortfolio = [
 
 let portfolio = clonePortfolio(samplePortfolio);
 let activeScenario = "softLanding";
+let activeView = "landing";
 
 function clonePortfolio(rows) {
   return rows.map((row) => ({ ...row }));
@@ -254,6 +257,23 @@ function renderScenarioActions() {
     .join("");
 }
 
+function setView(viewName) {
+  activeView = viewName;
+  views.forEach((view) => {
+    const isActive = view.dataset.view === activeView;
+    view.hidden = !isActive;
+    view.classList.toggle("is-active", isActive);
+  });
+
+  viewTabs.forEach((tab) => {
+    const isActive = tab.dataset.viewTarget === activeView;
+    tab.classList.toggle("is-active", isActive);
+    if (tab.classList.contains("view-tab")) {
+      tab.setAttribute("aria-current", isActive ? "page" : "false");
+    }
+  });
+}
+
 function renderPortfolio() {
   const rows = portfolio
     .map((row, index) => {
@@ -270,7 +290,7 @@ function renderPortfolio() {
               <span>SKU / family</span>
               <input data-field="sku" type="text" value="${row.sku}" />
             </label>
-            <div class="policy-chip" data-policy-chip>${row.abc}${row.xyz} · ${policy.service}% service · ${policy.tolerance}% tolerance</div>
+            <div class="policy-chip" data-policy-chip>${row.abc}${row.xyz} - ${policy.service}% service - ${policy.tolerance}% tolerance</div>
           </div>
 
           <label>
@@ -324,8 +344,8 @@ function renderPortfolio() {
 
           <div class="row-result" data-row-result>
             <span>${reasonLabels[baseline.topReason]}</span>
-            <strong>${baseline.timingRisk} → ${scenarioResult.timingRisk}</strong>
-            <small class="${delta >= 0 ? "is-up" : "is-down"}">${delta >= 0 ? "+" : ""}${delta} risk · ${scenarioResult.action}</small>
+            <strong>${baseline.timingRisk} -> ${scenarioResult.timingRisk}</strong>
+            <small class="${delta >= 0 ? "is-up" : "is-down"}">${delta >= 0 ? "+" : ""}${delta} risk - ${scenarioResult.action}</small>
           </div>
         </article>
       `;
@@ -344,7 +364,7 @@ function renderPortfolio() {
       <span>Freight</span>
       <span>Supplier</span>
       <span>Capital</span>
-      <span>Baseline → scenario</span>
+      <span>Baseline -> scenario</span>
     </div>
     ${rows}
   `;
@@ -362,11 +382,11 @@ function renderRowResult(index) {
   const delta = scenarioResult.timingRisk - baseline.timingRisk;
 
   rowElement.querySelector("[data-policy-chip]").textContent =
-    `${row.abc}${row.xyz} · ${policy.service}% service · ${policy.tolerance}% tolerance`;
+    `${row.abc}${row.xyz} - ${policy.service}% service - ${policy.tolerance}% tolerance`;
   rowElement.querySelector("[data-row-result]").innerHTML = `
     <span>${reasonLabels[baseline.topReason]}</span>
-    <strong>${baseline.timingRisk} → ${scenarioResult.timingRisk}</strong>
-    <small class="${delta >= 0 ? "is-up" : "is-down"}">${delta >= 0 ? "+" : ""}${delta} risk · ${scenarioResult.action}</small>
+    <strong>${baseline.timingRisk} -> ${scenarioResult.timingRisk}</strong>
+    <small class="${delta >= 0 ? "is-up" : "is-down"}">${delta >= 0 ? "+" : ""}${delta} risk - ${scenarioResult.action}</small>
   `;
 }
 
@@ -392,7 +412,7 @@ function summarizePortfolio() {
   summaryGrid.innerHTML = [
     ["Portfolio value", formatCurrency(totalValue)],
     ["Value at 60+ risk", formatCurrency(valueAtRisk)],
-    ["Avg risk shift", `${avgBaseline} → ${avgScenario}`],
+    ["Avg risk shift", `${avgBaseline} -> ${avgScenario}`],
     ["Scenario exceptions", `${stopBuyCount} SKUs`],
   ]
     .map(
@@ -485,4 +505,11 @@ resetPortfolio.addEventListener("click", () => {
   update();
 });
 
+viewTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    setView(tab.dataset.viewTarget);
+  });
+});
+
+setView(activeView);
 update();

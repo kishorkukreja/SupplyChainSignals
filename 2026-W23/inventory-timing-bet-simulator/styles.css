@@ -57,6 +57,7 @@ button {
 }
 
 .brand-lockup {
+  min-width: 0;
   max-width: 850px;
 }
 
@@ -125,6 +126,136 @@ h1 span {
 .scenario-strip,
 .workspace {
   margin-top: 24px;
+}
+
+.view[hidden] {
+  display: none;
+}
+
+.view-tabs {
+  display: flex;
+  gap: 1px;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 24px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.view-tab,
+.primary-action,
+.secondary-action {
+  min-height: 44px;
+  border: 0;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.view-tab {
+  min-width: 116px;
+  background: var(--panel);
+  padding: 0 16px;
+}
+
+.view-tab:hover,
+.view-tab.is-active {
+  background: var(--red);
+}
+
+.landing-view {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
+  gap: 1px;
+  margin-top: 24px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.landing-copy,
+.landing-options article {
+  min-width: 0;
+  background: rgba(13, 13, 13, 0.96);
+}
+
+.landing-copy {
+  padding: 34px;
+}
+
+.landing-copy h2 {
+  margin: 0 0 18px;
+  max-width: 720px;
+  color: var(--red);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 5.5vw, 5rem);
+  line-height: 0.9;
+  overflow-wrap: anywhere;
+}
+
+.landing-copy p {
+  max-width: 640px;
+  color: var(--muted);
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.landing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.primary-action,
+.secondary-action {
+  border-radius: 6px;
+  padding: 0 18px;
+}
+
+.primary-action {
+  background: var(--red);
+}
+
+.secondary-action {
+  border: 1px solid var(--line-strong);
+  background: transparent;
+}
+
+.secondary-action:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.landing-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+}
+
+.landing-options article {
+  display: grid;
+  align-content: end;
+  min-height: 360px;
+  padding: 26px;
+}
+
+.landing-options span {
+  color: var(--red);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.landing-options h3 {
+  margin: 36px 0 12px;
+  font-size: clamp(1.45rem, 3vw, 2.4rem);
+  line-height: 1;
+}
+
+.landing-options p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
 }
 
 .scenario-strip {
@@ -628,11 +759,13 @@ input[type="number"] {
   .workspace,
   .scenario-strip,
   .logic-note,
-  .guide-heading {
+  .guide-heading,
+  .landing-view {
     grid-template-columns: 1fr;
   }
 
-  .guide-grid {
+  .guide-grid,
+  .landing-options {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -643,7 +776,8 @@ input[type="number"] {
 
 @media (max-width: 760px) {
   .shell {
-    width: 100%;
+    width: min(100%, 360px);
+    max-width: 360px;
     padding: 22px 12px 48px;
     overflow: hidden;
   }
@@ -652,23 +786,71 @@ input[type="number"] {
     min-height: 220px;
   }
 
+  h1 {
+    font-size: clamp(2.25rem, 11vw, 3rem);
+  }
+
   .tagline {
+    max-width: 100%;
     letter-spacing: 0.22em;
+    overflow-wrap: anywhere;
   }
 
   .scenario-actions,
   .summary-grid,
   .guide-grid,
-  .guide-reference {
+  .guide-reference,
+  .landing-options {
     grid-template-columns: 1fr;
   }
 
   .scenario-strip,
   .workspace,
   .logic-note,
-  .guide {
+  .guide,
+  .landing-view {
     width: 100%;
+    max-width: 100%;
     overflow: hidden;
+  }
+
+  .view-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .view-tab {
+    min-width: 0;
+    padding: 0 8px;
+    font-size: 0.72rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .landing-copy {
+    padding: 22px;
+    min-width: 0;
+  }
+
+  .landing-copy h2 {
+    font-size: clamp(2rem, 11vw, 3.4rem);
+  }
+
+  .landing-actions {
+    display: grid;
+  }
+
+  .primary-action,
+  .secondary-action {
+    width: 100%;
+  }
+
+  .landing-options article {
+    min-height: 220px;
+    padding: 22px;
   }
 
   .scenario-strip h2 {
