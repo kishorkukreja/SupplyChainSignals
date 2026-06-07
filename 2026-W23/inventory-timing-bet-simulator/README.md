@@ -1,16 +1,20 @@
-# Supply Chain Signals Inventory Timing Bet
+# Supply Chain Signals Inventory Timing Bet Simulator
 
-A lightweight browser calculator inspired by `Inventory is becoming a timing bet`.
+A static browser simulator inspired by `Inventory is becoming a timing bet`.
 
-The tool lets an operator enter practical signals and tags the inventory position as:
+The tool lets an operator edit a small SKU portfolio, assign ABC/XYZ segments, and compare inventory positions against three scenarios from the article:
 
-- Service Buffer
-- Tariff Hedge
-- Freight Hedge
-- Supplier-Risk Buffer
-- Old Forecast Risk
+- Soft landing for inventory
+- Bullwhip hangover
+- Policy and freight squeeze
 
-It also returns a recommendation: hold with trigger review, sell through, stop-buy, reclassify, or review before the next order.
+Each SKU returns:
+
+- ABC/XYZ-derived service target and cost tolerance
+- Inventory reason code
+- Baseline timing-risk score
+- Scenario timing-risk score
+- Recommended action
 
 ## Local Run
 
@@ -28,31 +32,37 @@ Then open:
 http://localhost:4173
 ```
 
-You can also open `index.html` directly in a browser, but the local server path is closer to production hosting.
+You can also open `index.html` directly in a browser.
 
-## Deployment Recommendation
+## Deployment
 
-Use Vercel. There is no server requirement, so Railway is unnecessary.
+The current Vercel project is deployed from this folder:
+
+```text
+2026-W23/inventory-timing-bet-simulator
+```
+
+Production URL:
+
+```text
+https://inventory-timing-bet-simulator.vercel.app
+```
 
 Recommended Vercel settings:
 
-- Project root: `apps/supply-chain-signals-inventory-timing`
 - Framework preset: `Other`
 - Build command: leave empty
 - Output directory: `.`
-
-The app is plain HTML, CSS, and JavaScript, so it can also be hosted by any static host.
 
 ## Scoring Logic
 
 The scoring logic is in `app.js`.
 
-The model is deliberately simple:
+ABC/XYZ sets the operating policy first:
 
-- Demand-backed stock becomes `Service Buffer`.
-- Tariff-exposed stock with timing pressure becomes `Tariff Hedge`.
-- Freight-exposed stock with timing pressure becomes `Freight Hedge`.
-- Supplier-delay exposure becomes `Supplier-Risk Buffer`.
-- High days-on-hand, weak demand, and working-capital pressure become `Old Forecast Risk`.
+- `AX`: highest service target and highest cost tolerance
+- `AY`, `AZ`, `BX`: high service and moderate-high tolerance
+- `BY`, `BZ`, `CX`: moderate service and tolerance
+- `CY`, `CZ`: lower service and low tolerance
 
-The timing-risk score blends tariff exposure, freight exposure, supplier delay risk, working-capital pressure, inventory value, demand weakness, and excess days-on-hand. It is not a forecast model; it is a reason-code classifier for inventory conversations.
+The timing-risk score blends tariff exposure, freight exposure, supplier delay risk, working-capital pressure, inventory value, demand weakness, service gap, and excess days on hand. The model is a reason-code classifier for inventory conversations, not a forecast model.

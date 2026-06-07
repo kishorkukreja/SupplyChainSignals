@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Supply Chain Signals | Inventory Timing Bet</title>
+    <title>Supply Chain Signals | Inventory Timing Bet Simulator</title>
     <meta
       name="description"
-      content="A lightweight Supply Chain Signals calculator for classifying inventory as service buffer, tariff hedge, freight hedge, supplier-risk buffer, or old forecast risk."
+      content="A Supply Chain Signals portfolio simulator for ABC/XYZ inventory segmentation, service targets, cost tolerance, and timing-risk scenarios."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -14,9 +14,9 @@
     <main class="shell">
       <section class="masthead" aria-labelledby="app-title">
         <div class="brand-lockup">
-          <p class="kicker">Weekly briefing tool</p>
+          <p class="kicker">Weekly briefing simulator</p>
           <h1 id="app-title"><span>Supply Chain</span> Signals</h1>
-          <p class="tagline">Follow the constraint</p>
+          <p class="tagline">Inventory timing portfolio</p>
         </div>
 
         <div class="signal-band" aria-hidden="true">
@@ -29,92 +29,49 @@
         </div>
       </section>
 
-      <section class="workspace" aria-label="Inventory timing calculator">
-        <form class="controls" id="signal-form">
-          <div class="control-row primary-row">
-            <label for="inventoryDays">
-              <span>Inventory days on hand</span>
-              <strong id="inventoryDaysValue">55 days</strong>
-            </label>
-            <input id="inventoryDays" name="inventoryDays" type="range" min="5" max="160" value="55" />
+      <section class="scenario-strip" aria-labelledby="scenario-title">
+        <div>
+          <p class="kicker">Scenario lens</p>
+          <h2 id="scenario-title">Compare portfolio scenarios.</h2>
+        </div>
+        <div class="scenario-actions" id="scenarioActions" aria-label="Scenario selection"></div>
+      </section>
+
+      <section class="workspace" aria-label="ABC XYZ inventory portfolio simulator">
+        <section class="portfolio-panel" aria-labelledby="portfolio-title">
+          <div class="panel-heading">
+            <div>
+              <p class="kicker">Editable portfolio</p>
+              <h2 id="portfolio-title">SKU timing-risk board</h2>
+            </div>
+            <button class="ghost-button" id="resetPortfolio" type="button">Reset sample</button>
           </div>
 
-          <div class="control-grid">
-            <label>
-              <span>Inventory value</span>
-              <input id="inventoryValue" name="inventoryValue" type="number" min="0" step="10000" value="850000" />
-            </label>
-
-            <label>
-              <span>Demand confidence</span>
-              <select id="demandConfidence" name="demandConfidence">
-                <option value="90">Confirmed orders</option>
-                <option value="70" selected>Improving signal</option>
-                <option value="45">Mixed forecast</option>
-                <option value="20">Soft or unproven</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Tariff exposure</span>
-              <select id="tariffExposure" name="tariffExposure">
-                <option value="15">Low</option>
-                <option value="45" selected>Medium</option>
-                <option value="80">High</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Freight rate exposure</span>
-              <select id="freightExposure" name="freightExposure">
-                <option value="15">Low</option>
-                <option value="50" selected>Medium</option>
-                <option value="85">High</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Supplier delay risk</span>
-              <select id="supplierDelayRisk" name="supplierDelayRisk">
-                <option value="15">Stable</option>
-                <option value="45" selected>Uneven</option>
-                <option value="80">Slowing</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Working-capital pressure</span>
-              <select id="workingCapitalPressure" name="workingCapitalPressure">
-                <option value="20">Low</option>
-                <option value="55" selected>Moderate</option>
-                <option value="90">High</option>
-              </select>
-            </label>
-          </div>
-        </form>
+          <div class="portfolio-table" id="portfolioTable"></div>
+        </section>
 
         <aside class="readout" aria-live="polite">
           <div class="position-header">
-            <p>Inventory position</p>
-            <h2 id="classification">Service Buffer</h2>
-            <span id="confidenceBadge">Review cadence: weekly</span>
+            <p>Selected scenario</p>
+            <h2 id="selectedScenario">Soft landing</h2>
+            <span id="scenarioBadge">Freight and tariff pressure fade</span>
           </div>
 
-          <div class="score-block">
-            <div>
-              <span>Timing risk score</span>
-              <small id="capitalAtRisk">$850,000 at risk</small>
+          <div class="summary-grid" id="summaryGrid"></div>
+
+          <div class="reason-summary">
+            <div class="mini-heading">
+              <span>Baseline reason mix</span>
+              <strong id="portfolioValue">$0</strong>
             </div>
-            <strong id="riskScore">44</strong>
+            <div class="bars" id="reasonBars"></div>
           </div>
-
-          <div class="bars" id="reasonBars"></div>
 
           <div class="recommendation">
-            <span>Recommendation</span>
-            <strong id="recommendation">Hold with trigger review</strong>
-            <p id="rationale">
-              Demand support is credible, but exposure signals should stay tagged before the next order.
+            <span>Portfolio read</span>
+            <strong id="portfolioRecommendation">Review the exposed tail</strong>
+            <p id="portfolioRationale">
+              Scenario impact is concentrated where low predictability and high exposure meet high days on hand.
             </p>
           </div>
         </aside>
@@ -122,18 +79,17 @@
 
       <section class="logic-note" aria-labelledby="logic-title">
         <div>
-          <p class="kicker">Scoring logic</p>
-          <h2 id="logic-title">Tag the reason before managing the stock.</h2>
+          <p class="kicker">Policy logic</p>
+          <h2 id="logic-title">ABC/XYZ sets the service promise before the scenario tests the timing bet.</h2>
         </div>
         <p>
-          The calculator weighs demand confidence against days-on-hand, tariff exposure, freight exposure,
-          supplier-delay risk, and working-capital pressure. High exposure with weak demand pushes the output
-          toward old forecast risk or stop-buy; high exposure with credible demand tags the stock as a hedge or
-          buffer that needs a review date.
+          A-items and predictable X demand receive the strongest service protection and cost tolerance. Lower-value
+          or volatile segments carry tighter tolerance, so the same tariff, freight, or supplier shock can produce a
+          different recommendation across the portfolio.
         </p>
       </section>
     </main>
 
-    <script src="./app.js" type="module"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
