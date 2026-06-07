@@ -88,6 +88,93 @@
           different recommendation across the portfolio.
         </p>
       </section>
+
+      <section class="guide" aria-labelledby="guide-title">
+        <div class="guide-heading">
+          <p class="kicker">Operator guide</p>
+          <h2 id="guide-title">How to run and read the simulation</h2>
+          <p>
+            Start with one SKU family, make the inputs approximate your planning conversation, then switch scenarios
+            to see which positions remain service buffers and which become timing risks.
+          </p>
+        </div>
+
+        <div class="guide-grid">
+          <article>
+            <span>1</span>
+            <h3>Set the segment</h3>
+            <p>
+              ABC is value or commercial importance. XYZ is demand predictability. AX gets the strongest service
+              promise; CZ gets the tightest cash discipline.
+            </p>
+          </article>
+
+          <article>
+            <span>2</span>
+            <h3>Edit the operating signals</h3>
+            <p>
+              Days and value show the size of the bet. Demand, tariff, freight, supplier, and capital are 0-100
+              pressure scores: higher means the signal is more important to the decision.
+            </p>
+          </article>
+
+          <article>
+            <span>3</span>
+            <h3>Read the policy chip</h3>
+            <p>
+              The chip under each SKU shows the service target and cost tolerance implied by ABC/XYZ. High tolerance
+              means the model allows more cost to protect availability.
+            </p>
+          </article>
+
+          <article>
+            <span>4</span>
+            <h3>Compare baseline to scenario</h3>
+            <p>
+              The row result shows baseline risk into simulated risk. A rising number means the scenario makes the
+              position more exposed; a falling number means the scenario relieves pressure.
+            </p>
+          </article>
+
+          <article>
+            <span>5</span>
+            <h3>Use the recommendation</h3>
+            <p>
+              Hold means demand or supplier risk justifies the buffer. Reclassify means the hedge may be rational
+              but should not be managed like service stock. Stop-buy means cash and aging are the priority.
+            </p>
+          </article>
+
+          <article>
+            <span>6</span>
+            <h3>Check the portfolio read</h3>
+            <p>
+              The right panel totals value, high-risk dollars, average risk shift, exception count, and reason mix so
+              the meeting can focus on the exposed tail instead of debating every pallet.
+            </p>
+          </article>
+        </div>
+
+        <div class="guide-reference">
+          <div>
+            <h3>Scenario meanings</h3>
+            <ul>
+              <li><strong>Soft landing:</strong> demand holds while freight, tariff, supplier, and cash pressure ease.</li>
+              <li><strong>Bullwhip hangover:</strong> demand fades, days rise, and working-capital pressure gets worse.</li>
+              <li><strong>Policy and freight squeeze:</strong> tariff, freight, and supplier pressure all increase together.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Reason codes</h3>
+            <ul>
+              <li><strong>Service Buffer:</strong> inventory exists to protect availability.</li>
+              <li><strong>Tariff/Freight Hedge:</strong> inventory exists because a cost clock moved the buy earlier.</li>
+              <li><strong>Supplier-Risk Buffer:</strong> inventory exists because lead times or reliability are unstable.</li>
+              <li><strong>Old Forecast Risk:</strong> inventory may be solving yesterday's demand assumption.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="./app.js"></script>
