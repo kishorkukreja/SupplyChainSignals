@@ -44,21 +44,21 @@ button {
   width: min(1440px, calc(100% - 32px));
   max-width: 100%;
   margin: 0 auto;
-  padding: 28px 0 48px;
+  padding: 18px 0 48px;
 }
 
 .masthead {
-  min-height: 230px;
+  min-height: 132px;
   display: grid;
   align-content: end;
-  gap: 22px;
+  gap: 14px;
   border-bottom: 1px solid var(--red);
   position: relative;
 }
 
 .brand-lockup {
   min-width: 0;
-  max-width: 850px;
+  max-width: 620px;
 }
 
 .kicker {
@@ -77,11 +77,11 @@ p {
 }
 
 h1 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: var(--red);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.4rem, 10vw, 8.6rem);
-  line-height: 0.82;
+  font-size: clamp(2.8rem, 5.8vw, 5.9rem);
+  line-height: 0.86;
   letter-spacing: 0;
 }
 
@@ -93,16 +93,16 @@ h1 span {
 .tagline {
   margin: 0;
   color: var(--text);
-  font-size: clamp(0.78rem, 1.6vw, 1rem);
+  font-size: clamp(0.72rem, 1.1vw, 0.9rem);
   font-weight: 800;
-  letter-spacing: 0.34em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
 }
 
 .signal-band {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  height: 74px;
+  height: 44px;
   overflow: hidden;
 }
 
@@ -137,7 +137,7 @@ h1 span {
   gap: 1px;
   width: fit-content;
   max-width: 100%;
-  margin-top: 24px;
+  margin-top: 14px;
   background: var(--line);
   border: 1px solid var(--line);
 }
@@ -167,7 +167,7 @@ h1 span {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
   gap: 1px;
-  margin-top: 24px;
+  margin-top: 14px;
   background: var(--line);
   border: 1px solid var(--line);
 }
@@ -778,22 +778,27 @@ input[type="number"] {
   .shell {
     width: min(100%, 360px);
     max-width: 360px;
-    padding: 22px 12px 48px;
+    padding: 14px 12px 48px;
     overflow: hidden;
   }
 
   .masthead {
-    min-height: 220px;
+    min-height: 126px;
+    gap: 10px;
   }
 
   h1 {
-    font-size: clamp(2.25rem, 11vw, 3rem);
+    font-size: clamp(2rem, 10vw, 2.55rem);
   }
 
   .tagline {
     max-width: 100%;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.16em;
     overflow-wrap: anywhere;
+  }
+
+  .signal-band {
+    height: 36px;
   }
 
   .scenario-actions,
