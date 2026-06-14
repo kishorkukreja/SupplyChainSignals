@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Supply Chain Signals | Cost of Time Simulator</title>
+    <meta name="description" content="An operator simulator for deciding which supply-chain clock to pay for, wait on, split, or hold when freight, fuel, tariff, compliance, demand, and margin clocks collide." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="masthead" aria-labelledby="app-title">
+        <div class="brand-lockup">
+          <p class="kicker">Weekly briefing simulator · 2026-W24</p>
+          <h1 id="app-title"><span>Supply Chain</span> Signals</h1>
+          <p class="tagline">Cost-of-time operating calendar</p>
+        </div>
+        <div class="signal-band" aria-hidden="true">
+          <svg viewBox="0 0 1200 120" role="img"><path class="signal-grid" d="M0 62H120l18-28 22 58 19-82 23 94 18-50 17 16h136l18-24 18 52 19-78 23 92 19-50 18 18h168l16-18 22 42 18-64 24 86 16-48 20 18h134l14-28 24 58 22-92 22 100 19-58 18 18h152" /></svg>
+        </div>
+      </section>
+
+      <nav class="view-tabs" aria-label="Application views">
+        <button class="view-tab is-active" type="button" data-view-target="landing" aria-current="page">Start</button>
+        <button class="view-tab" type="button" data-view-target="simulator">Simulator</button>
+        <button class="view-tab" type="button" data-view-target="guide">Guide</button>
+      </nav>
+
+      <section class="view landing-view is-active" id="view-landing" data-view="landing" aria-labelledby="landing-title">
+        <div class="landing-copy">
+          <p class="kicker">Start here</p>
+          <h2 id="landing-title">Turn the price of time into a decision.</h2>
+          <p>W24's signal was blunt: freight, fuel, tariff, compliance, demand, and finance clocks are colliding inside the purchase order. This simulator helps an operator decide whether to pay now, wait, split, re-source, or hold.</p>
+          <div class="landing-actions">
+            <button class="primary-action" type="button" data-view-target="simulator">Open simulator</button>
+            <button class="secondary-action" type="button" data-view-target="guide">Read operator guide</button>
+          </div>
+        </div>
+        <div class="landing-options" aria-label="Entry options">
+          <article><span>01</span><h3>Model the clock stack</h3><p>Edit lane cost, fuel exposure, tariff exposure, deadline days, documentation readiness, demand cover, and margin for each order family.</p></article>
+          <article><span>02</span><h3>Pick a policy mode</h3><p>Compare a premium-that-works case, an air-pocket case, and a policy/fuel squeeze case against the same operating calendar.</p></article>
+          <article><span>03</span><h3>Act on thresholds</h3><p>The readout separates service protection from paid timing options, late-decision risk, cash drag, and compliance exposure.</p></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-simulator" data-view="simulator" aria-labelledby="simulator-title" hidden>
+        <section class="scenario-strip" aria-labelledby="simulator-title">
+          <div>
+            <p class="kicker">Scenario lens</p>
+            <h2 id="simulator-title">Which clock are you willing to pay for?</h2>
+            <p id="scenarioSummary">Choose a policy mode, then edit the order board. Results update live.</p>
+          </div>
+          <div class="scenario-actions" id="scenarioActions" aria-label="Scenario selection"></div>
+        </section>
+
+        <section class="metric-deck" aria-label="Current signal facts">
+          <article><span>Drewry WCI</span><strong>$3,549</strong><em>/40ft · +3% WoW · 11 Jun</em></article>
+          <article><span>Fuel clock</span><strong>$845</strong><em>VLSFO avg across 20 hubs</em></article>
+          <article><span>Import bulge</span><strong>+14.3%</strong><em>NRF June YoY forecast</em></article>
+          <article><span>Policy clock</span><strong>22 Jun</strong><em>first USTR process date</em></article>
+        </section>
+
+        <section class="workspace" aria-label="Cost-of-time purchase order simulator">
+          <section class="portfolio-panel" aria-labelledby="board-title">
+            <div class="panel-heading"><div><p class="kicker">Editable operating calendar</p><h2 id="board-title">Purchase-order clock board</h2></div><button class="ghost-button" id="resetPortfolio" type="button">Reset sample</button></div>
+            <div class="portfolio-table" id="portfolioTable"></div>
+          </section>
+
+          <aside class="readout" aria-live="polite">
+            <div class="position-header"><p>Selected scenario</p><h2 id="selectedScenario">The premium works</h2><span id="scenarioBadge">Early movement protects service</span></div>
+            <div class="summary-grid" id="summaryGrid"></div>
+            <div class="reason-summary"><div class="mini-heading"><span>Exposure by primary clock</span><strong id="portfolioValue">$0</strong></div><div class="bars" id="reasonBars"></div></div>
+            <div class="recommendation"><span>Portfolio read</span><strong id="portfolioRecommendation">Choose a policy mode</strong><p id="portfolioRationale">The model compares timing premium against margin, service risk, compliance readiness, and deadline distance.</p></div>
+          </aside>
+        </section>
+
+        <section class="logic-note" aria-labelledby="logic-title"><div><p class="kicker">Decision logic</p><h2 id="logic-title">The cheapest lane is not always the cheapest calendar.</h2></div><p>Each row scores the cost of waiting, the cost of moving early, and the cost of being wrong. A high score does not always mean ship now; it means the order needs an explicit clock owner and a threshold-triggered action.</p></section>
+      </section>
+
+      <section class="view guide" id="view-guide" data-view="guide" aria-labelledby="guide-title" hidden>
+        <div class="guide-heading"><p class="kicker">Operator guide</p><h2 id="guide-title">How to run and read the simulation</h2><p>Use one category, lane, supplier program, or PO wave at a time. The goal is not to forecast the exact future. The goal is to decide which timing risk gets paid for, delayed, split, or stopped.</p></div>
+        <div class="guide-grid">
+          <article><span>1</span><h3>Define the order family</h3><p>Replace sample rows with SKU families or open POs. Use value at landed cost so margin and cash effects are visible.</p></article>
+          <article><span>2</span><h3>Score the clocks</h3><p>Rate freight/fuel, tariff, compliance, demand, and supplier pressure from 0 to 100. Higher means the clock matters more.</p></article>
+          <article><span>3</span><h3>Set deadline days</h3><p>Use days until a tariff, surcharge, booking cutoff, delivery promise, or supplier documentation deadline. Short windows raise late-decision risk.</p></article>
+          <article><span>4</span><h3>Check margin buffer</h3><p>Low margin makes a paid timing premium harder to absorb. High service criticality can still justify it.</p></article>
+          <article><span>5</span><h3>Compare scenarios</h3><p>The row shows baseline risk into scenario risk. A large positive delta means the selected future makes that PO more fragile.</p></article>
+          <article><span>6</span><h3>Use the action</h3><p>Actions are meeting prompts: book now, split, wait with trigger, hold for documents, re-source, reprice, or stop the buy.</p></article>
+        </div>
+        <div class="guide-reference">
+          <div><h3>Scenario meanings</h3><ul><li><strong>The premium works:</strong> early bookings protect service and demand absorbs the goods.</li><li><strong>Air pocket arrives:</strong> June pull-forward borrowed from July/August and inventory ages.</li><li><strong>Policy and fuel squeeze:</strong> tariff details stay uncertain, fuel stays high, and documentation gaps become expensive.</li></ul></div>
+          <div><h3>Primary clock codes</h3><ul><li><strong>Carrier clock:</strong> spot rates, GRIs, fuel pass-through, capacity and blank sailings.</li><li><strong>Policy clock:</strong> tariff rates, USTR process dates, country exposure and exemptions.</li><li><strong>Compliance clock:</strong> origin evidence, forced-labor documentation and broker readiness.</li><li><strong>Retail clock:</strong> demand proof, promotion dates, seasonal promise and sell-through risk.</li><li><strong>Finance clock:</strong> margin buffer, working capital and repricing window.</li></ul></div>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
