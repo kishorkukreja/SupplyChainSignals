@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>W25 Crude-to-Plastic Clock Triage Simulator</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="shell hero">
+    <div>
+      <p class="eyebrow">Supply Chain Signals · 2026-W25 simulator</p>
+      <h1>Crude-to-plastic clock triage</h1>
+      <p class="lede">Decide when a premium shipment is rational by putting packaging and consumer-goods moves under named clocks: freight, fuel, tariff, compliance, demand, and warehouse capacity.</p>
+    </div>
+    <aside class="signal-card">
+      <span class="label">Working signal</span>
+      <strong>Planning under moving clocks</strong>
+      <p>W25 evidence points to freight-rate spikes, tariff/compliance dates, fuel pass-through, and import pull-forward hitting decisions before conditions settle.</p>
+    </aside>
+  </header>
+
+  <nav class="shell tabs" aria-label="Simulator sections">
+    <button class="tab active" data-target="landingView">Start</button>
+    <button class="tab" data-target="simulatorView">Simulator</button>
+    <button class="tab" data-target="guideView">Operator guide</button>
+  </nav>
+
+  <main class="shell">
+    <section id="landingView" class="view active">
+      <div class="grid two">
+        <article class="panel">
+          <h2>What this answers</h2>
+          <p>Should you pull crude-to-plastic-linked goods forward now, wait for clearer rates, or redesign the pack/SKU plan?</p>
+          <ul>
+            <li>Quantifies the premium freight decision against stockout exposure.</li>
+            <li>Separates calendar pressure from demand confidence.</li>
+            <li>Flags when tariff documentation or warehouse capacity blocks action.</li>
+          </ul>
+          <button class="primary" data-target="simulatorView">Open simulator</button>
+        </article>
+        <article class="panel facts">
+          <h2>Reference cards from W25 source map</h2>
+          <div class="fact"><strong>Drewry WCI</strong><span>$3,969 / 40ft, +12% WoW on 18 Jun; Shanghai-New York $6,769, +15%.</span></div>
+          <div class="fact"><strong>Port of LA</strong><span>840,165 TEUs in May, +17% YoY; loaded imports +26%; no vessel backlog.</span></div>
+          <div class="fact"><strong>ISM forecast</strong><span>Manufacturing revenue +8.4%, prices +14.1%, capacity +9.7%; 77% plan tariff pass-through.</span></div>
+          <div class="fact"><strong>Razor case</strong><span>China production reduced from 100% to ~75%; ~25% shifted to Thailand/Vietnam via existing partners.</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="simulatorView" class="view">
+      <div class="sim-grid">
+        <form id="inputs" class="panel controls">
+          <h2>Shipment clocks</h2>
+          <label>Container count
+            <input id="containers" type="range" min="1" max="160" value="42" />
+            <output for="containers"></output>
+          </label>
+          <label>Current freight rate per 40ft ($)
+            <input id="currentRate" type="range" min="2000" max="9000" step="50" value="3969" />
+            <output for="currentRate"></output>
+          </label>
+          <label>Expected later rate per 40ft ($)
+            <input id="laterRate" type="range" min="1800" max="9000" step="50" value="3300" />
+            <output for="laterRate"></output>
+          </label>
+          <label>Days pulled forward
+            <input id="pullDays" type="range" min="0" max="75" value="28" />
+            <output for="pullDays"></output>
+          </label>
+          <label>Inventory carrying cost (% annual)
+            <input id="carryPct" type="range" min="4" max="36" step="0.5" value="16" />
+            <output for="carryPct"></output>
+          </label>
+          <label>Cargo value per container ($)
+            <input id="cargoValue" type="range" min="15000" max="220000" step="5000" value="85000" />
+            <output for="cargoValue"></output>
+          </label>
+          <label>Stockout penalty per day ($)
+            <input id="stockoutPenalty" type="range" min="0" max="120000" step="1000" value="28000" />
+            <output for="stockoutPenalty"></output>
+          </label>
+          <label>Stockout days avoided
+            <input id="stockoutDays" type="range" min="0" max="45" value="12" />
+            <output for="stockoutDays"></output>
+          </label>
+          <label>Tariff/compliance exposure avoided ($)
+            <input id="tariffExposure" type="range" min="0" max="800000" step="10000" value="180000" />
+            <output for="tariffExposure"></output>
+          </label>
+          <label>Warehouse readiness
+            <select id="warehouseReadiness">
+              <option value="1">Ready: space and labor booked</option>
+              <option value="0.72" selected>Constrained: market-specific risk</option>
+              <option value="0.45">Weak: overflow likely</option>
+            </select>
+          </label>
+          <label>Demand confidence
+            <select id="demandConfidence">
+              <option value="1">High: firm orders / promotion locked</option>
+              <option value="0.76" selected>Medium: replenishment signal</option>
+              <option value="0.48">Low: anxiety buffer</option>
+            </select>
+          </label>
+          <label>Policy mode
+            <select id="policyMode">
+              <option value="frontload" selected>Frontload if the clock pays</option>
+              <option value="split">Split shipment / option value</option>
+              <option value="redesign">Packaging redesign first</option>
+            </select>
+          </label>
+        </form>
+
+        <section class="panel output">
+          <h2>Live readout</h2>
+          <div class="decision" id="decisionBadge">Calculating…</div>
+          <div class="metrics">
+            <div><span>Premium freight</span><strong id="premiumFreight">$0</strong></div>
+            <div><span>Carrying cost</span><strong id="carryingCost">$0</strong></div>
+            <div><span>Clock benefit</span><strong id="clockBenefit">$0</strong></div>
+            <div><span>Net value</span><strong id="netValue">$0</strong></div>
+          </div>
+          <div class="gauge"><div id="gaugeFill"></div></div>
+          <p id="recommendation" class="recommendation"></p>
+          <h3>Scenario notes</h3>
+          <ul id="scenarioNotes"></ul>
+          <h3>Watch indicators</h3>
+          <div class="watch-grid">
+            <span>Drewry/Freightos route-rate divergence</span>
+            <span>July tariff or forced-labor comment windows</span>
+            <span>Warehouse market vacancy / overflow quote</span>
+            <span>Customer penalty clock vs promotion date</span>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="guideView" class="view">
+      <article class="panel guide">
+        <h2>Operator guide</h2>
+        <ol>
+          <li><strong>Name the clock.</strong> Tariff deadline, fuel surcharge, promotion date, production restart, customer penalty, or stockout risk. If no clock exists, the premium is probably anxiety.</li>
+          <li><strong>Separate rate indexes.</strong> Do not blend Drewry WCI, Freightos, NRF/Hackett, Port of LA, and ISM into a fake master index. They measure different things.</li>
+          <li><strong>Check the receiving system.</strong> Pull-forward only works if warehouse space, labor, compliance evidence, and SKU-level product data are ready.</li>
+          <li><strong>Use crude-to-plastic as the lens.</strong> Packaging, petrochemical exposure, bunker fuel, and consumer-goods timing sit on the same cost clock, but each decision still needs SKU economics.</li>
+          <li><strong>Prefer option value when uncertain.</strong> Split shipments or redesign packaging when demand confidence is medium/low and policy clocks are not yet binding.</li>
+        </ol>
+      </article>
+    </section>
+  </main>
+
+  <footer class="shell foot">Built from W25 Supply Chain Signals notes: Drewry, Port of Los Angeles, NRF/Hackett, ISM, Manufacturing Dive, Reuters. Static companion app; no external dependencies.</footer>
+  <script src="./app.js"></script>
+</body>
+</html>
