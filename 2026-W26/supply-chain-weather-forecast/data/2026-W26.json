@@ -1,0 +1,75 @@
+{
+  "week": "2026-W26",
+  "source_mode": "newsletter-fallback",
+  "chain_candidate": "ore to equipment",
+  "headline": "Freight squalls and a Section 232 pressure front are converging over equipment purchasing.",
+  "dek": "W26 is not one storm. It is a clock collision: freight rates, tariff classifications, fuel-linked surcharges, port timing, inventory cost and supplier proof all move on different calendars.",
+  "forecast_horizon": "2-8 weeks",
+  "confidence": "medium-high",
+  "headline_severity": "red",
+  "zones": [
+    {
+      "name": "Freight lanes",
+      "weather": "Transpacific squall line",
+      "severity": "red",
+      "operator_meaning": "Drewry WCI rose 5% to $4,166/40ft; Shanghai-LA hit $5,750 and Shanghai-NY $7,149, so the price of waiting increased again.",
+      "watch": "Next Drewry/Freightos prints after July GRIs and peak-season surcharges."
+    },
+    {
+      "name": "Equipment BOMs",
+      "weather": "Section 232 pressure front",
+      "severity": "red",
+      "operator_meaning": "Steel, aluminum and copper derivative treatment now turns SKU economics into HTS classification, origin, metal-content and supplier-evidence work.",
+      "watch": "CBP/Commerce guidance, annex coverage, USMCA treatment and attestation requirements."
+    },
+    {
+      "name": "Inventory placement",
+      "weather": "Warehouse humidity",
+      "severity": "orange",
+      "operator_meaning": "LMI Inventory Costs around 84 and Transportation Prices at 96.0 mean pull-forward decisions carry local cost even when annual logistics-cost narratives look calmer.",
+      "watch": "Overflow quotes, receiving labor, and whether inventory is a demand bet or a tariff hedge."
+    },
+    {
+      "name": "Retail ports",
+      "weather": "False-clear skies",
+      "severity": "yellow",
+      "operator_meaning": "NRF/Hackett sees June imports at 2.25M TEU, up 14.3% YoY, then negative YoY readings from July through September; port strength may be frontloading, not demand quality.",
+      "watch": "July-September import forecast revisions and retailer commentary on margin/inventory."
+    },
+    {
+      "name": "Strategic inputs",
+      "weather": "Rare-earth fog bank",
+      "severity": "yellow",
+      "operator_meaning": "China's export-control/procurement lists keep strategic-input risk alive, but this is a watch item because mine-to-battery ran recently.",
+      "watch": "Any move from symbolic defense-linked listings into commercial industrial inputs."
+    }
+  ],
+  "reference_cards": [
+    { "label": "Drewry WCI", "value": "$4,166 / 40ft", "note": "+5% WoW on 25 Jun; highest Drewry reports since Sep 2024." },
+    { "label": "Shanghai-LA", "value": "$5,750", "note": "+12% WoW; Transpacific did most of the visible work." },
+    { "label": "LMI cost stack", "value": "69.5", "note": "Inventory Costs ~84; Transportation Prices 96.0; Transportation Capacity 31.7." },
+    { "label": "NRF June imports", "value": "2.25M TEU", "note": "+14.3% YoY, followed by negative YoY forecasts July-Sep." },
+    { "label": "Section 232 bands", "value": "50/25/15/10%", "note": "Treatment depends on category, content, origin, annexes and proof." }
+  ],
+  "operator_watchlist": [
+    "Do not blend Drewry, LMI, NRF and port data into a fake master index; they are separate weather stations.",
+    "For equipment POs, make item-master evidence the first workstream: HTS, metal content, origin, annex mapping, supplier attestation.",
+    "Treat strong port/import numbers as possible frontloading until demand evidence agrees.",
+    "Book warehouse space/labor before approving pull-forward freight; receiving capacity is part of the forecast.",
+    "Keep rare earths in What to Watch unless controls spread into broader commercial industrial inputs."
+  ],
+  "newsletter_insert": {
+    "title": "Supply Chain Weather",
+    "headline": "Transpacific squalls meet a Section 232 pressure front.",
+    "body": "This week's operating weather is a clock collision, not a single headline. Freight rates are moving now, tariff evidence has to be ready before the purchase order, and import strength may be frontloading rather than demand confidence.",
+    "operator_translation": "If `ore to equipment` wins Sunday, the job is not to forecast metal prices. It is to decide which equipment SKUs need HTS/content/origin proof before the freight and policy clocks close."
+  },
+  "sources": [
+    "Drewry World Container Index, 25 Jun 2026",
+    "Logistics Managers' Index, May 2026",
+    "Holland & Knight Section 232 alert, 4 Jun 2026",
+    "C.H. Robinson Section 232 advisory, 2 Jun 2026",
+    "NRF/Hackett Global Port Tracker, 8 Jun 2026",
+    "Reuters China export controls, 22 Jun 2026"
+  ]
+}

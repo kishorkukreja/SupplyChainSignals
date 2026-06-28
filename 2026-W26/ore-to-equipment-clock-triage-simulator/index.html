@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Supply Chain Signals | Ore-to-Equipment Clock Triage Simulator</title>
+    <meta name="description" content="A W26 Supply Chain Signals simulator for equipment purchase-order triage across freight, Section 232, Section 301, inventory and margin clocks." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="masthead" aria-labelledby="app-title">
+        <div class="brand-lockup">
+          <p class="kicker">Weekly briefing simulator · 2026-W26</p>
+          <h1 id="app-title"><span>Supply Chain</span> Signals</h1>
+          <p class="tagline">Ore-to-equipment clock triage</p>
+        </div>
+        <div class="signal-band" aria-hidden="true"><svg viewBox="0 0 1200 120"><path class="signal-grid" d="M0 64H150l18-36 24 78 26-96 20 54 18-20h90l15-29 22 68 22-80 24 72 19-26h152l17-37 23 82 25-92 22 66 18-20h132l16-31 24 74 25-82 23 72 18-24h192"/></svg></div>
+      </section>
+      <nav class="view-tabs" aria-label="Application views">
+        <button class="view-tab is-active" type="button" data-view-target="landing">Start</button>
+        <button class="view-tab" type="button" data-view-target="simulator">Simulator</button>
+        <button class="view-tab" type="button" data-view-target="guide">Operator guide</button>
+      </nav>
+      <section class="view landing-view is-active" id="view-landing" data-view="landing" aria-labelledby="landing-title">
+        <div class="landing-copy">
+          <p class="kicker">Start here</p>
+          <h2 id="landing-title">Which clock owns the next equipment purchase order?</h2>
+          <p>W26 is calendar triage under cost pressure. Drewry freight rates, LMI cost pressure, USTR deadlines, Section 232 metal treatment, port frontloading and margin math are not one index. This simulator keeps them separate and turns the queue into an operator decision.</p>
+          <div class="landing-actions">
+            <button class="primary-action" type="button" data-view-target="simulator">Open simulator</button>
+            <button class="secondary-action" type="button" data-view-target="guide">Read the model</button>
+          </div>
+        </div>
+        <div class="landing-options" aria-label="Reference cards">
+          <article><span>01</span><h3>Freight clock</h3><p>Drewry WCI: $4,166/40ft, +5% WoW. Shanghai-LA: $5,750. Shanghai-NY: $7,149.</p></article>
+          <article><span>02</span><h3>Policy clock</h3><p>USTR comments due 6 July; hearings start 7 July. Section 232 treatment depends on category, content, origin and proof.</p></article>
+          <article><span>03</span><h3>Cost clock</h3><p>LMI Transportation Prices: 96.0; Transportation Capacity: 31.7; Inventory Costs: about 84.</p></article>
+          <article><span>04</span><h3>Demand clock</h3><p>NRF/Hackett sees June imports up 14.3% YoY, then negative YoY readings July through September.</p></article>
+        </div>
+      </section>
+      <section class="view" id="view-simulator" data-view="simulator" aria-labelledby="simulator-title" hidden>
+        <section class="scenario-strip">
+          <div><p class="kicker">Scenario / policy mode</p><h2 id="simulator-title">Test the purchase-order queue.</h2></div>
+          <div class="scenario-actions" id="scenarioActions" aria-label="Scenario selection"></div>
+        </section>
+        <section class="workspace" aria-label="Ore to equipment clock triage simulator">
+          <section class="portfolio-panel">
+            <div class="panel-heading">
+              <div><p class="kicker">Editable equipment orders</p><h2>PO triage board</h2></div>
+              <button class="ghost-button" id="resetOrders" type="button">Reset sample</button>
+            </div>
+            <div class="source-note">Figures are traceable to the W26 newsletter fallback notes. They are separate station inputs, not a blended public index.</div>
+            <div class="order-table" id="orderTable"></div>
+          </section>
+          <aside class="readout" aria-live="polite">
+            <div class="position-header"><p>Selected mode</p><h2 id="selectedScenario">Proof before premium</h2><span id="scenarioBadge">Classification and evidence first</span></div>
+            <div class="summary-grid" id="summaryGrid"></div>
+            <div class="recommendation"><span>Portfolio read</span><strong id="portfolioRecommendation">Build proof before money moves</strong><p id="portfolioRationale">The orders most exposed to the W26 signal combine urgent freight with weak tariff evidence and thin margin.</p></div>
+            <div class="reason-summary"><div class="mini-heading"><span>Clock ownership</span><strong id="totalValue">$0</strong></div><div class="bars" id="reasonBars"></div></div>
+          </aside>
+        </section>
+      </section>
+      <section class="view guide" id="view-guide" data-view="guide" aria-labelledby="guide-title" hidden>
+        <div class="guide-heading"><p class="kicker">Operator guide</p><h2 id="guide-title">How to use the clock-triage model</h2><p>Pick a live equipment book, approximate the current order values, then use the readout to decide which orders need premium freight, classification work, supplier evidence, split shipment, repricing or a pause.</p></div>
+        <div class="guide-grid">
+          <article><span>1</span><h3>Keep stations separate</h3><p>Drewry is a lane-price station. LMI is a diffusion-cost station. NRF/Hackett is an import forecast. USTR and Section 232 are policy clocks.</p></article>
+          <article><span>2</span><h3>Edit current facts</h3><p>Change margin, days to ship, receiving capacity, evidence quality and clock pressures. The simulator treats weak proof as a cost risk before duty cash is paid.</p></article>
+          <article><span>3</span><h3>Choose a mode</h3><p>Baseline uses W26 pressure. Proof before premium favors evidence work. Pay for time raises freight urgency. Air pocket penalizes excess inventory and weak demand proof.</p></article>
+          <article><span>4</span><h3>Read the owner</h3><p>The top clock is the function that should own the next meeting: logistics, trade, warehouse, finance or commercial.</p></article>
+          <article><span>5</span><h3>Act on exceptions</h3><p>High scores mean the order needs an explicit go/wait/split/reclassify/reprice decision before the booking window closes.</p></article>
+          <article><span>6</span><h3>Use traceable facts</h3><p>The default reference cards come from W26 newsletter notes because the Signal Translation folder was absent after the required retry window.</p></article>
+        </div>
+        <div class="guide-reference"><h3>Reference facts</h3><ul><li>Drewry WCI: $4,166/40ft, +5% WoW; Shanghai-LA $5,750; Shanghai-NY $7,149.</li><li>LMI: overall 69.5, Transportation Prices 96.0, Transportation Capacity 31.7, Inventory Costs about 84.</li><li>USTR: Section 301 written comments due 6 July 2026; hearings begin 7 July 2026.</li><li>Section 232: steel, aluminum, copper and derivative treatment can vary by category, metal content, origin and documentation.</li></ul></div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

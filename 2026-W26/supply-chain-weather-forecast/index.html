@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>W26 Supply Chain Weather Forecast</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="shell masthead" aria-labelledby="app-title">
+    <div class="brand-lockup">
+      <p class="kicker">Weekly weather insert · 2026-W26</p>
+      <h1 id="app-title"><span>Supply Chain</span> Signals</h1>
+      <p class="tagline">Weather forecast for operators</p>
+      <p id="dek" class="lede"></p>
+    </div>
+    <div class="signal-band" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" role="img"><path class="signal-grid" d="M0 62H110l18-32 24 66 19-88 25 98 19-52 18 20h126l20-27 19 56 21-82 25 98 19-52 18 19h148l18-22 23 48 20-68 24 92 18-52 22 21h130l16-31 26 64 23-98 24 104 20-61 20 20h152" /></svg>
+    </div>
+  </header>
+
+  <nav class="shell tabs" aria-label="Forecast sections">
+    <button class="tab active" data-target="mapView">Weather map</button>
+    <button class="tab" data-target="operatorView">Operator readout</button>
+    <button class="tab" data-target="newsletterView">Newsletter insert</button>
+  </nav>
+
+  <main class="shell">
+    <section id="mapView" class="view active">
+      <div class="hero-grid">
+        <article class="panel forecast-panel">
+          <p class="eyebrow">Headline forecast</p>
+          <h2 id="headline"></h2>
+          <p id="summary"></p>
+          <div class="meta-grid">
+            <div><span>Candidate chain</span><strong id="chain"></strong></div>
+            <div><span>Horizon</span><strong id="horizon"></strong></div>
+            <div><span>Confidence</span><strong id="confidence"></strong></div>
+          </div>
+        </article>
+        <article class="panel facts">
+          <h2>Weather stations</h2>
+          <div id="referenceCards"></div>
+        </article>
+      </div>
+      <section class="weather-grid" id="zones" aria-label="Supply-chain weather zones"></section>
+    </section>
+
+    <section id="operatorView" class="view">
+      <div class="panel guide">
+        <h2>Operator readout</h2>
+        <p>The forecast is meant to be dropped into the newsletter, then expanded as a visual artifact. Its discipline is simple: vivid language on top, traceable evidence underneath.</p>
+        <ol id="watchlist"></ol>
+      </div>
+    </section>
+
+    <section id="newsletterView" class="view">
+      <article class="panel newsletter-card">
+        <p class="eyebrow">Copy/paste section</p>
+        <h2 id="newsletterTitle"></h2>
+        <div id="newsletterMarkdown" class="markdown-preview"></div>
+        <button class="primary" id="copyMarkdown">Copy Markdown</button>
+        <p id="copyStatus" class="copy-status" aria-live="polite"></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="shell foot">Built from W26 Supply Chain Signals newsletter research. Static companion app; no external dependencies.</footer>
+  <script src="./app.js"></script>
+</body>
+</html>
