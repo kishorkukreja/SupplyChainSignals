@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supply Chain Weather Forecast | 2026-W27</title>
+  <meta name="description" content="Supply Chain Signals weather forecast artifact for 2026-W27 deadline compression." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="masthead">
+      <div><p class="kicker">Supply Chain Weather · 2026-W27</p><h1><span>Supply Chain</span> Weather</h1><p class="tagline">Separate stations, no fake composite score</p></div>
+      <div class="signal-band" aria-hidden="true"><svg viewBox="0 0 1200 120"><path class="signal-grid" d="M0 62H160l16-24 18 62 18-96 24 108 20-62 20 20h118l12-16 18 44 18-82 22 98 18-50 22 20h160l14-22 20 54 20-92 22 108 18-56 22 22h250" /></svg></div>
+    </section>
+    <nav class="view-tabs" aria-label="Forecast views"><button class="view-tab is-active" data-view-target="map" type="button">Weather map</button><button class="view-tab" data-view-target="operator" type="button">Operator readout</button><button class="view-tab" data-view-target="newsletter" type="button">Newsletter insert</button></nav>
+    <section class="hero" id="mapView" data-view="map"><p class="kicker">Forecast headline</p><h2 id="headline">Loading forecast…</h2><p id="dek"></p><div class="meta"><span id="horizon"></span><span id="confidence"></span><span id="sourceMode"></span></div><div class="zones" id="zones"></div></section>
+    <section class="view" id="operatorView" data-view="operator" hidden><div class="operator-grid"><section><p class="kicker">Operator translation</p><h2>What this weather changes inside the building</h2><p id="operatorTranslation"></p><h3>Watchlist</h3><ul id="watchlist"></ul></section><aside><p class="kicker">Reference cards</p><div class="cards" id="referenceCards"></div></aside></div></section>
+    <section class="view" id="newsletterView" data-view="newsletter" hidden><p class="kicker">Copy / paste insert</p><h2 id="insertTitle">Supply Chain Weather</h2><div class="insert" id="newsletterInsert"></div><button class="copy" id="copyInsert" type="button">Copy insert text</button></section>
+    <section class="sources"><p class="kicker">Traceable sources</p><ul id="sources"></ul></section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

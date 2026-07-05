@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supply Chain Signals | Deadline Compression Simulator</title>
+  <meta name="description" content="A Supply Chain Signals operating simulator for July freight, proof, carton, refund, and receiving deadline compression." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="masthead" aria-labelledby="app-title">
+      <div class="brand-lockup">
+        <p class="kicker">Weekly briefing simulator · 2026-W27</p>
+        <h1 id="app-title"><span>Supply Chain</span> Signals</h1>
+        <p class="tagline">Deadline compression board</p>
+      </div>
+      <div class="signal-band" aria-hidden="true"><svg viewBox="0 0 1200 120"><path class="signal-grid" d="M0 62H172l12-22 16 58 19-96 22 110 20-70 17 24 15-8h85l10-16 16 42 18-78 20 94 18-48 22 20 12-12h146l15-18 18 44 19-84 22 102 18-50 21 23 14-14h118l14-22 19 52 22-94 20 112 19-58 23 24 15-16h190" /></svg></div>
+    </section>
+
+    <nav class="view-tabs" aria-label="Application views">
+      <button class="view-tab is-active" type="button" data-view-target="landing">Start</button>
+      <button class="view-tab" type="button" data-view-target="simulator">Simulator</button>
+      <button class="view-tab" type="button" data-view-target="guide">Guide</button>
+    </nav>
+
+    <section class="view landing-view is-active" id="view-landing" data-view="landing" aria-labelledby="landing-title">
+      <div class="landing-copy">
+        <p class="kicker">Start here</p>
+        <h2 id="landing-title">The freight spike is visible. The proof queue is the operating problem.</h2>
+        <p>Drewry's 2 July WCI reached $4,530 per 40-foot container while retailers pulled China orders four to six weeks early. Use this board to decide which seasonal orders can spend the time they just bought.</p>
+        <div class="landing-actions">
+          <button class="primary-action" type="button" data-view-target="simulator">Open simulator</button>
+          <button class="secondary-action" type="button" data-view-target="guide">Read operator guide</button>
+        </div>
+      </div>
+      <div class="landing-options" aria-label="Entry options">
+        <article><span>01</span><h3>Separate the clocks</h3><p>Edit freight, USTR exposure, CAPE refund confidence, carton readiness, supplier proof, demand confidence and receiving capacity without blending them into one fake score.</p></article>
+        <article><span>02</span><h3>Assign the queue</h3><p>The readout converts pressure into owner-specific actions for logistics, trade compliance, procurement, finance, planning and warehouse operations.</p></article>
+      </div>
+    </section>
+
+    <section class="view" id="view-simulator" data-view="simulator" aria-labelledby="simulator-view-title" hidden>
+      <section class="scenario-strip" aria-labelledby="scenario-title">
+        <div><p class="kicker">Scenario lens</p><h2 id="simulator-view-title">Test the July queue before the booking window shuts.</h2></div>
+        <div class="scenario-actions" id="scenarioActions" aria-label="Scenario selection"></div>
+      </section>
+      <section class="reference-grid" aria-label="Current source cards">
+        <article><span>Drewry WCI</span><strong>$4,530 / 40ft</strong><p>2 July composite, +9% WoW and +61% YoY; Shanghai-LA $6,349, Shanghai-NY $7,902.</p></article>
+        <article><span>Retail pull-forward</span><strong>4–6 weeks early</strong><p>Reuters reported seasonal China orders pulled forward; May China imports +35% YoY with normal-to-soft demand caveat.</p></article>
+        <article><span>Port calendar</span><strong>2.25M TEU</strong><p>NRF/Hackett June forecast +14.3% YoY, then July–September below 2025 levels.</p></article>
+        <article><span>Policy / refund clocks</span><strong>6–15 July</strong><p>USTR comments due 6 July, hearings begin 7 July, HMM PSS cited for 15 July; CAPE refund work adds entry-file labor.</p></article>
+      </section>
+      <section class="workspace" aria-label="Deadline compression simulator">
+        <section class="portfolio-panel" aria-labelledby="queue-title">
+          <div class="panel-heading"><div><p class="kicker">Editable decision queue</p><h2 id="queue-title">Seasonal order board</h2></div><button class="ghost-button" id="resetBoard" type="button">Reset sample</button></div>
+          <div class="portfolio-table" id="orderTable"></div>
+        </section>
+        <aside class="readout" aria-live="polite">
+          <div class="position-header"><p>Selected scenario</p><h2 id="selectedScenario">Base squeeze</h2><span id="scenarioBadge">Freight stays high and proof work bunches</span></div>
+          <div class="summary-grid" id="summaryGrid"></div>
+          <div class="recommendation"><span>Portfolio read</span><strong id="portfolioRecommendation">Sequence before you expedite</strong><p id="portfolioRationale">The board highlights orders where booking speed has outrun proof, carton or dock readiness.</p></div>
+          <div class="decision-queue"><h3>The Decision Queue</h3><div id="decisionQueue"></div></div>
+          <div class="watch-box"><h3>What to Watch (external only)</h3><ul><li>Drewry's next WCI, especially Shanghai-LA and Shanghai-NY.</li><li>USTR comment themes and hearing testimony after 7 July.</li><li>July bookings versus NRF/Hackett's expected fall air pocket.</li><li>CBP's later CAPE phase and refund usability as cash.</li></ul></div>
+        </aside>
+      </section>
+    </section>
+
+    <section class="view guide" id="view-guide" data-view="guide" aria-labelledby="guide-title" hidden>
+      <div class="guide-heading"><p class="kicker">Operator guide</p><h2 id="guide-title">Buying time is useful only if the rest of the system can spend it.</h2><p>The simulator mirrors the W27 Signal Translation package: metrics prove pressure, the decision queue assigns internal action, and What to Watch stays external.</p></div>
+      <div class="guide-grid">
+        <article><span>1</span><h3>Start with exposed seasonal orders</h3><p>Use SKU families where a July booking, policy, carton or receiving decision is live.</p></article>
+        <article><span>2</span><h3>Keep stations separate</h3><p>Drewry rates, NRF forecasts, USTR dates, CBP refunds and ISM/FAO indexes are not one composite metric.</p></article>
+        <article><span>3</span><h3>Check proof before speed</h3><p>Early bookings help service only if supplier evidence, product scope and importer-of-record checks are ready.</p></article>
+        <article><span>4</span><h3>Make cartons visible</h3><p>Forest-to-cardboard is this week's lens: carton specs, print approval and pallet patterns can block a frontload.</p></article>
+        <article><span>5</span><h3>Name the owner</h3><p>Logistics owns bookings; trade owns proof; procurement owns packaging; finance owns refunds; warehouse owns dock slots.</p></article>
+        <article><span>6</span><h3>Read recommendation as a meeting agenda</h3><p>Move, split, hold or pause are prompts for cross-functional decisions, not automated purchase advice.</p></article>
+      </div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

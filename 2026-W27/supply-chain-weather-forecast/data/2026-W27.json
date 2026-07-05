@@ -1,0 +1,109 @@
+{
+  "week": "2026-W27",
+  "source_mode": "signal-translation",
+  "chain_candidate": "forest to cardboard",
+  "headline": "A July deadline front is turning freight speed into a proof, carton and receiving storm.",
+  "dek": "The visible weather is a Drewry rate jump and early seasonal orders. The operating weather is the queue of USTR proof, CAPE refunds, packaging readiness and dock slots behind the move.",
+  "forecast_horizon": "1-8 weeks",
+  "confidence": "medium-high",
+  "zones": [
+    {
+      "name": "Transpacific freight lanes",
+      "weather": "Rate squall line",
+      "severity": "red",
+      "operator_meaning": "Drewry's 2 July WCI reached $4,530 per 40-foot container, +9% WoW; Shanghai-LA was $6,349 and Shanghai-NY $7,902.",
+      "watch": "Next Drewry WCI reading and whether July bookings fade after frontloaded cargo clears."
+    },
+    {
+      "name": "Seasonal retail calendar",
+      "weather": "Pull-forward heat dome",
+      "severity": "orange",
+      "operator_meaning": "Retailers moved China orders four to six weeks early, while May China imports rose 35% YoY despite normal-to-soft demand caveats.",
+      "watch": "Retail commentary that separates demand strength from tariff hedging."
+    },
+    {
+      "name": "USTR / forced-labor policy clock",
+      "weather": "Policy pressure front",
+      "severity": "red",
+      "operator_meaning": "Comments are due 6 July and hearings begin 7 July for proposed Section 301 actions, including 10% and 12.5% duty tiers plus textile/apparel mechanism.",
+      "watch": "Comment themes, hearing testimony and SKU/BOM exposure mapping."
+    },
+    {
+      "name": "CAPE refund and finance files",
+      "weather": "Customs paperwork fog",
+      "severity": "orange",
+      "operator_meaning": "CBP CAPE refund processing creates entry-list, liquidation-status, ACE-access and broker-authority work before refunds can become usable cash.",
+      "watch": "CBP's later CAPE phase and whether eligible entries convert into reliable timing."
+    },
+    {
+      "name": "Carton and receiving readiness",
+      "weather": "Warehouse humidity",
+      "severity": "orange",
+      "operator_meaning": "Early seasonal receipts only protect service if carton specs, print approvals, pallet patterns, dock appointments and labor are ready.",
+      "watch": "Packaging supplier stress, corrugated lead times and DC appointment slippage."
+    },
+    {
+      "name": "Food input counter-station",
+      "weather": "Component split, not headline calm",
+      "severity": "yellow",
+      "operator_meaning": "FAO's headline Food Price Index was nearly flat at 130.3, but vegetable oils rose 3.8% MoM and meat hit a record while cereals and sugar fell.",
+      "watch": "Category-specific input exposure; do not treat the aggregate as domestic retail food inflation."
+    }
+  ],
+  "reference_cards": [
+    {
+      "label": "Drewry WCI",
+      "value": "$4,530 / 40ft",
+      "note": "2 July composite, +9% WoW and +61% YoY; keep separate from other freight indexes."
+    },
+    {
+      "label": "Shanghai-LA / Shanghai-NY",
+      "value": "$6,349 / $7,902",
+      "note": "Drewry lane rates on 2 July."
+    },
+    {
+      "label": "Retail pull-forward",
+      "value": "4–6 weeks",
+      "note": "Reuters reported early China orders for back-to-school, Black Friday, Christmas and World Cup goods."
+    },
+    {
+      "label": "NRF/Hackett June forecast",
+      "value": "2.25M TEU",
+      "note": "+14.3% YoY, followed by July-September below 2025 levels."
+    },
+    {
+      "label": "USTR dates",
+      "value": "6–7 July",
+      "note": "Comments due 6 July; hearings begin 7 July; proposed action, not final tariff collection."
+    },
+    {
+      "label": "ISM customer inventories",
+      "value": "42.3",
+      "note": "June Customers' Inventories stayed too low; diffusion index, not a direct cost measure."
+    }
+  ],
+  "operator_translation": "Run a single July deadline board by SKU: booking premium, supplier proof, product scope, carton spec, CAPE entry/refund status, receiving appointment, inventory cover and margin under the next freight rate. Assign one owner per clock before paying for speed.",
+  "operator_watchlist": [
+    "Drewry's next WCI and whether Shanghai-LA/New York keep rising.",
+    "USTR comment themes and hearing testimony after 7 July.",
+    "July bookings versus NRF/Hackett's expected import air pocket.",
+    "Packaging, corrugated and warehouse stress from early seasonal receipts.",
+    "CBP CAPE phase timing and refund usability as cash."
+  ],
+  "newsletter_insert": {
+    "title": "Supply Chain Weather",
+    "headline": "A July deadline front is turning freight speed into proof, carton and receiving work.",
+    "body": "The weather map is not one blended risk score. Freight lanes, policy clocks, customs refunds, packaging readiness, receiving capacity and food inputs are separate stations this week. Drewry shows a red freight squall; USTR and CBP add policy and paperwork fronts; the carton/receiving station decides whether early orders become service protection or an internal bottleneck.",
+    "operator_translation": "Before approving the next booking premium, put each exposed SKU on one board: supplier proof, carton spec, CAPE entry/refund status, receiving appointment, inventory cover and margin under the next freight rate."
+  },
+  "sources": [
+    "Drewry World Container Index, 2 July 2026",
+    "Reuters, U.S. retailers frontload China orders, 30 June 2026",
+    "NRF/Hackett Global Port Tracker, June 2026 forecast",
+    "USTR and Federal Register Section 301 notices, June-July 2026",
+    "CBP IEEPA duty refunds / CAPE processing; Supply Chain Dive refund expansion coverage",
+    "ISM June Manufacturing PMI",
+    "FAO Food Price Index, 3 July 2026",
+    "Maersk North America market update, 29 June 2026"
+  ]
+}
