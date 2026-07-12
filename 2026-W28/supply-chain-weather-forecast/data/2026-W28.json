@@ -1,0 +1,110 @@
+{
+  "week": "2026-W28",
+  "source_mode": "signal-translation",
+  "chain_candidate": "field to fork",
+  "headline": "A record July import heat dome is feeding a proof, cost and input-friction queue.",
+  "dek": "The visible weather is import front-loading. The operating weather is the queue behind it: booking decisions, forced-labor proof, freight and diesel repricing, and strategic-input approvals.",
+  "forecast_horizon": "1-8 weeks",
+  "confidence": "medium-high",
+  "zones": [
+    {
+      "name": "Covered U.S. ports",
+      "weather": "Record import heat dome",
+      "severity": "red",
+      "operator_meaning": "NRF/Hackett expects 2.47M TEU in July, above the May 2022 record, before August-November turn negative YoY.",
+      "watch": "Reported July TEU by port and origin; whether China-origin strength persists."
+    },
+    {
+      "name": "June import anchor",
+      "weather": "Front-load surge",
+      "severity": "orange",
+      "operator_meaning": "Reuters/Descartes reported 2,400,627 TEU in June, +8.2% YoY, with China-origin volume +27.4% to 814,474 TEU.",
+      "watch": "Order quality and inventory-to-sales data that separate demand from timing."
+    },
+    {
+      "name": "Forced-labor proof clock",
+      "weather": "Documentation front",
+      "severity": "red",
+      "operator_meaning": "USTR posted July 7-9 Section 301 forced-labor hearing transcripts, turning policy monitoring into SKU-level proof work.",
+      "watch": "Transcript categories, product examples, final action timing and exemption arguments."
+    },
+    {
+      "name": "Freight and diesel costs",
+      "weather": "Cost squall",
+      "severity": "orange",
+      "operator_meaning": "Drewry's 9 July WCI headline rose 2% to $4,639 per 40ft; Reuters reported U.S. ULSD futures +11% and inventories down to 97.8M barrels.",
+      "watch": "Clean WCI lane table, diesel futures, gasoil premiums and surcharge treatment."
+    },
+    {
+      "name": "Manufacturing and services inputs",
+      "weather": "Sticky-friction layer",
+      "severity": "yellow",
+      "operator_meaning": "ISM June Manufacturing and Services stayed expansionary with high Prices and slower Supplier Deliveries; data-center commodities remain short.",
+      "watch": "July ISM prices, supplier deliveries, imports, backlog and shortage lists."
+    },
+    {
+      "name": "Field to fork",
+      "weather": "Category split under calm headline",
+      "severity": "yellow",
+      "operator_meaning": "FAO's headline food index slipped slightly while vegetable oils and meat rose; food exposure needs category, fuel and cold-chain review.",
+      "watch": "Vegetable oils, meat, weather-linked inputs, diesel and refrigeration capacity."
+    }
+  ],
+  "reference_cards": [
+    {
+      "label": "NRF/Hackett July forecast",
+      "value": "2.47M TEU",
+      "note": "Above May 2022 covered-port monthly record; later forecast air pocket."
+    },
+    {
+      "label": "Reuters/Descartes June imports",
+      "value": "2,400,627 TEU",
+      "note": "+8.2% YoY; China-origin +27.4% to 814,474 TEU."
+    },
+    {
+      "label": "Drewry WCI",
+      "value": "$4,639 / 40ft",
+      "note": "9 July headline, +2%; lane table requires re-check."
+    },
+    {
+      "label": "Diesel station",
+      "value": "+11% futures",
+      "note": "Reuters reported U.S. ULSD futures at $154/bbl and inventories at 97.8M barrels."
+    },
+    {
+      "label": "ISM Manufacturing / Services",
+      "value": "53.3 / 54.0",
+      "note": "Expansion with sticky prices and slower deliveries."
+    },
+    {
+      "label": "USTR proof clock",
+      "value": "3 transcripts",
+      "note": "Day 1-3 forced-labor Section 301 hearing transcripts posted."
+    }
+  ],
+  "operator_translation": "Do not read July volume as one signal. Split it into booking, proof, cost and strategic-input lanes; assign owners before early receipts, proof gaps and repricing pressure land in the same meeting.",
+  "operator_watchlist": [
+    "Reported July TEU by port and origin.",
+    "NRF/Hackett August-November forecast validation.",
+    "USTR transcript categories and final action timing.",
+    "Drewry WCI lane re-check plus diesel inventory updates.",
+    "ISM July prices, supplier deliveries, imports and backlog.",
+    "FAO category movements for vegetable oils, meat and weather-linked inputs."
+  ],
+  "newsletter_insert": {
+    "title": "Supply Chain Weather",
+    "headline": "A record July import heat dome is feeding a proof-and-booking queue.",
+    "body": "The weather map is not one blended risk score. Covered-port forecasts, reported June TEU, USTR transcripts, Drewry WCI, diesel, ISM and FAO are separate stations this week. Together they show a decision queue: what to book, what to prove, what to reprice and what to protect.",
+    "operator_translation": "Before approving the next pull-forward move, put exposed product families on a four-lane board: booking, proof, cost and strategic inputs. Name the owner and approval gate for each lane."
+  },
+  "sources": [
+    "NRF/Hackett Global Port Tracker, 8 July 2026",
+    "Reuters/Descartes U.S. container imports, 8 July 2026",
+    "USTR Section 301 forced-labor investigation page and 2 July hearing release",
+    "Drewry World Container Index, 9 July 2026",
+    "Reuters diesel supply coverage, 10/11 July 2026",
+    "ISM June 2026 Manufacturing and Services PMI",
+    "FAO Food Price Index, 3 July 2026",
+    "Reuters power equipment and rare-earth coverage"
+  ]
+}

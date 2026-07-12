@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supply Chain Signals | Proof-and-Booking Queue</title>
+  <meta name="description" content="A W28 Signal-to-Action Brief that turns record import pull-forward into booking, proof, cost and strategic-input decisions." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="masthead" aria-labelledby="app-title">
+      <div class="brand-lockup">
+        <p class="kicker">Signal-to-Action Brief · 2026-W28</p>
+        <h1 id="app-title"><span>Supply Chain</span> Signals</h1>
+        <p class="tagline">Proof-and-booking queue</p>
+      </div>
+      <div class="signal-band" aria-hidden="true"><svg viewBox="0 0 1200 120"><path d="M0 62H160l16-28 18 62 20-96 22 112 18-64 18 28 14-12h112l12-18 18 44 20-80 22 96 18-46 22 22 14-10h132l16-24 20 56 22-98 22 108 18-54 24 24 16-16h120l14-20 18 46 22-84 22 100 20-48 22 20 16-12h190" /></svg></div>
+    </section>
+
+    <nav class="view-tabs" aria-label="Application views">
+      <button class="view-tab is-active" type="button" data-view-target="start">Start</button>
+      <button class="view-tab" type="button" data-view-target="brief-builder">Brief builder</button>
+      <button class="view-tab" type="button" data-view-target="output-readout">Output readout</button>
+      <button class="view-tab" type="button" data-view-target="agent-workflow">Agent workflow</button>
+      <button class="view-tab" type="button" data-view-target="guide">Guide</button>
+    </nav>
+
+    <section class="view is-active" id="view-start" data-view="start" aria-labelledby="start-title">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Executive signal</p>
+          <h2 id="start-title">Record July imports are not the conclusion. They are the trigger.</h2>
+          <p class="lede">NRF/Hackett expects covered U.S. ports to hit 2.47M TEU in July, above the May 2022 record, while Reuters/Descartes reported June imports at 2,400,627 TEU. The operating signal is not simply demand strength. It is a queue forming across booking, proof, cost and strategic inputs.</p>
+          <div class="hero-actions">
+            <button class="primary-action" type="button" data-view-target="brief-builder">Build my queue</button>
+            <button class="secondary-action" type="button" data-view-target="guide">Read the guide</button>
+          </div>
+        </div>
+        <div class="queue-board" aria-label="Four lane queue">
+          <article><span>Booking</span><strong>What moves now?</strong><p>July front-loading, carrier timing and customer-order quality.</p></article>
+          <article><span>Proof</span><strong>What needs evidence?</strong><p>USTR transcripts, origin, supplier files and exemption arguments.</p></article>
+          <article><span>Cost</span><strong>What resets margin?</strong><p>Drewry WCI, diesel, duties, refunds and contract assumptions.</p></article>
+          <article><span>Strategic inputs</span><strong>What needs approval?</strong><p>ISM shortages, power equipment, rare earths and memory watch items.</p></article>
+        </div>
+      </div>
+      <section class="reference-grid" aria-label="Current source cards">
+        <article><span>NRF/Hackett July forecast</span><strong>2.47M TEU</strong><p>Above the May 2022 covered-port monthly record; August through November then turn negative year over year.</p></article>
+        <article><span>Reuters/Descartes June anchor</span><strong>2,400,627 TEU</strong><p>Up 8.2% year over year; China-origin volume up 27.4% to 814,474 TEU.</p></article>
+        <article><span>USTR proof clock</span><strong>July 7-9 transcripts</strong><p>Forced-labor Section 301 hearing transcripts are posted and subject to errata review.</p></article>
+        <article><span>Cost station</span><strong>$4,639 / 40ft</strong><p>Drewry 9 July WCI headline; lane table requires re-check. Reuters reported an 11% diesel futures jump.</p></article>
+      </section>
+    </section>
+
+    <section class="view" id="view-brief-builder" data-view="brief-builder" aria-labelledby="builder-title" hidden>
+      <div class="section-heading">
+        <p class="kicker">Brief builder</p>
+        <h2 id="builder-title">Answer six practical questions. Do not enter raw operating metrics.</h2>
+        <p>The source facts already do the signal translation. This builder only asks for your local business context.</p>
+      </div>
+      <form class="builder-grid" id="briefForm">
+        <label>Exposed product family<select id="productFamily"><option>Apparel / consumer goods</option><option>Food and ingredients</option><option>Bulky goods</option><option>Automotive / electronics</option><option>Mixed import portfolio</option></select></label>
+        <label>Most urgent decision<select id="decisionDue"><option>Book or delay receipts</option><option>Build proof files</option><option>Reprice landed cost</option><option>Escalate constrained inputs</option><option>Separate demand from timing</option></select></label>
+        <label>Constraint that matters most<select id="constraint"><option>Service level</option><option>Margin</option><option>Compliance</option><option>Working capital</option><option>Supplier capacity</option></select></label>
+        <label>Proof readiness<select id="proofReadiness"><option>Strong files already mapped to SKUs</option><option>Partial supplier / origin evidence</option><option>Weak or scattered files</option></select></label>
+        <label>Inventory timing<select id="inventoryTiming"><option>Receipts are arriving early</option><option>Receipts are on normal timing</option><option>Receipts may slip</option></select></label>
+        <label>Decision authority<select id="authority"><option>Single owner can decide</option><option>Cross-functional approval needed</option><option>Executive / legal gate needed</option></select></label>
+      </form>
+      <div class="builder-actions"><button class="primary-action" type="button" id="generateBrief">Generate readout</button></div>
+    </section>
+
+    <section class="view" id="view-output-readout" data-view="output-readout" aria-labelledby="readout-title" hidden>
+      <div class="section-heading"><p class="kicker">Output readout</p><h2 id="readout-title">Your next 72 hours</h2><p id="readoutIntro">Generate the brief to assign the queue.</p></div>
+      <section class="readout-layout">
+        <article class="recommendation"><span>Recommended posture</span><strong id="recommendationText">Build the queue before booking speed outruns evidence.</strong><p id="recommendationRationale">Use the builder to tailor this readout.</p></article>
+        <div class="owner-queue" id="ownerQueue"></div>
+        <aside class="watch-box"><h3>What to watch next</h3><ul><li>Reported July TEU by port and origin.</li><li>USTR final action timing and product examples.</li><li>Clean Drewry WCI lane table and diesel inventory updates.</li><li>ISM July supplier delivery, prices, imports and backlog readings.</li></ul></aside>
+      </section>
+    </section>
+
+    <section class="view" id="view-agent-workflow" data-view="agent-workflow" aria-labelledby="workflow-title" hidden>
+      <div class="section-heading"><p class="kicker">Agent workflow</p><h2 id="workflow-title">Three agents, one decision queue</h2><p>This is a static workflow model. It shows how an operator could automate the handoff without blending separate signals into one fake score.</p></div>
+      <div class="workflow-grid">
+        <article><span>01</span><h3>Signal Reader</h3><p>Reads public signals and keeps them separated: TEU, USTR transcripts, WCI, diesel, ISM, FAO and strategic-input stories.</p></article>
+        <article><span>02</span><h3>Business Matcher</h3><p>Maps signals to product families, suppliers, lanes, evidence gaps, margin exposure and current commitments.</p></article>
+        <article><span>03</span><h3>Decision Coach</h3><p>Outputs a next-72-hour agenda: owner, trigger, decision, approval gate and what happens if nobody owns it.</p></article>
+      </div>
+    </section>
+
+    <section class="view guide" id="view-guide" data-view="guide" aria-labelledby="guide-title" hidden>
+      <div class="section-heading"><p class="kicker">Operator guide</p><h2 id="guide-title">Use the signal without overcomplicating it.</h2><p>The W28 mechanism is simple: July front-loading buys time, but it also creates proof, cost and allocation work.</p></div>
+      <div class="guide-grid">
+        <article><span>1</span><h3>Keep facts and interpretation separate</h3><p>TEU, USTR, WCI, diesel and ISM are source facts. The operator read is the decision queue they create.</p></article>
+        <article><span>2</span><h3>Name the lane</h3><p>Every issue should land in booking, proof, cost or strategic inputs. If it does not change a decision, leave it on watch.</p></article>
+        <article><span>3</span><h3>Do not make a blended score</h3><p>Different signals have different owners and clocks. A single risk number hides who needs to act.</p></article>
+        <article><span>4</span><h3>Use field to fork as a case lens</h3><p>For food and ingredients, check fuel sensitivity, cold-chain capacity, supplier documentation and margin triggers.</p></article>
+        <article><span>5</span><h3>Separate watch from action</h3><p>What to Watch is external. What To Do This Week is internal. Do not confuse monitoring with ownership.</p></article>
+      </div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
