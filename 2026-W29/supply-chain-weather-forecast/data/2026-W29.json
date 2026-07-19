@@ -1,0 +1,86 @@
+{
+  "week": "2026-W29",
+  "source_mode": "signal-translation",
+  "chain_candidate": "ore to equipment",
+  "headline": "A dated-exception pressure front is moving across compliance, booking, steel and equipment files.",
+  "dek": "The weather is not one blended score. W29 has separate clocks: Brazil tariffs, USTR proof work, steel quotas, compressed bookings, EU cargo-data quality and long-lead electrical equipment.",
+  "forecast_horizon": "72 hours-8 weeks",
+  "confidence": "medium-high",
+  "zones": [
+    {
+      "name": "Brazil tariff clock",
+      "weather": "July 22 red-date front",
+      "severity": "red",
+      "operator_meaning": "Reuters reported new 25% duties on selected Brazilian furniture, ethanol, machinery, footwear, sugar and other goods from July 22, with exemptions that still require SKU-level review.",
+      "watch": "Importer notices, exemption status and supplier origin proof before July 22."
+    },
+    {
+      "name": "Forced-labor proof",
+      "weather": "Documentation fog bank",
+      "severity": "red",
+      "operator_meaning": "USTR hearings ran July 7-9 for proposed action tied to forced-labor import prohibitions across 60 economies; duty families and exemptions require file-level review.",
+      "watch": "Transcript posting, rebuttal timing, final action and product examples."
+    },
+    {
+      "name": "UK/EU steel",
+      "weather": "Quota-pressure system",
+      "severity": "orange",
+      "operator_meaning": "GOV.UK said UK tariff-free steel quota volumes were cut 51% with a 50% out-of-quota duty; Reuters reported EU duty-free quotas cut 47% to 18.3M metric tons with the same out-of-quota duty.",
+      "watch": "Product-code fit, quota availability, substitute approval and transitional treatment."
+    },
+    {
+      "name": "North America booking",
+      "weather": "Compressed peak-season squall",
+      "severity": "orange",
+      "operator_meaning": "NRF/Hackett forecast July covered-port volume at 2.47M TEU, above the May 2022 record; Maersk described frontloaded imports, tight trans-Pacific space and tightening inland capacity.",
+      "watch": "Reported July TEU, sailing cutoffs, protected-space availability and inland constraints."
+    },
+    {
+      "name": "Europe cargo data",
+      "weather": "ICS2 data-quality turbulence",
+      "severity": "yellow",
+      "operator_meaning": "Maersk Europe flagged ICS2 Release 3 cargo-data requirements alongside Rotterdam heatwave and Antwerp pilot constraints; weak classification or ENS detail can become a hold risk.",
+      "watch": "Classification completeness, ENS data quality and carrier operational updates."
+    },
+    {
+      "name": "Power equipment",
+      "weather": "Long-lead capacity drought",
+      "severity": "orange",
+      "operator_meaning": "Reuters/Wood Mackenzie reported generator step-up transformer lead times above 160 weeks in Q1 2026 and high-voltage circuit-breaker lead times at 125 weeks in H2 2025.",
+      "watch": "Reservation slots, project float, switchgear availability and approval gates."
+    }
+  ],
+  "reference_cards": [
+    {"label":"Brazil tariff date","value":"July 22","note":"25% duties reported by Reuters; exemptions need SKU review."},
+    {"label":"UK steel quotas","value":"-51%","note":"GOV.UK measure versus previous safeguard; 50% out-of-quota duty."},
+    {"label":"EU steel quotas","value":"18.3M tons","note":"Reuters reported 47% annual quota cut and 50% out-of-quota duty."},
+    {"label":"July import forecast","value":"2.47M TEU","note":"NRF/Hackett covered-port forecast above prior May 2022 record."},
+    {"label":"Drewry WCI","value":"$4,547 / 40ft","note":"16 July headline captured through noisy extraction; lane details remain re-check item."},
+    {"label":"Power equipment","value":"160+ weeks","note":"Generator step-up transformer lead times reported by Reuters/Wood Mackenzie."}
+  ],
+  "operator_translation": "Build a dated exception board instead of a weather score. Each station needs a clock, affected family, required file, primary owner, decision and escalation trigger.",
+  "operator_watchlist": [
+    "USTR transcript posting, rebuttal timing and final action.",
+    "Brazil July 22 implementation and importer notices.",
+    "Clean Drewry WCI lane details and Maersk booking updates.",
+    "Port, Descartes or Reuters confirmation of whether July approaches 2.47M TEU.",
+    "UK/EU steel quota effects on buyers and product-code decisions.",
+    "Transformer, breaker and switchgear lead-time changes."
+  ],
+  "newsletter_insert": {
+    "title": "Supply Chain Weather",
+    "headline": "Dated-exception pressure front: the clocks matter more than a composite score.",
+    "body": "This week's weather map has six separate stations: Brazil's July 22 tariff date, USTR forced-labor proof work, UK/EU steel quota pressure, compressed North America bookings, EU ICS2 data quality and long-lead electrical equipment. They should not be blended into one risk number because each has a different owner and clock.",
+    "operator_translation": "Before the next planning meeting, create a dated exception board with one row per trigger: affected family, required file, owner, deadline, decision and escalation trigger."
+  },
+  "sources": [
+    "Signal Translation 2026-W29 dated-exception-queue source-map.md",
+    "USTR July and June 2026 forced-labor Section 301 releases",
+    "Reuters Brazil tariff action, 16 July 2026",
+    "GOV.UK UK steel trade measure from 1 July 2026",
+    "Reuters EU steel quotas coverage, 30 June 2026",
+    "NRF/Hackett Global Port Tracker, July 2026",
+    "Maersk North America and Europe market updates, July 2026",
+    "Reuters/Wood Mackenzie power equipment lead-time coverage, July 2026"
+  ]
+}
