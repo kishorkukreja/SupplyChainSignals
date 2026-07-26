@@ -1,0 +1,115 @@
+{
+  "week": "2026-W30",
+  "source_mode": "signal-translation",
+  "chain_candidate": "molecule to medicine",
+  "headline": "The entry-exception front is live: separate the clocks, then assign the rows before cargo enters.",
+  "dek": "W30 weather is not one blended tariff score. USTR entry timing, India exemption math, Brazil stacking, freight, import pull-forward, pharma qualification, AI capacity and fuel each have separate owners, clocks and evidence files.",
+  "forecast_horizon": "72 hours-8 weeks",
+  "confidence": "medium-high",
+  "zones": [
+    {
+      "name": "USTR entry clock",
+      "weather": "Red cutoff front",
+      "severity": "red",
+      "operator_meaning": "USTR's forced-labor Section 301 final action became effective at 12:01 a.m. ET on 24 July 2026, with a transition cutoff at 12:01 a.m. ET on 28 July for qualifying goods loaded before the effective moment and entered before the cutoff.",
+      "watch": "CBP guidance, broker notes, disputes and USTR clarifications around product exemptions, country treatment and annex detail."
+    },
+    {
+      "name": "Duty coverage",
+      "weather": "Broad-rate pressure system",
+      "severity": "red",
+      "operator_meaning": "Reuters and FreightWaves reported 10% and 12.5% duty families across 60 trading partners, with coverage described as 99.4% of U.S. imports; USTR remains the source of record for legal decisions.",
+      "watch": "Do not use the public coverage number as a treatment decision; map affected country and product family to HTS, mechanism and exemption status."
+    },
+    {
+      "name": "India exemption math",
+      "weather": "Split-product fog",
+      "severity": "orange",
+      "operator_meaning": "Reuters reported India faces a 10% rate while India's commerce ministry said about 45% of U.S.-bound exports remain outside the fresh duty and 55% face it.",
+      "watch": "Product-family split, exemption treatment, supplier proof and customer-price caveats for India-linked rows."
+    },
+    {
+      "name": "Brazil stacking",
+      "weather": "Stacked-duty squall",
+      "severity": "orange",
+      "operator_meaning": "Reuters reported a 25% U.S. tariff threatening $7 billion to $11 billion of Brazilian exports and possible 37.5% combined duty on some goods if the forced-labor layer applies.",
+      "watch": "Exposed, exempt, stacked and uncertain Brazil rows before finance refreshes landed cost or reserves."
+    },
+    {
+      "name": "Freight station",
+      "weather": "Spot-rate downdraft",
+      "severity": "yellow",
+      "operator_meaning": "Drewry's 23 July tracker put the World Container Index at $4,374 per 40-foot container, down 4%, and IACI at $960 per 40-foot container, down 2%.",
+      "watch": "Next Drewry readings and route detail, kept separate from tariff treatment and import-volume indicators."
+    },
+    {
+      "name": "Import volume",
+      "weather": "Pull-forward humidity",
+      "severity": "yellow",
+      "operator_meaning": "Reuters, citing Descartes, reported June U.S. container imports up 8.2% year over year to 2,400,627 TEUs after buyers moved cargo early.",
+      "watch": "Whether July import strength becomes inventory overhang or sell-through-confirmed demand."
+    },
+    {
+      "name": "Pharma qualification",
+      "weather": "Long-run runway clock",
+      "severity": "orange",
+      "operator_meaning": "Supply Chain Dive reported a generic-drug tariff ladder that would keep qualifying goods at 0% for two years from 1 August before much higher levies; Reuters generic context cited FDA that more than 90% of U.S. medicines are generics.",
+      "watch": "Formal text and qualification, validation, site, API and packaging workstream timing."
+    },
+    {
+      "name": "AI infrastructure",
+      "weather": "Reservation-board heat",
+      "severity": "yellow",
+      "operator_meaning": "Reuters reported Samsung and Broadcom cooperation expected to exceed $200 billion through 2030, while separate power-equipment reporting points to data-center grid equipment constraints.",
+      "watch": "Transformer, switchgear, memory, packaging and grid-access reservation updates."
+    },
+    {
+      "name": "Fuel station",
+      "weather": "Surcharge watch",
+      "severity": "yellow",
+      "operator_meaning": "Reuters reported dated Brent at $105.70 and North Sea Forties at $108.77 on 24 July after supply disruptions.",
+      "watch": "Oil and fuel-surcharge movement as a separate cost station, not a container-rate claim."
+    }
+  ],
+  "reference_cards": [
+    {"label":"USTR effective time","value":"24 Jul 12:01 ET","note":"Forced-labor Section 301 final action effective time."},
+    {"label":"Transition cutoff","value":"28 Jul 12:01 ET","note":"For qualifying goods loaded before the effective moment and entered before cutoff."},
+    {"label":"Duty families","value":"10% / 12.5%","note":"Reuters/FreightWaves reported families across 60 trading partners; use USTR for legal scope."},
+    {"label":"India split","value":"45% / 55%","note":"Reported exempt versus exposed U.S.-bound export share per Reuters."},
+    {"label":"Brazil exposure","value":"$7B-$11B","note":"Reuters reported export exposure and possible 37.5% combined duty on some goods."},
+    {"label":"Drewry WCI","value":"$4,374 / 40ft","note":"23 July tracker, down 4%; keep separate from import-volume signal."},
+    {"label":"June U.S. imports","value":"2,400,627 TEU","note":"Reuters/Descartes reported +8.2% year over year after early cargo movement."},
+    {"label":"Dated Brent","value":"$105.70","note":"Reuters physical oil report, 24 July; fuel station only."}
+  ],
+  "operator_translation": "Do not blend the stations into a fake composite score. Build an entry exception board with one row per affected product, origin, HTS mechanism, exemption state, vessel or warehouse status, entry deadline, customer commitment and owner.",
+  "operator_watchlist": [
+    "CBP guidance, broker notes or disputes before and after the 28 July transition cutoff.",
+    "USTR clarifications on product exemptions, country treatment and annex details.",
+    "India, Brazil, Australia or other trading-partner responses that change exemption or retaliation risk.",
+    "Formal text for the reported generic-drug tariff schedule before the 1 August plan start.",
+    "Drewry's next WCI and IACI readings, kept separate from Freightos, SONAR and carrier commentary unless a source combines them.",
+    "Reuters/Descartes, NRF/Hackett or port data showing whether import pull-forward becomes inventory overhang.",
+    "Oil and fuel-surcharge movement, kept separate from container spot rates.",
+    "AI infrastructure procurement updates for transformers, switchgear, memory, advanced packaging and grid access."
+  ],
+  "newsletter_insert": {
+    "title": "Supply Chain Weather",
+    "headline": "Entry-exception weather: the clocks matter more than a composite score.",
+    "body": "This week's weather map has separate stations for the USTR 24-28 July entry clock, broad 10% and 12.5% duty families, India exemption math, Brazil stacking, Drewry freight, import pull-forward, pharma qualification, AI infrastructure and fuel. They should not be blended into one risk number because each station has a different source, owner and clock.",
+    "operator_translation": "Before the next planning meeting, create one entry exception board: product, origin, HTS, mechanism, exemption status, vessel status, entry deadline, customer commitment and named owner. External watch items stay external; internal action rows get owners."
+  },
+  "sources": [
+    "Signal Translation 2026-W30 entry-exception-board README.md, source-map.md and visuals.md",
+    "USTR, Notice of Actions in Section 301 Investigations of Forced Labor Import Policies, final action PDF, 23 July 2026",
+    "Reuters, Trump imposes new global tariffs, 24 July 2026",
+    "FreightWaves forced-labor tariff summary captured in W30 source files",
+    "Reuters, India to keep engaging with US on trade deal after new tariff measures, 25 July 2026",
+    "Reuters, New US 25% tariff hits billions of dollars in Brazilian exports, 22 July 2026",
+    "Drewry Latest Trackers and Indices, 23 July 2026 values captured in W30 source files",
+    "Reuters/Descartes, U.S. container imports jumped 8% in June, 8 July 2026",
+    "Supply Chain Dive, Trump maps out 200% tariffs for generic pharmaceuticals, 25 July 2026",
+    "Reuters generic-drug context captured in W30 source files citing FDA",
+    "Reuters Samsung-Broadcom AI chip partnership and Reuters power-equipment lead-time coverage, July 2026",
+    "Reuters physical oil prices report, 24 July 2026"
+  ]
+}
