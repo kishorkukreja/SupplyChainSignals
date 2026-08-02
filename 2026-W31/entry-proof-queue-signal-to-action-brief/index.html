@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supply Chain Signals | Entry Proof Queue</title>
+  <meta name="description" content="A 2026-W31 Signal-to-Action Brief for turning tariff and forced-labor proof signals into an owned entry proof queue." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="masthead" aria-labelledby="app-title">
+      <div class="brand-lockup">
+        <p class="kicker">Signal-to-Action Brief · 2026-W31</p>
+        <h1 id="app-title"><span>Supply Chain</span> Signals</h1>
+        <p class="tagline">Entry proof queue</p>
+      </div>
+      <div class="signal-band" aria-hidden="true"><svg viewBox="0 0 1200 120" role="img"><path d="M0 62H115l17-28 19 66 20-103 21 116 19-63 21 31 17-13h116l14-22 18 51 20-85 23 102 20-47 25 22 15-11h124l18-29 20 61 22-105 23 113 19-55 23 26 18-19h122l17-25 19 53 23-91 24 107 20-52 23 24 18-15h180" /></svg></div>
+    </section>
+
+    <nav class="view-tabs" aria-label="Application views">
+      <button class="view-tab is-active" type="button" data-view-target="start">Start</button>
+      <button class="view-tab" type="button" data-view-target="brief-builder">Brief builder</button>
+      <button class="view-tab" type="button" data-view-target="output-readout">Output readout</button>
+      <button class="view-tab" type="button" data-view-target="agent-workflow">Agent workflow</button>
+      <button class="view-tab" type="button" data-view-target="guide">Guide</button>
+    </nav>
+
+    <section class="view is-active" id="view-start" data-view="start" aria-labelledby="start-title">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Executive Signal</p>
+          <h2 id="start-title">The tariff rate is the headline. The proof file is the signal.</h2>
+          <p class="lede">W31 moved trade exposure from policy commentary into a shipment-level entry proof queue. Country treatment, in-transit timing, product exemptions, supplier evidence, broker instruction, landed cost and customer language now have to line up before the entry file is filed.</p>
+          <div class="hero-actions">
+            <button class="primary-action" type="button" data-view-target="brief-builder">Build my 72-hour brief</button>
+            <button class="secondary-action" type="button" data-view-target="guide">Read the guide</button>
+          </div>
+        </div>
+        <aside class="proof-board" aria-label="Entry proof queue lanes">
+          <article><span>Tariff authority</span><strong>USTR / Federal Register</strong><p>60 economies, rate buckets, exemption categories and effective dates.</p></article>
+          <article><span>Entry clock</span><strong>24 Jul / 28 Jul</strong><p>Effective at 12:01 a.m. ET on 24 July; in-transit relief cutoff on 28 July.</p></article>
+          <article><span>Supplier proof</span><strong>Evidence speed</strong><p>Forced-labor, origin and exemption files need named owners.</p></article>
+          <article><span>Customer decision</span><strong>No blanket surcharge</strong><p>Sales language waits for legal treatment, timing and landed-cost status.</p></article>
+        </aside>
+      </div>
+
+      <section class="section-card">
+        <p class="kicker">What Changed</p>
+        <div class="reference-grid">
+          <article><span>Import coverage</span><strong>99.4%</strong><p>USTR's fact sheet says the affected trade partners cover 99.4% of U.S. imports.</p></article>
+          <article><span>UFLPA list</span><strong>144 → 187</strong><p>Reuters reported 43 additional companies, widening forced-labor screening exposure.</p></article>
+          <article><span>Drewry WCI</span><strong>$4,255 / 40ft</strong><p>30 July WCI composite, kept separate from tariff and import-volume stations.</p></article>
+          <article><span>NRF/Hackett July</span><strong>2.47M TEU</strong><p>Covered-port forecast; August forecast falls to 2.22M TEU.</p></article>
+        </div>
+      </section>
+
+      <section class="section-card two-column">
+        <div><p class="kicker">Operator Read</p><h3>Proof capacity is the bottleneck.</h3><p>The scarce resource is not another policy memo. It is a clean row that customs, procurement, logistics, finance, brokers and sales can all use before a shipment becomes an entry, landed-cost update or customer commitment.</p></div>
+        <div><p class="kicker">Chain of the Week</p><h3>Cotton to closet</h3><p>Apparel makes the mechanism concrete: country placement, quota feasibility, cotton-input proof, supplier labor evidence and lead-time risk now sit in the same sourcing scorecard.</p></div>
+      </section>
+    </section>
+
+    <section class="view" id="view-brief-builder" data-view="brief-builder" aria-labelledby="builder-title" hidden>
+      <div class="section-heading">
+        <p class="kicker">Brief Builder</p>
+        <h2 id="builder-title">Answer six context questions. Do not enter raw operating metrics.</h2>
+        <p>The public signal has already been translated. This builder only asks where the entry proof queue touches your business.</p>
+      </div>
+      <form class="builder-grid" id="briefForm">
+        <label>Exposed product or lane<select id="exposure"><option>Mixed-origin import portfolio</option><option>Apparel / textile shipment</option><option>Supplier with forced-labor proof exposure</option><option>Parcel-heavy retail import flow</option><option>Multi-country bill of material</option><option>Customer order already quoted</option></select></label>
+        <label>Decision due next<select id="deadline"><option>Before broker filing</option><option>Before next purchase order release</option><option>Before customer pass-through language changes</option><option>Before S&OP / finance review</option><option>Before supplier commitment</option></select></label>
+        <label>Primary constraint<select id="constraint"><option>Compliance confidence</option><option>Margin / landed cost</option><option>Service level</option><option>Supplier evidence speed</option><option>Working capital</option><option>Executive attention</option></select></label>
+        <label>Evidence state<select id="evidence"><option>Proof is mapped to SKU, origin, supplier and HTS</option><option>Supplier files exist but owner is unclear</option><option>Country-level model exists; row proof does not</option><option>Broker, procurement and finance have different files</option><option>External guidance is still moving</option></select></label>
+        <label>Decision authority<select id="authority"><option>Trade compliance lead</option><option>Customs + procurement + finance</option><option>Logistics + broker + compliance</option><option>Finance + sales owner</option><option>Executive escalation required</option></select></label>
+        <label>Implementation friction<select id="friction"><option>Broker instruction timing</option><option>Product exemption ambiguity</option><option>Supplier proof response speed</option><option>Customer communication</option><option>Refund / protest recordkeeping</option><option>Systems do not share one file</option></select></label>
+      </form>
+      <div class="builder-actions"><button class="primary-action" type="button" id="generateBrief">Generate readout</button></div>
+    </section>
+
+    <section class="view" id="view-output-readout" data-view="output-readout" aria-labelledby="readout-title" hidden>
+      <div class="section-heading"><p class="kicker">Output Readout</p><h2 id="readout-title">Your next 72 hours</h2><p id="readoutIntro">Generate the brief to assign the entry proof queue.</p></div>
+      <section class="readout-layout">
+        <article class="recommendation"><span>Recommended posture</span><strong id="recommendationText">Create an entry proof board before the next entry decision.</strong><p id="recommendationRationale">Use the builder to tailor this readout.</p></article>
+        <div class="owner-queue" id="ownerQueue"></div>
+        <aside class="watch-box"><h3>What To Watch Next</h3><ul><li>CBP/USTR implementation guidance and broker practice after the Federal Register notice.</li><li>UFLPA list updates, detention data and sector alerts.</li><li>Drewry and Freightos lane moves, kept as separate metric families.</li><li>NRF/Hackett import forecasts versus Reuters/Descartes reported TEUs.</li><li>Textile TRQ details for Bangladesh, Cambodia, Indonesia and Malaysia before 1 September.</li><li>ISM supplier deliveries, prices and short-supply commodities after the 3 August release.</li></ul></aside>
+      </section>
+    </section>
+
+    <section class="view" id="view-agent-workflow" data-view="agent-workflow" aria-labelledby="workflow-title" hidden>
+      <div class="section-heading"><p class="kicker">Agent Workflow</p><h2 id="workflow-title">Signal Reader → Business Matcher → Decision Coach</h2><p>A deterministic in-browser handoff that turns public signals into an owner queue without inventing a composite score.</p></div>
+      <div class="workflow-grid">
+        <article><span>01</span><h3>Signal Reader</h3><p>Separates USTR/Federal Register dates, UFLPA expansion, Drewry/Freightos freight, NRF/Hackett forecasts, Reuters/Descartes TEUs and ISM indicators into traceable evidence families.</p></article>
+        <article><span>02</span><h3>Business Matcher</h3><p>Maps the evidence to product family, origin, HTS treatment, exemption status, supplier proof, entry timing, landed-cost treatment and customer exposure.</p></article>
+        <article><span>03</span><h3>Decision Coach</h3><p>Outputs owner, file, next 72-hour move, failure mode and external watchlist. Legal and commercial commitments stay with human owners.</p></article>
+      </div>
+    </section>
+
+    <section class="view guide" id="view-guide" data-view="guide" aria-labelledby="guide-title" hidden>
+      <div class="section-heading"><p class="kicker">Guide</p><h2 id="guide-title">Use the weekly signal as an entry proof queue, not a tariff dashboard.</h2><p>What Changed is external fact. Operator Read is interpretation. What To Do This Week is internal action. What To Watch Next stays external-only.</p></div>
+      <div class="guide-grid">
+        <article><span>1</span><h3>Open the row</h3><p>Each row needs SKU or shipment group, origin, HTS, authority, exemption status, in-transit status, supplier proof, broker instruction, landed-cost treatment and customer exposure.</p></article>
+        <article><span>2</span><h3>Name the owner</h3><p>Trade compliance cannot finish without procurement proof, logistics timing, finance treatment and sales language.</p></article>
+        <article><span>3</span><h3>Keep stations separate</h3><p>Do not blend freight relief, import pull-forward and tariff proof into one score. Each station has a different source and decision owner.</p></article>
+        <article><span>4</span><h3>Set the failure mode</h3><p>The avoidable failure is a broker filing, supplier commitment or customer surcharge that uses a different fact file than finance or compliance.</p></article>
+        <article><span>5</span><h3>Review in 72 hours</h3><p>Close rows only when proof, timing, landed cost and customer language point to the same decision.</p></article>
+      </div>
+      <section class="section-card"><p class="kicker">Sources</p><p>Built from the 2026-W31 Signal Translation package: README.md, source-map.md, visuals.md and substack.md. Primary source families include USTR, Federal Register, Reuters, Supply Chain Dive, Drewry, Freightos, NRF/Hackett, Reuters/Descartes and ISM.</p></section>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

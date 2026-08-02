@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supply Chain Weather | 2026-W31</title>
+  <meta name="description" content="W31 Supply Chain Weather forecast for the entry proof queue." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="weather-shell">
+    <header class="masthead">
+      <p class="kicker">Supply Chain Weather · 2026-W31</p>
+      <h1><span>Supply Chain</span> Weather</h1>
+      <p id="dek">Separate stations. Separate clocks. No fake composite score.</p>
+      <div class="signal-band" aria-hidden="true"><svg viewBox="0 0 1200 120"><path d="M0 60H120l18-32 18 70 20-104 22 118 18-62 20 30 15-12h118l13-20 19 48 20-84 22 101 20-48 24 22 16-12h124l18-28 20 60 22-104 23 112 18-54 23 25 18-18h122l16-24 20 52 22-90 24 106 20-51 23 23 18-14h180" /></svg></div>
+    </header>
+    <section class="headline-panel">
+      <p class="kicker">Forecast</p>
+      <h2 id="headline">Loading forecast…</h2>
+      <p id="summary"></p>
+    </section>
+    <section class="station-grid" id="stationGrid" aria-label="Weather stations"></section>
+    <section class="reference-grid" id="referenceGrid" aria-label="Reference cards"></section>
+    <section class="operator-panel">
+      <article><p class="kicker">Operator Translation</p><p id="operatorTranslation"></p></article>
+      <article><p class="kicker">What To Watch Next</p><ul id="watchList"></ul></article>
+    </section>
+    <section class="source-panel"><p class="kicker">Sources</p><ul id="sourceList"></ul></section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
