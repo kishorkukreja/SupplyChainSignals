@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Supply Chain Signals — W32 Restart-and-Reservation Board</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="masthead">
+        <div class="brand-lockup">
+          <p class="kicker">2026-W32 Signal-to-Action Brief</p>
+          <h1>Supply Chain <span>Signals</span></h1>
+          <p class="tagline">The peak may be fading, but the queue remains.</p>
+        </div>
+        <div class="signal-band" aria-hidden="true">
+          <svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path class="signal-grid" d="M0 52 L80 52 L110 20 L150 64 L210 64 L240 34 L290 34 L330 58 L390 58 L430 16 L500 16 L540 68 L610 68 L650 30 L720 30 L760 54 L840 54 L880 22 L960 22 L1000 62 L1080 62 L1120 38 L1200 38" /></svg>
+        </div>
+        <nav class="view-tabs" aria-label="Brief views">
+          <button class="view-tab is-active" data-view="start-view">Start</button>
+          <button class="view-tab" data-view="brief-builder-view">Brief Builder</button>
+          <button class="view-tab" data-view="output-readout-view">Readout</button>
+          <button class="view-tab" data-view="agent-workflow-view">Agent Workflow</button>
+          <button class="view-tab" data-view="guide-view">Guide</button>
+        </nav>
+      </header>
+
+      <main>
+        <section id="start-view" class="view landing-view">
+          <div class="landing-copy">
+            <p class="kicker">Executive Signal</p>
+            <h2>Do not ask whether supply chains are tight or loose. Ask which clock needs an owner.</h2>
+            <p>W32's useful operating signal is the restart-and-reservation board: as the front-loaded import peak starts to fade, the work moves into separate owner files for restart recovery, entry filing, freight/import lanes, and scarce inputs.</p>
+            <div class="landing-actions">
+              <button class="primary-action" data-jump="brief-builder-view">Build this week's action brief</button>
+              <button class="secondary-action" data-jump="guide-view">How to use the signal</button>
+            </div>
+          </div>
+          <div class="landing-options">
+            <article><span>What changed</span><strong>ISM manufacturing PMI 55.6; Supplier Deliveries 58.9; Prices 71.1.</strong><p>Expansion still carries input-time pressure.</p></article>
+            <article><span>Import calendar</span><strong>August major-port imports forecast at 2.2M TEUs, down 4.2% YoY.</strong><p>The rush may cool while the reservations remain.</p></article>
+            <article><span>Entry-file clock</span><strong>Forced-labor Section 301 duties of 10%–12.5% from July 24.</strong><p>HTSUS sequence, exemptions, broker instructions and proof files need ownership.</p></article>
+            <article><span>Restart clock</span><strong>Typhoon Dolphin forced Shanghai flights, ferries and Yangshan vessels into restart mode.</strong><p>Current evidence supports a Monday recovery check, not a congestion claim.</p></article>
+          </div>
+        </section>
+
+        <section id="brief-builder-view" class="view workspace" hidden>
+          <div class="section-heading">
+            <p class="kicker">Brief Builder</p>
+            <h2>Answer context questions, not raw operating metrics.</h2>
+            <p>The app translates your local situation into a four-lane owner queue. No carton counts, dock percentages or private freight tables required.</p>
+          </div>
+          <form id="brief-form" class="builder-grid">
+            <label>Which exposure is live this week?
+              <select id="exposure">
+                <option value="restart">China coast / weather restart node</option>
+                <option value="entry">U.S. import entry file or tariff proof</option>
+                <option value="freight">Ocean booking, import timing or customer promise</option>
+                <option value="scarce">Scarce input, supplier slot or dated policy window</option>
+                <option value="food">Food-input or Black Sea logistics trigger</option>
+              </select>
+            </label>
+            <label>What decision is due in the next 72 hours?
+              <select id="decision">
+                <option value="promise">Keep or revise a customer promise</option>
+                <option value="reserve">Reserve / prepay / qualify a supplier slot</option>
+                <option value="file">Clean entry files and broker instructions</option>
+                <option value="booking">Change a freight booking or lane plan</option>
+                <option value="cash">Protect margin and working-capital discipline</option>
+              </select>
+            </label>
+            <label>Who can unblock the decision?
+              <select id="owner">
+                <option value="logistics">Logistics</option>
+                <option value="trade">Trade compliance</option>
+                <option value="procurement">Procurement</option>
+                <option value="finance">Finance</option>
+                <option value="sales">Sales / customer owner</option>
+              </select>
+            </label>
+            <label>Which constraint matters most?
+              <select id="constraint">
+                <option value="service">Service level</option>
+                <option value="margin">Margin / landed cost</option>
+                <option value="capital">Working capital</option>
+                <option value="compliance">Compliance proof</option>
+                <option value="speed">Speed of execution</option>
+              </select>
+            </label>
+            <label>What implementation friction is most likely?
+              <select id="friction">
+                <option value="handoff">Unclear cross-functional handoff</option>
+                <option value="proof">Missing document or exemption proof</option>
+                <option value="signal">Conflicting public signals</option>
+                <option value="authority">No approval authority for premium cost or prepay</option>
+                <option value="customer">Customer expectation already set</option>
+              </select>
+            </label>
+            <button class="primary-action full" type="submit">Generate owner queue</button>
+          </form>
+        </section>
+
+        <section id="output-readout-view" class="view workspace" hidden>
+          <div class="section-heading">
+            <p class="kicker">Output Readout</p>
+            <h2 id="recommendation-title">Your W32 board is ready.</h2>
+            <p id="recommendation-summary">Use the builder to generate a tailored 72-hour owner queue.</p>
+          </div>
+          <div class="readout-grid">
+            <article class="readout-card decision"><h3>Decision</h3><p id="decision-copy">Assign an owner before interpreting another index.</p></article>
+            <article class="readout-card"><h3>Rationale</h3><p id="rationale-copy">The source signal is already translated: the pressure is in separate clocks, not one composite score.</p></article>
+            <article class="readout-card"><h3>Next 72 hours</h3><ul id="owner-queue"></ul></article>
+            <article class="readout-card"><h3>External watchlist</h3><ul id="watchlist"></ul></article>
+          </div>
+          <div class="lane-board" aria-label="Four lane operating board">
+            <article><span>Restart clock</span><strong>Owner: logistics</strong><p>Monday port, airport, rail, vessel and customer-promise check.</p></article>
+            <article><span>Entry file</span><strong>Owner: trade compliance</strong><p>Country bucket, HTSUS sequence, exemption proof and broker instruction.</p></article>
+            <article><span>Freight/import lane</span><strong>Owner: logistics + planning</strong><p>Keep Drewry, Freightos and import forecasts as separate cards.</p></article>
+            <article><span>Scarce input</span><strong>Owner: procurement + finance</strong><p>Reserve, qualify, hedge, prepay or stand down by dated trigger.</p></article>
+          </div>
+        </section>
+
+        <section id="agent-workflow-view" class="view workspace" hidden>
+          <div class="section-heading">
+            <p class="kicker">Agent Workflow</p>
+            <h2>Signal Reader → Business Matcher → Decision Coach</h2>
+            <p>The browser simulates the agent handoff deterministically. The user supplies context; the app supplies operating translation.</p>
+          </div>
+          <div class="workflow">
+            <article><b>01 Signal Reader</b><p>Separates ISM, TEU forecasts, freight indexes, CBP guidance, FAO prices, weather and dated policy windows. It rejects a fake composite metric.</p></article>
+            <article><b>02 Business Matcher</b><p>Maps the selected exposure to the function that can actually unblock it: logistics, trade compliance, procurement, finance or sales.</p></article>
+            <article><b>03 Decision Coach</b><p>Turns that match into a next-72-hour owner queue with a falsifier and external watch items.</p></article>
+          </div>
+        </section>
+
+        <section id="guide-view" class="view workspace guide" hidden>
+          <div class="section-heading">
+            <p class="kicker">Guide</p>
+            <h2>How to use W32 without doing the signal translation yourself.</h2>
+          </div>
+          <div class="guide-grid">
+            <article><h3>1. Start with a due decision.</h3><p>Pick the customer promise, broker instruction, reservation, booking or approval due this week.</p></article>
+            <article><h3>2. Put it in one lane.</h3><p>Restart, entry file, freight/import and scarce input have different owners and falsifiers. Do not average them.</p></article>
+            <article><h3>3. Assign the owner before reading more news.</h3><p>Another headline does not fix a late handoff between master data, broker, logistics, procurement, finance and sales.</p></article>
+            <article><h3>4. Keep What To Watch external.</h3><p>Watch Yangshan/Shanghai recovery, CBP CSMS updates, Drewry/Freightos lane cards, July port actuals, Odesa, Port Hedland and polysilicon/generic-drug implementation details.</p></article>
+          </div>
+          <aside class="source-note"><b>Source mode:</b> built from the 2026-W32 Signal Translation package on /data/Self-OS origin/master: README.md, source-map.md, visuals.md and substack.md.</aside>
+        </section>
+      </main>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

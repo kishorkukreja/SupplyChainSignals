@@ -1,0 +1,92 @@
+{
+  "week": "2026-W32",
+  "title": "Supply Chain Weather Forecast",
+  "subtitle": "One week, four clocks — separate stations, no composite score.",
+  "sourceMode": "Signal Translation package on /data/Self-OS origin/master",
+  "sourceFiles": [
+    "analysis/signal-translation/2026-W32/restart-and-reservation-board/README.md",
+    "analysis/signal-translation/2026-W32/restart-and-reservation-board/source-map.md",
+    "analysis/signal-translation/2026-W32/restart-and-reservation-board/visuals.md",
+    "analysis/signal-translation/2026-W32/restart-and-reservation-board/substack.md"
+  ],
+  "stations": [
+    {
+      "id": "restart-clock",
+      "label": "Restart clock",
+      "condition": "Live recovery watch",
+      "owner": "Logistics",
+      "facts": [
+        "Typhoon Dolphin made landfall near Yuhuan, Zhejiang.",
+        "Reuters reported about 1,500 Shanghai flights cancelled, 55 Fujian ferry routes suspended and more than 500 Yangshan vessels moved to shelter.",
+        "Current evidence supports a Monday recovery clock, not a sustained congestion claim."
+      ],
+      "decision": "Check exposed ports, airports, rail nodes, vessels and customer promises before confirming Monday commitments.",
+      "watch": "Yangshan, Ningbo, Shanghai airports, Yangtze River Delta rail and Zhejiang/Fujian port recovery."
+    },
+    {
+      "id": "entry-file",
+      "label": "Entry-file station",
+      "condition": "Compliance sequencing",
+      "owner": "Trade compliance",
+      "facts": [
+        "CBP guidance covers USTR forced-labor Section 301 duties of 10% to 12.5% on imports from sixty economies.",
+        "The guidance applies to goods entered for consumption or withdrawn from warehouse on or after July 24, with HTSUS sequence instructions.",
+        "Federal Register timing and in-transit treatment make dated proof and broker instructions operational work."
+      ],
+      "decision": "Assign origin evidence, Chapter 99 sequence, exemption proof, broker instruction and finance review for exposed entries.",
+      "watch": "CBP CSMS updates, filing errors, exemption details and counsel-reviewed product decisions."
+    },
+    {
+      "id": "freight-import",
+      "label": "Freight/import station",
+      "condition": "Mixed lane cards",
+      "owner": "Logistics and planning",
+      "facts": [
+        "Reuters/NRF/Hackett forecast August major-port imports at 2.2 million TEUs, down 4.2% year over year.",
+        "FreightWaves/Freightos reported Asia-North America spot rates down 60% to 70%, with West Coast at $1,744/FEU and East Coast at $2,733/FEU.",
+        "Drewry's August 6 World Container Index moved up 1% to $4,297 per 40-foot container after three weekly declines."
+      ],
+      "decision": "Keep forecasts, lane rates and index cards separate; change bookings only where the card maps to live demand or a customer promise.",
+      "watch": "Next Drewry and Freightos/FreightWaves cards, July port actuals and the next NRF/Hackett Global Port Tracker update."
+    },
+    {
+      "id": "scarce-input",
+      "label": "Scarce-input station",
+      "condition": "Reservation pressure",
+      "owner": "Procurement and finance",
+      "facts": [
+        "ISM July Manufacturing PMI was 55.6, with Supplier Deliveries 58.9, Prices 71.1 and Customers' Inventories 40.7.",
+        "ISM listed electrical components, integrated circuits, memory, rare earth components, semiconductors, steel and tungsten products in short supply.",
+        "Reuters reported polysilicon tariff/minimum-price measures with December 4 implementation delay."
+      ],
+      "decision": "Rank reservations by service-critical or profitable demand; assign approval for reserve, qualify, hedge, prepay or stand down.",
+      "watch": "Next ISM readings, supplier payment terms, polysilicon implementation detail and generic-drug policy text."
+    },
+    {
+      "id": "food-input",
+      "label": "Food-input station",
+      "condition": "Category trigger watch",
+      "owner": "Procurement and logistics",
+      "facts": [
+        "FAO July Food Price Index was 131.1, up 0.6% from June.",
+        "FAO reported cereals up 3.4%, wheat up 5.8%, vegetable oils up 2.0%, sugar up 5.6%, meat down 2.8% and dairy down 0.7%.",
+        "Reuters reported Odesa seaport damage; the port complex is a key agricultural export artery, but cargo-flow impact was not yet quantified."
+      ],
+      "decision": "Keep food category moves and Black Sea logistics as trigger cards for buy timing, substitute qualification and customer communication.",
+      "watch": "FAO category updates, Odesa cargo-flow evidence and supplier quote validity windows."
+    }
+  ],
+  "newsletterInsert": {
+    "headline": "Supply Chain Weather: one week, four clocks",
+    "copy": "This week's weather is not a composite risk score. It is five separate stations: restart recovery, entry-file compliance, freight/import lanes, scarce inputs and food-input triggers. Each station has a different owner, trigger and falsifier."
+  },
+  "sources": [
+    "ISM July Manufacturing PMI and Services PMI",
+    "Reuters / NRF-Hackett import forecast",
+    "FreightWaves / Freightos Asia-North America spot-rate reporting",
+    "Drewry World Container Index, August 6",
+    "CBP CSMS #69326983 and Federal Register Section 301 notice",
+    "FAO July Food Price Index",
+    "Reuters Typhoon Dolphin, Odesa, Port Hedland, polysilicon and generic-drug policy reporting"
+  ]
+}
