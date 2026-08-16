@@ -1,0 +1,94 @@
+{
+  "week": "2026-W33",
+  "title": "Supply Chain Weather Forecast",
+  "subtitle": "Five separate weather stations for verified exception files — no composite risk score.",
+  "sourceMode": "Signal Translation package on /data/Self-OS origin/master",
+  "sourceFiles": [
+    "analysis/signal-translation/2026-W33/verified-exception-file/README.md",
+    "analysis/signal-translation/2026-W33/verified-exception-file/source-map.md",
+    "analysis/signal-translation/2026-W33/verified-exception-file/visuals.md",
+    "analysis/signal-translation/2026-W33/verified-exception-file/substack.md"
+  ],
+  "stations": [
+    {
+      "id": "origin-proof",
+      "label": "Origin-proof station",
+      "condition": "Inspection-ready evidence",
+      "owner": "Trade compliance",
+      "facts": [
+        "Reuters reported a White House transshipment report estimating $19 billion to $26 billion in annual lost tariff revenue.",
+        "The same reporting said CBP is using AI tools to inspect container markings, packaging patterns and X-ray images for mismatches.",
+        "USTR and Federal Register forced-labor Section 301 signals move policy into dated entry and origin-proof records."
+      ],
+      "decision": "Attach supplier, routing, entry and origin evidence to exposed shipments before approval or customer promise.",
+      "watch": "CBP enforcement signals, USTR/Federal Register notices, broker exception logs and origin-proof gaps."
+    },
+    {
+      "id": "classification-master-data",
+      "label": "Classification station",
+      "condition": "Product-master-data review",
+      "owner": "Trade compliance and master data",
+      "facts": [
+        "Supply Chain Dive coverage of drone tariffs and Section 232 derivative proposals keeps product classification live.",
+        "Classification rows require HTS, product description, country treatment and approval evidence.",
+        "A tariff schedule alone does not prove treatment for a specific SKU or importer."
+      ],
+      "decision": "Assign one owner for HTS/product-master-data rows and hold exceptions where proof or legal approval is missing.",
+      "watch": "Federal Register updates, counsel-reviewed classifications and master-data change logs."
+    },
+    {
+      "id": "freight-capacity",
+      "label": "Freight-capacity station",
+      "condition": "Mixed volume and rate cards",
+      "owner": "Logistics and planning",
+      "facts": [
+        "FreightWaves, citing Descartes, said July U.S. containerized imports rose 4.5% from June to 2,508,310 TEUs.",
+        "FreightWaves/Xeneta reported Far East to U.S. rates still falling.",
+        "Reuters Rhine low-water reporting keeps inland-waterway fallback capacity on the watch board."
+      ],
+      "decision": "Keep volume, rate, booking, inventory and fallback-route assumptions as separate owner cards.",
+      "watch": "Descartes, NRF/Hackett, Xeneta/FreightWaves lane cards, port actuals and Rhine Kaub levels."
+    },
+    {
+      "id": "inventory-simulation",
+      "label": "Inventory-simulation station",
+      "condition": "AI-assisted planning with approval needed",
+      "owner": "Planning / S&OP",
+      "facts": [
+        "Reuters reported manufacturers using AI as inventory buffers shrink.",
+        "The Signal Translation package cites McKinsey survey work showing reliance on larger buffers down to 34% from 60% in 2022.",
+        "It also cites Gartner's estimate that supply-chain software spending including generative AI could reach $55 billion by 2029."
+      ],
+      "decision": "Treat AI or digital-twin output as an exception note with a named owner, approval and failure mode.",
+      "watch": "Planning-data quality, audit trails, override rules and pilot-to-rollout performance claims."
+    },
+    {
+      "id": "farm-to-fork-proof",
+      "label": "Farm-to-fork proof station",
+      "condition": "Input, freshness and storage evidence",
+      "owner": "Procurement, quality and logistics",
+      "facts": [
+        "FAO's July Food Price Index rose 0.6% from June while cereals, vegetable oils and sugar rose and meat and dairy fell.",
+        "Supply Chain Dive reported Target's Proxima fresh-food digital-twin pilot improved on-shelf availability by 2.5% for 63 items and simulated a 1.2 million-square-foot receive center with about 98% accuracy.",
+        "Reuters reported Maharashtra suspended permits for 12 quick-commerce warehouses after inspections across 86 establishments."
+      ],
+      "decision": "Create proof files for input exposure, freshness, storage compliance, fallback routing and availability promises.",
+      "watch": "FAO category moves, food-safety inspections, supplier proof, storage permits and fresh-food availability pilots."
+    }
+  ],
+  "newsletterInsert": {
+    "headline": "Supply Chain Weather: five verified-exception stations",
+    "copy": "This week's weather is not one risk score. It is five separate stations — origin proof, classification, freight capacity, inventory simulation and farm-to-fork proof. Each station needs a source, owner, proof artifact, deadline, approval and failure mode before the next decision."
+  },
+  "sources": [
+    "Reuters White House transshipment report / CBP AI inspection reporting",
+    "USTR and Federal Register forced-labor Section 301 materials",
+    "FreightWaves / Descartes July U.S. containerized import reporting",
+    "FreightWaves / Xeneta Far East to U.S. rate reporting",
+    "Reuters Rhine low-water reporting",
+    "Reuters manufacturer AI and inventory-buffer reporting",
+    "Supply Chain Dive Target Proxima coverage",
+    "FAO July Food Price Index",
+    "Reuters Maharashtra quick-commerce warehouse inspection reporting"
+  ]
+}
