@@ -1,47 +1,39 @@
 async function loadForecast() {
   const response = await fetch('./data/2026-W33.json');
-  if (!response.ok) throw new Error(`Unable to load forecast data: ${response.status}`);
-  return response.json();
+  const data = await response.json();
+
+  document.getElementById('headline').textContent = data.headline;
+  document.getElementById('dek').textContent = data.dek;
+  document.getElementById('horizon').textContent = data.forecastHorizon;
+  document.getElementById('confidence').textContent = data.confidence;
+
+  document.getElementById('stationGrid').innerHTML = data.stations.map((station) => `
+    <article class="station">
+      <span><i class="severity ${station.severity}"></i> ${station.condition}</span>
+      <h3>${station.label}</h3>
+      <p><strong>Owner:</strong> ${station.owner}</p>
+      <ul>${station.facts.map((fact) => `<li>${fact}</li>`).join('')}</ul>
+      <p><strong>Operator meaning:</strong> ${station.operatorMeaning}</p>
+      <p><strong>Watch:</strong> ${station.watch}</p>
+    </article>
+  `).join('');
+
+  document.getElementById('referenceCards').innerHTML = data.referenceCards.map((card) => `
+    <article class="card">
+      <span>${card.label}</span>
+      <strong>${card.value}</strong>
+      <p>${card.note}</p>
+    </article>
+  `).join('');
+
+  const insert = data.newsletterInsert;
+  document.getElementById('newsletterCopy').innerHTML = `
+    <h3>${insert.title}: ${insert.headline}</h3>
+    <p>${insert.body}</p>
+    <p><strong>Operator translation:</strong> ${insert.operatorTranslation}</p>
+  `;
 }
 
-function el(tag, className, text) {
-  const node = document.createElement(tag);
-  if (className) node.className = className;
-  if (text) node.textContent = text;
-  return node;
-}
-
-function renderStation(station) {
-  const card = el('article', 'station-card');
-  card.id = station.id;
-  card.appendChild(el('span', 'station-condition', station.condition));
-  card.appendChild(el('h3', null, station.label));
-  card.appendChild(el('p', 'owner', `Owner: ${station.owner}`));
-  const facts = el('ul', 'facts');
-  station.facts.forEach(fact => facts.appendChild(el('li', null, fact)));
-  card.appendChild(facts);
-  const decision = el('p', 'decision', station.decision);
-  card.appendChild(decision);
-  card.appendChild(el('p', 'watch', `Watch: ${station.watch}`));
-  return card;
-}
-
-function renderSources(sources) {
-  const list = document.getElementById('sources');
-  list.innerHTML = '';
-  sources.forEach(source => list.appendChild(el('li', null, source)));
-}
-
-loadForecast().then(data => {
-  document.getElementById('forecast-title').textContent = `${data.week}: ${data.title}`;
-  document.getElementById('forecast-subtitle').textContent = data.subtitle;
-  document.getElementById('insert-headline').textContent = data.newsletterInsert.headline;
-  document.getElementById('insert-copy').textContent = data.newsletterInsert.copy;
-  const stations = document.getElementById('weather-stations');
-  stations.innerHTML = '';
-  data.stations.forEach(station => stations.appendChild(renderStation(station)));
-  renderSources(data.sources);
-}).catch(error => {
-  document.getElementById('forecast-title').textContent = 'Forecast data unavailable';
-  document.getElementById('forecast-subtitle').textContent = error.message;
+loadForecast().catch((error) => {
+  document.getElementById('dek').textContent = `Forecast failed to load: ${error.message}`;
 });

@@ -1,94 +1,116 @@
 {
   "week": "2026-W33",
   "title": "Supply Chain Weather Forecast",
-  "subtitle": "Five separate weather stations for verified exception files — no composite risk score.",
-  "sourceMode": "Signal Translation package on /data/Self-OS origin/master",
+  "subtitle": "Separate weather stations for declarations under test — no composite risk score.",
+  "sourceMode": "Signal Translation package on /data/Self-OS origin/master, commit 566d79d2",
   "sourceFiles": [
-    "analysis/signal-translation/2026-W33/verified-exception-file/README.md",
-    "analysis/signal-translation/2026-W33/verified-exception-file/source-map.md",
-    "analysis/signal-translation/2026-W33/verified-exception-file/visuals.md",
-    "analysis/signal-translation/2026-W33/verified-exception-file/substack.md"
+    "analysis/signal-translation/2026-W33/pattern-matched-customs-enforcement/README.md",
+    "analysis/signal-translation/2026-W33/pattern-matched-customs-enforcement/research.md",
+    "analysis/signal-translation/2026-W33/pattern-matched-customs-enforcement/source-map.md",
+    "analysis/signal-translation/2026-W33/pattern-matched-customs-enforcement/visuals.md",
+    "analysis/signal-translation/2026-W33/pattern-matched-customs-enforcement/substack.md",
+    "newsletters/supply-chain-signals/2026-W33/brief/supply-chain-signals-2026-W33-brief.md"
   ],
+  "headline": "Declarations are becoming testable claims.",
+  "dek": "This week's weather is not one score. It is a set of evidence-pressure stations where declared supply-chain records can be compared with observable signals.",
+  "forecastHorizon": "Now through early September policy clocks",
+  "confidence": "medium-high",
   "stations": [
     {
-      "id": "origin-proof",
-      "label": "Origin-proof station",
-      "condition": "Inspection-ready evidence",
+      "id": "origin-observation",
+      "label": "Origin observation station",
+      "condition": "Pattern-detection pressure front",
+      "severity": "red",
       "owner": "Trade compliance",
       "facts": [
         "Reuters reported a White House transshipment report estimating $19 billion to $26 billion in annual lost tariff revenue.",
-        "The same reporting said CBP is using AI tools to inspect container markings, packaging patterns and X-ray images for mismatches.",
-        "USTR and Federal Register forced-labor Section 301 signals move policy into dated entry and origin-proof records."
+        "The same reporting said CBP is using AI tools to analyze container markings, packaging patterns and X-ray images for mismatches.",
+        "The report names about 40 elevated-risk countries, according to the Signal Translation source map."
       ],
-      "decision": "Attach supplier, routing, entry and origin evidence to exposed shipments before approval or customer promise.",
-      "watch": "CBP enforcement signals, USTR/Federal Register notices, broker exception logs and origin-proof gaps."
+      "operatorMeaning": "Origin is no longer just a supplier declaration. It needs routing, packaging, marking, broker and approval evidence before the company relies on it.",
+      "watch": "CBP updates, detention patterns, broker exception logs and any clarified data requirements."
     },
     {
-      "id": "classification-master-data",
-      "label": "Classification station",
-      "condition": "Product-master-data review",
-      "owner": "Trade compliance and master data",
+      "id": "product-attribute",
+      "label": "Product-attribute station",
+      "condition": "Dated classification clocks",
+      "severity": "orange",
+      "owner": "Trade compliance + product master data",
       "facts": [
-        "Supply Chain Dive coverage of drone tariffs and Section 232 derivative proposals keeps product classification live.",
-        "Classification rows require HTS, product description, country treatment and approval evidence.",
-        "A tariff schedule alone does not prove treatment for a specific SKU or importer."
+        "Commerce is seeking comments by Aug. 27 on additional aluminum, steel and copper derivative articles under Section 232.",
+        "Supply Chain Dive summarized 14 proposed derivative categories and rate buckets of 25%, 15% and 50%.",
+        "Drone/UAS tariffs include 100%, 25%, 15% and 10% categories and a Sept. 3 effective date in the extracted source notes."
       ],
-      "decision": "Assign one owner for HTS/product-master-data rows and hold exceptions where proof or legal approval is missing.",
-      "watch": "Federal Register updates, counsel-reviewed classifications and master-data change logs."
+      "operatorMeaning": "HTS, material composition and component provenance have become timed commercial exposure, not static catalog metadata.",
+      "watch": "Federal Register updates, counsel-reviewed classifications, component-origin evidence and master-data change logs."
     },
     {
-      "id": "freight-capacity",
-      "label": "Freight-capacity station",
-      "condition": "Mixed volume and rate cards",
-      "owner": "Logistics and planning",
+      "id": "flow-split",
+      "label": "Flow-split station",
+      "condition": "Volume, rate and capacity signals disagree",
+      "severity": "yellow",
+      "owner": "Logistics + planning",
       "facts": [
-        "FreightWaves, citing Descartes, said July U.S. containerized imports rose 4.5% from June to 2,508,310 TEUs.",
-        "FreightWaves/Xeneta reported Far East to U.S. rates still falling.",
-        "Reuters Rhine low-water reporting keeps inland-waterway fallback capacity on the watch board."
+        "Descartes July U.S. container imports were 2.5 million TEUs, down 4.3% year over year, as reported by Reuters in the source map.",
+        "NRF/Hackett June major-port volume was up 13.2% year over year, with July and August forecast declines.",
+        "FreightWaves/Xeneta showed Far East-U.S. West Coast and East Coast spot rates falling in the week ending Aug. 13."
       ],
-      "decision": "Keep volume, rate, booking, inventory and fallback-route assumptions as separate owner cards.",
-      "watch": "Descartes, NRF/Hackett, Xeneta/FreightWaves lane cards, port actuals and Rhine Kaub levels."
+      "operatorMeaning": "Physical flow, rate power and demand proof need separate owner cards; do not treat high volume or lower spot rates as proof the route is safe.",
+      "watch": "Descartes actuals, NRF/Hackett forecasts, Xeneta/FreightWaves rates and port/lane exception logs."
     },
     {
-      "id": "inventory-simulation",
-      "label": "Inventory-simulation station",
-      "condition": "AI-assisted planning with approval needed",
+      "id": "simulation-approval",
+      "label": "Simulation-approval station",
+      "condition": "AI planning with human release",
+      "severity": "orange",
       "owner": "Planning / S&OP",
       "facts": [
-        "Reuters reported manufacturers using AI as inventory buffers shrink.",
-        "The Signal Translation package cites McKinsey survey work showing reliance on larger buffers down to 34% from 60% in 2022.",
-        "It also cites Gartner's estimate that supply-chain software spending including generative AI could reach $55 billion by 2029."
+        "Target's Proxima pilot covered 63 fresh-food items, improved on-shelf availability by 2.5%, and simulated the Houston Receive Center at about 98% accuracy.",
+        "Reuters reported manufacturers using AI during tariff volatility, with Gartner and McKinsey figures cited through Reuters in the source map.",
+        "The Signal Translation package warns that AI should surface mismatches, not approve tariff positions, supplier status or customer promises."
       ],
-      "decision": "Treat AI or digital-twin output as an exception note with a named owner, approval and failure mode.",
-      "watch": "Planning-data quality, audit trails, override rules and pilot-to-rollout performance claims."
+      "operatorMeaning": "Simulation output should become a challenge step with owner, override reason and approval path before inventory moves or promises change.",
+      "watch": "Pilot accuracy claims, override rules, customer-service impact and measured inventory outcomes."
     },
     {
-      "id": "farm-to-fork-proof",
-      "label": "Farm-to-fork proof station",
-      "condition": "Input, freshness and storage evidence",
-      "owner": "Procurement, quality and logistics",
+      "id": "inland-storage",
+      "label": "Inland and storage station",
+      "condition": "Observed condition stress",
+      "severity": "yellow",
+      "owner": "Logistics + quality",
       "facts": [
-        "FAO's July Food Price Index rose 0.6% from June while cereals, vegetable oils and sugar rose and meat and dairy fell.",
-        "Supply Chain Dive reported Target's Proxima fresh-food digital-twin pilot improved on-shelf availability by 2.5% for 63 items and simulated a 1.2 million-square-foot receive center with about 98% accuracy.",
-        "Reuters reported Maharashtra suspended permits for 12 quick-commerce warehouses after inspections across 86 establishments."
+        "Rhine navigable depth at Kaub hit 10 cm on Aug. 14, below the 25 cm 2018 low, with freight shifting to land transport.",
+        "India set a maximum daily LPG production target of 63,810 metric tons and required storage/transport capacity directly or through rail and road tankers.",
+        "Maharashtra suspended 12 quick-commerce warehouse permits after 86 inspections and 60 improvement notices."
       ],
-      "decision": "Create proof files for input exposure, freshness, storage compliance, fallback routing and availability promises.",
-      "watch": "FAO category moves, food-safety inspections, supplier proof, storage permits and fresh-food availability pilots."
+      "operatorMeaning": "Route, storage and capacity claims need current observable evidence; averages are weak when water, permits or inspections change the usable network.",
+      "watch": "Rhine Kaub levels, storage permits, inspection notices, LPG capacity orders and fallback-route availability."
     }
   ],
+  "referenceCards": [
+    { "label": "Transshipment estimate", "value": "$19B-$26B", "note": "White House estimate reported by Reuters; do not treat as independently verified evasion volume." },
+    { "label": "Derivative-duty clock", "value": "Aug. 27", "note": "Commerce comment deadline; proposal, not final action." },
+    { "label": "Drone/UAS clock", "value": "Sept. 3", "note": "Effective date in secondary Supply Chain Dive summary." },
+    { "label": "July imports", "value": "2.5M TEUs", "note": "Descartes data reported by Reuters; keep separate from NRF/Hackett forecasts." },
+    { "label": "Rhine Kaub depth", "value": "10 cm", "note": "Reuters Aug. 14 value; capacity stress support, not the thesis." }
+  ],
   "newsletterInsert": {
-    "headline": "Supply Chain Weather: five verified-exception stations",
-    "copy": "This week's weather is not one risk score. It is five separate stations — origin proof, classification, freight capacity, inventory simulation and farm-to-fork proof. Each station needs a source, owner, proof artifact, deadline, approval and failure mode before the next decision."
+    "title": "Supply Chain Weather",
+    "headline": "Five stations for declarations under test",
+    "body": "This week's weather is not one blended risk score. It is five separate stations where declared records can be compared with observed evidence: origin observation, product attributes, flow split, simulation approval, and inland/storage condition.",
+    "operatorTranslation": "Before approving the next exposed entry, SKU, supplier, route or inventory promise, name the declared claim, the observed surface that could contradict it, the owner, the human approval step and the external watch item."
   },
   "sources": [
-    "Reuters White House transshipment report / CBP AI inspection reporting",
+    "Reuters White House transshipment / CBP AI inspection reporting",
     "USTR and Federal Register forced-labor Section 301 materials",
-    "FreightWaves / Descartes July U.S. containerized import reporting",
-    "FreightWaves / Xeneta Far East to U.S. rate reporting",
-    "Reuters Rhine low-water reporting",
-    "Reuters manufacturer AI and inventory-buffer reporting",
+    "Federal Register and Supply Chain Dive Section 232 derivative-duty coverage",
+    "Supply Chain Dive drone/UAS tariff coverage",
+    "Reuters / Descartes July U.S. import reporting",
+    "Supply Chain Dive / NRF-Hackett port forecast coverage",
+    "FreightWaves / Xeneta Far East-U.S. rate reporting",
     "Supply Chain Dive Target Proxima coverage",
-    "FAO July Food Price Index",
+    "Reuters Rhine low-water reporting",
+    "Reuters India LPG capacity-order reporting",
     "Reuters Maharashtra quick-commerce warehouse inspection reporting"
   ]
 }

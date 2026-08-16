@@ -3,43 +3,57 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Supply Chain Weather Forecast — 2026-W33</title>
+    <title>Supply Chain Weather | 2026-W33</title>
+    <meta name="description" content="Supply Chain Weather companion artifact for W33: declarations under test." />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="shell">
+    <main class="shell">
       <header class="masthead">
-        <p class="kicker">2026-W33 Companion Artifact</p>
-        <h1>Supply Chain <span>Weather</span></h1>
-        <p class="tagline">Separate weather stations. No fake composite score.</p>
-        <div class="signal-band" aria-hidden="true"><svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path class="signal-grid" d="M0 40 L70 40 L100 18 L150 62 L230 62 L270 28 L350 28 L390 54 L470 54 L520 20 L610 20 L660 68 L740 68 L790 34 L880 34 L930 58 L1010 58 L1060 24 L1140 24 L1200 46" /></svg></div>
+        <p class="kicker">Supply Chain Weather · 2026-W33</p>
+        <h1><span>Supply Chain</span> Weather</h1>
+        <p class="tagline">Separate stations. No composite score.</p>
+        <div class="signal-band" aria-hidden="true"><svg viewBox="0 0 1200 120"><path class="signal-grid" d="M0 62h160l16-32 18 72 22-92 24 98 20-54 20 18h128l16-28 20 54 24-82 24 90 18-45 18 15h170l15-24 18 48 22-76 24 86 19-42 18 12h230" /></svg></div>
       </header>
-      <main>
-        <section id="forecast-summary" class="hero">
-          <div>
-            <p class="kicker">Weather Forecast</p>
-            <h2 id="forecast-title">Loading W33 stations…</h2>
-            <p id="forecast-subtitle"></p>
-          </div>
-          <aside class="newsletter-card">
-            <span>Newsletter insert</span>
-            <strong id="insert-headline"></strong>
-            <p id="insert-copy"></p>
-          </aside>
-        </section>
-        <section id="weather-stations" class="stations" aria-label="Supply chain weather stations"></section>
-        <section id="operator-clocks" class="clocks">
-          <article><b>Source</b><p>Public facts stay traceable to the W33 Signal Translation source map.</p></article>
-          <article><b>Owner</b><p>Every station names the function that can unblock work.</p></article>
-          <article><b>Proof</b><p>The artifact names the file that must survive review.</p></article>
-          <article><b>Falsifier</b><p>The operator should know what evidence lets them stand down.</p></article>
-        </section>
-        <section id="source-ledger" class="source-ledger">
-          <p class="kicker">Sources</p>
-          <ul id="sources"></ul>
-        </section>
-      </main>
-    </div>
+
+      <section class="weather-hero" id="forecastView">
+        <div>
+          <p class="kicker">Forecast headline</p>
+          <h2 id="headline">Declarations are becoming testable claims.</h2>
+          <p id="dek">Loading forecast…</p>
+        </div>
+        <aside>
+          <span>Horizon</span>
+          <strong id="horizon">—</strong>
+          <span>Confidence</span>
+          <strong id="confidence">—</strong>
+        </aside>
+      </section>
+
+      <section class="stations" id="stationsView" aria-labelledby="stations-title">
+        <div class="section-heading">
+          <p class="kicker">Weather stations</p>
+          <h2 id="stations-title">Keep each signal family separate.</h2>
+        </div>
+        <div class="station-grid" id="stationGrid"></div>
+      </section>
+
+      <section class="operator" id="operatorView" aria-labelledby="operator-title">
+        <div class="section-heading">
+          <p class="kicker">Operator translation</p>
+          <h2 id="operator-title">What the weather means for this week’s decision.</h2>
+        </div>
+        <div class="cards" id="referenceCards"></div>
+      </section>
+
+      <section class="newsletter" id="newsletterView" aria-labelledby="newsletter-title">
+        <div class="section-heading">
+          <p class="kicker">Newsletter insert</p>
+          <h2 id="newsletter-title">Copy from the same JSON source.</h2>
+        </div>
+        <article id="newsletterCopy"></article>
+      </section>
+    </main>
     <script src="./app.js"></script>
   </body>
 </html>

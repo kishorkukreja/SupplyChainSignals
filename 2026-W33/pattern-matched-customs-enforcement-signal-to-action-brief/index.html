@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Supply Chain Signals | Pattern-Matched Customs Enforcement</title>
+    <meta
+      name="description"
+      content="A Signal-to-Action Brief for W33: supply-chain declarations are becoming testable claims."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead" aria-labelledby="app-title">
+        <div>
+          <p class="kicker">Signal-to-Action Brief · 2026-W33</p>
+          <h1 id="app-title"><span>Supply Chain</span> Signals</h1>
+          <p class="tagline">Declarations under test</p>
+        </div>
+        <div class="signal-band" aria-hidden="true">
+          <svg viewBox="0 0 1200 120" role="img">
+            <path class="signal-grid" d="M0 64H128l12-22 18 68 22-98 24 100 18-58 20 18 16-8h130l12-18 20 54 24-90 22 92 18-48 21 16 14-6h150l14-25 19 58 22-82 22 94 20-50 21 18 14-13h196l14-20 20 42 22-70 24 84 19-42 18 14 14-8h116" />
+          </svg>
+        </div>
+      </header>
+
+      <nav class="view-tabs" aria-label="Application views">
+        <button class="view-tab is-active" type="button" data-view-target="startView">Start</button>
+        <button class="view-tab" type="button" data-view-target="builderView">Brief Builder</button>
+        <button class="view-tab" type="button" data-view-target="outputView">Readout</button>
+        <button class="view-tab" type="button" data-view-target="agentWorkflowView">Agent Workflow</button>
+        <button class="view-tab" type="button" data-view-target="guideView">Guide</button>
+      </nav>
+
+      <section class="view start-view is-active" id="startView" data-view="startView" aria-labelledby="start-title">
+        <div class="hero-copy">
+          <p class="kicker">Executive Signal</p>
+          <h2 id="start-title">Declarations are becoming testable claims.</h2>
+          <p>
+            The visible story is tariffs, transshipment and AI. The operator problem is sharper: origin, product,
+            route, supplier and inventory records now have to survive comparison with packaging, markings,
+            X-rays, material lists, inspections and simulations.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-action" type="button" data-view-target="builderView">Build my 72-hour action</button>
+            <button class="secondary-action" type="button" data-view-target="guideView">Read the operating guide</button>
+          </div>
+        </div>
+        <aside class="signal-card">
+          <p class="kicker">Hidden operator problem</p>
+          <h3>Can your declared record defend itself when a different evidence surface disagrees?</h3>
+          <ul>
+            <li><strong>Origin:</strong> supplier claim versus routing, packaging, markings and X-ray patterns.</li>
+            <li><strong>Product:</strong> HTS/material record versus derivative-duty and component-origin rules.</li>
+            <li><strong>Flow:</strong> planned allocation versus simulated inventory and real capacity stress.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="view" id="builderView" data-view="builderView" aria-labelledby="builder-title" hidden>
+        <div class="section-heading">
+          <p class="kicker">Brief Builder</p>
+          <h2 id="builder-title">Answer context questions — not raw operating metrics.</h2>
+          <p>Pick the business context that most resembles the decision due this week. The signal logic is already encoded from the W33 newsletter package.</p>
+        </div>
+        <form id="briefForm" class="builder-grid">
+          <label>
+            <span>Exposed decision</span>
+            <select name="decision">
+              <option value="entry">Approve an import entry or broker response</option>
+              <option value="sku">Approve a SKU classification / component-origin position</option>
+              <option value="supplier">Clear a supplier, facility, or sourcing claim</option>
+              <option value="inventory">Release an inventory allocation or customer promise</option>
+              <option value="route">Change a route, mode, or booking with compliance exposure</option>
+            </select>
+          </label>
+          <label>
+            <span>Chain lens</span>
+            <select name="chain">
+              <option value="cotton">Cotton to closet / apparel-retail</option>
+              <option value="electronics">Electronics or drone components</option>
+              <option value="metals">Steel, aluminum, copper or derivative articles</option>
+              <option value="fresh">Fresh food / storage-sensitive retail</option>
+              <option value="industrial">Industrial equipment or mixed-origin assemblies</option>
+            </select>
+          </label>
+          <label>
+            <span>Primary owner today</span>
+            <select name="owner">
+              <option value="trade">Trade compliance</option>
+              <option value="master">Product master data</option>
+              <option value="sourcing">Sourcing / supplier management</option>
+              <option value="logistics">Logistics</option>
+              <option value="planning">Planning / S&OP</option>
+              <option value="finance">Finance / pricing</option>
+            </select>
+          </label>
+          <label>
+            <span>Constraint that cannot slip</span>
+            <select name="constraint">
+              <option value="compliance">Compliance defensibility</option>
+              <option value="service">Customer service promise</option>
+              <option value="margin">Margin and customer price</option>
+              <option value="capital">Working capital / reserve exposure</option>
+              <option value="speed">Speed to release decision</option>
+            </select>
+          </label>
+          <label>
+            <span>Evidence friction</span>
+            <select name="friction">
+              <option value="missing">Key proof is missing or scattered</option>
+              <option value="conflict">Records conflict across systems or partners</option>
+              <option value="stale">Master data or supplier data may be stale</option>
+              <option value="approval">Human approval path is unclear</option>
+              <option value="monitoring">External trigger monitoring is weak</option>
+            </select>
+          </label>
+          <label>
+            <span>Next decision timing</span>
+            <select name="timing">
+              <option value="24">Within 24 hours</option>
+              <option value="72">Within 72 hours</option>
+              <option value="week">This week</option>
+              <option value="window">Before Aug. 27 / Sept. 3 policy clocks</option>
+            </select>
+          </label>
+        </form>
+        <button class="primary-action wide" type="button" id="buildBrief">Generate action brief</button>
+      </section>
+
+      <section class="view" id="outputView" data-view="outputView" aria-labelledby="output-title" hidden>
+        <div class="section-heading">
+          <p class="kicker">Output Readout</p>
+          <h2 id="output-title">Your 72-hour handoff</h2>
+          <p id="readoutDek">Select context in the Brief Builder to generate a deterministic recommendation.</p>
+        </div>
+        <div class="readout-grid">
+          <article class="readout-panel emphasis">
+            <span>Decision</span>
+            <h3 id="recommendationTitle">Build the evidence packet before approving the claim.</h3>
+            <p id="recommendationText">Start with the exposed record, then attach observed evidence and a named human approval path.</p>
+          </article>
+          <article class="readout-panel">
+            <span>Rationale</span>
+            <p id="rationaleText">The W33 signal says declared data is no longer enough; it must be structured enough for systems to test and clear enough for humans to defend.</p>
+          </article>
+          <article class="readout-panel">
+            <span>Owner handoff</span>
+            <ol id="ownerSteps"></ol>
+          </article>
+          <article class="readout-panel">
+            <span>External watchlist</span>
+            <ul id="watchList"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="agentWorkflowView" data-view="agentWorkflowView" aria-labelledby="workflow-title" hidden>
+        <div class="section-heading">
+          <p class="kicker">Agent Workflow</p>
+          <h2 id="workflow-title">Signal Reader → Business Matcher → Decision Coach</h2>
+          <p>No backend is called. This browser demo simulates the handoff deterministically from the weekly Signal Translation package.</p>
+        </div>
+        <div class="workflow-grid">
+          <article><span>01</span><h3>Signal Reader</h3><p>Extracts source-backed facts: CBP pattern detection, Section 232 timing, drone/UAS origin categories, import/rate split, Rhine and simulation signals.</p></article>
+          <article><span>02</span><h3>Business Matcher</h3><p>Maps the external signal to your decision context: entry, product data, supplier claim, route change or inventory promise.</p></article>
+          <article><span>03</span><h3>Decision Coach</h3><p>Turns the match into an owner, evidence surface, approval step, failure mode and external watch item.</p></article>
+        </div>
+      </section>
+
+      <section class="view guide-view" id="guideView" data-view="guideView" aria-labelledby="guide-title" hidden>
+        <div class="section-heading">
+          <p class="kicker">Operator Guide</p>
+          <h2 id="guide-title">How to use this week’s signal without doing the signal translation yourself.</h2>
+        </div>
+        <div class="guide-grid">
+          <article><span>1</span><h3>Start with the claim</h3><p>Name the record being relied on: origin, HTS, supplier site, component provenance, route, storage condition or inventory plan.</p></article>
+          <article><span>2</span><h3>Find the observed surface</h3><p>Ask what could contradict the claim: packaging, markings, X-ray, material list, audit case, inspection, rate/volume split or simulation result.</p></article>
+          <article><span>3</span><h3>Assign a human approval</h3><p>AI can triage mismatches; it should not approve tariff positions, supplier status, route changes or customer promises.</p></article>
+          <article><span>4</span><h3>Keep watches external</h3><p>Monitor CBP guidance, Aug. 27 derivative-duty comments, Sept. 3 drone/UAS implementation, import data and simulation evidence separately.</p></article>
+        </div>
+        <div class="source-strip">
+          <p><strong>Source used:</strong> 2026-W33 Signal Translation package, commit 566d79d2, topic <code>pattern-matched-customs-enforcement</code>. Public thesis: declarations are becoming testable claims.</p>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
