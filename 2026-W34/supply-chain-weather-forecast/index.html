@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Supply Chain Weather — 2026-W34</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="masthead">
+        <p class="kicker">2026-W34 Supply Chain Weather</p>
+        <h1>Supply Chain <span>Weather</span></h1>
+        <p id="dek">Separate weather stations for relief without replacement capacity.</p>
+        <div class="signal-band" aria-hidden="true"><svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path class="signal-grid" d="M0 46 L90 46 L130 20 L180 62 L250 62 L300 34 L360 34 L405 55 L480 55 L525 18 L590 18 L645 66 L725 66 L765 30 L840 30 L880 54 L960 54 L1005 24 L1085 24 L1135 62 L1200 38" /></svg></div>
+      </header>
+      <main>
+        <section id="mapView" class="weather-map">
+          <div class="section-heading">
+            <p class="kicker">Weather Stations</p>
+            <h2 id="headline">Relief levers are moving faster than capacity repair.</h2>
+            <p>Do not blend these into one score. Each station has a separate source family, owner and watch item.</p>
+          </div>
+          <div id="stations" class="station-grid"></div>
+        </section>
+        <section id="operatorView" class="operator-panel">
+          <div class="section-heading">
+            <p class="kicker">Operator Translation</p>
+            <h2>Before treating relief as solved, name the capacity that did not move.</h2>
+          </div>
+          <div class="cards" id="referenceCards"></div>
+          <ul id="watchlist" class="watchlist"></ul>
+        </section>
+        <section id="newsletterView" class="newsletter-panel">
+          <p class="kicker">Newsletter Insert</p>
+          <h2 id="newsletterTitle">Supply Chain Weather</h2>
+          <p id="newsletterBody"></p>
+          <p id="operatorTranslation"></p>
+          <a href="./newsletter-insert.md">Open copy/paste Markdown insert</a>
+        </section>
+      </main>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

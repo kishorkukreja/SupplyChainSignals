@@ -1,0 +1,122 @@
+{
+  "week": "2026-W34",
+  "title": "Supply Chain Weather Forecast",
+  "subtitle": "Separate food-chain weather stations for relief without replacement capacity — no composite risk score.",
+  "source_mode": "signal-translation",
+  "sourceMode": "Signal Translation package on /data/Self-OS origin/master, commit 6925c440",
+  "chain_candidate": "farm to fork",
+  "headline": "Relief levers are moving faster than capacity repair.",
+  "dek": "This week's weather separates temporary relief from the slower constraints still sitting in herds, routes, supplier scale, food-safety trust and category-specific commodity flows.",
+  "forecast_horizon": "Next 2-8 weeks, with 90-day beef-window and September import-data clocks",
+  "forecastHorizon": "Next 2-8 weeks, with 90-day beef-window and September import-data clocks",
+  "confidence": "medium-high",
+  "stations": [
+    {
+      "id": "beef-relief",
+      "label": "Beef relief station",
+      "condition": "90-day import window over herd drought",
+      "severity": "red",
+      "owner": "Category procurement + finance",
+      "facts": [
+        "Reuters reported a planned 300,000 metric ton lower-tariff ground-beef import window for 90 days.",
+        "Reuters also reported that U.S. cattle inventories are at a 75-year low.",
+        "Mexican cattle imports remain constrained by pest concerns and meatpackers have closed plants because cattle costs are high, according to the Signal Translation source map."
+      ],
+      "operatorMeaning": "Treat import relief as a timed grocery-pressure bridge, not as domestic herd repair.",
+      "operator_meaning": "Treat import relief as a timed grocery-pressure bridge, not as domestic herd repair.",
+      "watch": "Final supplier-country list, mechanics of the import action, herd rebuilding signals and producer response."
+    },
+    {
+      "id": "lettuce-trust",
+      "label": "Lettuce trust station",
+      "condition": "Food-safety trust collapse with supplier-concentration fog",
+      "severity": "red",
+      "owner": "Food safety + procurement",
+      "facts": [
+        "Reuters tied a cyclosporiasis outbreak to iceberg lettuce processed in central Mexico.",
+        "The reporting cited more than 15,000 CDC-confirmed cases across 47 states and two deaths.",
+        "Wholesale lettuce prices fell 73% in July while buyers could not easily replace Taylor Farms because of its scale."
+      ],
+      "operatorMeaning": "A price fall can be broken demand, not healthy supply; supplier concentration becomes a capacity exposure after trust breaks.",
+      "operator_meaning": "A price fall can be broken demand, not healthy supply; supplier concentration becomes a capacity exposure after trust breaks.",
+      "watch": "Customer actions, recall updates, buyer substitution evidence and demand recovery."
+    },
+    {
+      "id": "oil-substitution",
+      "label": "Edible-oil substitution station",
+      "condition": "Sunflower delay shifts pressure into soyoil lane",
+      "severity": "orange",
+      "owner": "Ingredient procurement + logistics",
+      "facts": [
+        "Reuters reported expected August soyoil imports of about 620,000 metric tons for India.",
+        "The shift followed delayed Black Sea sunflower oil shipments of roughly 150,000 metric tons for August and September shipment.",
+        "Trader estimates are not final customs data."
+      ],
+      "operatorMeaning": "Ingredient substitution buys availability but creates a second lane to price, book and monitor.",
+      "operator_meaning": "Ingredient substitution buys availability but creates a second lane to price, book and monitor.",
+      "watch": "September import data, Black Sea cargo timing, port handling and relative soyoil/sunflower pricing."
+    },
+    {
+      "id": "sugar-policy",
+      "label": "Sugar policy station",
+      "condition": "Policy-pressure humidity before festival demand",
+      "severity": "orange",
+      "owner": "Procurement + policy monitor",
+      "facts": [
+        "Reuters reported India is considering sugar imports, stock limits and mill-allocation changes.",
+        "The discussion followed wholesale sugar prices in Kolhapur rising nearly one fifth since the start of August.",
+        "Measures were under consideration, not final policy."
+      ],
+      "operatorMeaning": "Policy can cap near-term pressure, but teams need a domestic-supply and expiry read before changing commitments.",
+      "operator_meaning": "Policy can cap near-term pressure, but teams need a domestic-supply and expiry read before changing commitments.",
+      "watch": "Import decisions, stockholding moves, mill allocations and festival-demand signals."
+    },
+    {
+      "id": "category-index",
+      "label": "Food category split station",
+      "condition": "Headline average hides exposed categories",
+      "severity": "yellow",
+      "owner": "Finance + merchandising",
+      "facts": [
+        "FAO's July Food Price Index rose 0.6%.",
+        "Under the average, cereals rose 3.4%, vegetable oils rose 2.0% and sugar rose 5.6%.",
+        "Meat and dairy fell, so the global average is not a retail-grocery inflation metric."
+      ],
+      "operatorMeaning": "Do not act on one food number; assign the exposed category and margin bridge separately.",
+      "operator_meaning": "Do not act on one food number; assign the exposed category and margin bridge separately.",
+      "watch": "Next FAO category release, retail discount breadth and category-specific margin changes."
+    }
+  ],
+  "zones": [],
+  "reference_cards": [
+    {"label": "Beef import window", "value": "300,000 mt / 90 days", "note": "Reuters-reported plan; not herd rebuild."},
+    {"label": "Cattle inventory", "value": "75-year low", "note": "Reuters-reported constraint behind the relief window."},
+    {"label": "Lettuce trust shock", "value": "15,000+ cases", "note": "CDC-confirmed cases cited by Reuters; price drop reflects demand/trust break."},
+    {"label": "Wholesale lettuce", "value": "-73% in July", "note": "Do not treat falling price as healthy supply."},
+    {"label": "India soyoil", "value": "620,000 mt", "note": "Expected August imports; trader estimate, not final customs data."},
+    {"label": "FAO split", "value": "+0.6% headline", "note": "Cereals, oils and sugar up while meat and dairy down; keep categories separate."}
+  ],
+  "operator_watchlist": [
+    "Final mechanics and supplier-country eligibility for the U.S. beef import action.",
+    "Cattle herd rebuilding signals and producer response to import relief.",
+    "Taylor Farms customer actions, recall updates and lettuce demand recovery.",
+    "September Indian soyoil and delayed sunflower cargo data.",
+    "India sugar import, stockholding or mill-allocation decisions.",
+    "Black Sea grain vessel, insurance and replacement-origin pricing."
+  ],
+  "newsletter_insert": {
+    "title": "Supply Chain Weather",
+    "headline": "Relief levers under capacity clouds",
+    "body": "This week's weather is not a single food-price storm. It is five separate stations where relief arrives before replacement capacity: beef import relief over a low-herd constraint, lettuce price collapse under a trust and supplier-concentration shock, edible-oil substitution into soyoil, sugar-policy humidity before festival demand, and a FAO category split hidden under a mild headline average.",
+    "operator_translation": "Before treating a relief move as solved, name the exposed category, the relief lever, the upstream capacity that did not change, the owner carrying the gap and the external signal that would prove the constraint has actually moved."
+  },
+  "sources": [
+    "Reuters Taylor Farms / lettuce cyclosporiasis reporting, 2026-08-20",
+    "Reuters U.S. beef import plan and cattle inventory reporting, 2026-08-21",
+    "Reuters India soyoil / sunflower shipment delay reporting, 2026-08-17",
+    "Reuters India sugar policy reporting, 2026-08-18",
+    "Reuters Black Sea wheat disruption reporting, 2026-08-20",
+    "FAO Food Price Index, July 2026 release dated 2026-08-07",
+    "Signal Translation source-map for 2026-W34 relief-without-replacement-capacity"
+  ]
+}
