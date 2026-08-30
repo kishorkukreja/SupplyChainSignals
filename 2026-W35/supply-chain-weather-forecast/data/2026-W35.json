@@ -1,0 +1,156 @@
+{
+  "week": "2026-W35",
+  "title": "Supply Chain Weather Forecast",
+  "subtitle": "Separate weather stations for product-boundary, capacity and market-reference clocks — no composite risk score.",
+  "source_mode": "signal-translation",
+  "sourceMode": "Signal Translation package on /data/Self-OS origin/master, 2026-W35/product-boundaries-before-capacity-moves",
+  "chain_candidate": "auto parts to assembly",
+  "headline": "Product definitions are moving faster than capacity.",
+  "dek": "This week's weather separates editable product lists, market-access names, auto-capacity clocks, freight readings, food categories and strategic-input watch lanes so operators do not blend them into one false signal.",
+  "forecast_horizon": "Next 72 hours through 1 January 2027 clocks",
+  "forecastHorizon": "Next 72 hours through 1 January 2027 clocks",
+  "confidence": "medium-high",
+  "stations": [
+    {
+      "id": "canada-product-list",
+      "label": "Canada product-list station",
+      "condition": "Editable list before 8 September start",
+      "severity": "red",
+      "owner": "Trade compliance + product master data",
+      "facts": [
+        "Reuters reported Canada announced counter-tariffs on about $20 billion of annual U.S. imports.",
+        "The package included 15%, 25% and 50% rates across roughly 700 products and a planned 8 September start.",
+        "Reuters later reported seafood and fish were removed from the list after feedback about economic harm."
+      ],
+      "operatorMeaning": "Do not act from the announcement-day table; verify whether the product is still covered, removed, exempt or deferred before assigning capacity.",
+      "operator_meaning": "Do not act from the announcement-day table; verify whether the product is still covered, removed, exempt or deferred before assigning capacity.",
+      "watch": "Final Canadian product coverage before 8 September and any further removals after seafood and fish."
+    },
+    {
+      "id": "cheese-name-access",
+      "label": "Cheese-name access station",
+      "condition": "Market-access fog around protected names",
+      "severity": "orange",
+      "owner": "Category management + legal/compliance",
+      "facts": [
+        "Reuters reported protected names including Parmigiano Reggiano, feta and manchego became a U.S.-Mexico trade-talk stumbling block.",
+        "Reuters said U.S. cheese exports to Mexico are about $1 billion annually.",
+        "Reuters said imports account for nearly 30% of Mexican cheese consumption."
+      ],
+      "operatorMeaning": "A label or name can decide access even if the physical route is unchanged; customer and assortment language needs caveats.",
+      "operator_meaning": "A label or name can decide access even if the physical route is unchanged; customer and assortment language needs caveats.",
+      "watch": "Official U.S.-Mexico language on cheese names and geographic indications."
+    },
+    {
+      "id": "auto-capacity-clock",
+      "label": "Auto capacity station",
+      "condition": "1 January tariff threat over sticky assembly and parts capacity",
+      "severity": "red",
+      "owner": "Sourcing + industrial strategy",
+      "facts": [
+        "Reuters reported a threatened 50% U.S. tariff on Canadian vehicles, auto parts and trucks from 1 January 2027.",
+        "Reuters reported Canadian-built vehicles were about 6% of U.S. sales in 2025.",
+        "Reuters reported Toyota and Honda accounted for more than 75% of Canada's 1.2 million vehicles produced that year."
+      ],
+      "operatorMeaning": "Treat auto exposure as a capacity-preservation file, not only a landed-cost file; decide which parts, plants and suppliers deserve protection if the boundary hardens.",
+      "operator_meaning": "Treat auto exposure as a capacity-preservation file, not only a landed-cost file; decide which parts, plants and suppliers deserve protection if the boundary hardens.",
+      "watch": "Canada auto talks on assembly, parts capacity, content rules and any change to the 1 January clock."
+    },
+    {
+      "id": "vw-board-date",
+      "label": "VW industrial decision station",
+      "condition": "4 September restructuring deadline",
+      "severity": "orange",
+      "owner": "Supplier risk + regional operations",
+      "facts": [
+        "Reuters reported VW's supervisory board will meet on 4 September to discuss a turnaround plan.",
+        "The plan could involve further job losses, factory closures or other restructuring.",
+        "Reuters tied the pressure to tariffs, weaker demand and Chinese competition."
+      ],
+      "operatorMeaning": "A policy and demand signal can become a supplier and plant decision before the policy picture is final.",
+      "operator_meaning": "A policy and demand signal can become a supplier and plant decision before the policy picture is final.",
+      "watch": "VW board outcome: job cuts, factory closures, supplier exposure or delay."
+    },
+    {
+      "id": "freight-reference",
+      "label": "Freight reference station",
+      "condition": "Easing spot-rate context, not product-boundary proof",
+      "severity": "yellow",
+      "owner": "Logistics + finance",
+      "facts": [
+        "Drewry's 27 August WCI composite decreased 1% to $4,473 per 40-foot container.",
+        "Drewry's Shanghai-New York assessment fell 2% to $9,333 while Shanghai-Los Angeles was flat at $6,818.",
+        "FreightWaves/Xeneta described lane-specific declines on a different date and methodology."
+      ],
+      "operatorMeaning": "Lower spot rates can soften landed cost, but they do not answer whether the product is covered, removed, renamed or capacity-protected.",
+      "operator_meaning": "Lower spot rates can soften landed cost, but they do not answer whether the product is covered, removed, renamed or capacity-protected.",
+      "watch": "Drewry, Xeneta, Freightos and port data, kept as separate freight families."
+    },
+    {
+      "id": "food-category-split",
+      "label": "Food category station",
+      "condition": "Category-specific food pressure under a mild headline average",
+      "severity": "yellow",
+      "owner": "Food procurement + merchandising",
+      "facts": [
+        "FAO's July Food Price Index rose 0.6% to 131.1.",
+        "Cereals, vegetable oils and sugar rose while meat and dairy fell.",
+        "Reuters reported India may import only about 500,000 metric tons of a 1 million-ton duty-free raw sugar quota after domestic prices fell nearly 20%."
+      ],
+      "operatorMeaning": "Food exposure remains category-specific; do not turn the FAO average into a universal grocery signal.",
+      "operator_meaning": "Food exposure remains category-specific; do not turn the FAO average into a universal grocery signal.",
+      "watch": "Next FAO category release, India sugar decisions and harvest/weather updates."
+    },
+    {
+      "id": "strategic-input-watch",
+      "label": "Strategic input watch station",
+      "condition": "Localization and allocation signals building, not yet the main thesis",
+      "severity": "gray",
+      "owner": "Strategic sourcing + planning",
+      "facts": [
+        "Reuters reported CXMT will supply LPDDR6 DRAM for Xiaomi's 18 Fold.",
+        "Supply Chain Dive reported Lenovo doubled Whitsett, North Carolina capacity and started PC production in Riyadh.",
+        "Lenovo reported an AI server pipeline of $54 billion, up 157% quarter over quarter, according to Supply Chain Dive."
+      ],
+      "operatorMeaning": "Track localization and scarce-input allocation, but do not blend these signals into the product-boundary decision unless a product family or capacity slot is directly affected.",
+      "operator_meaning": "Track localization and scarce-input allocation, but do not blend these signals into the product-boundary decision unless a product family or capacity slot is directly affected.",
+      "watch": "China PMI, high-tech export detail, CXMT/Lenovo follow-on evidence and polysilicon policy."
+    }
+  ],
+  "zones": [],
+  "reference_cards": [
+    {"label": "Canada retaliation", "value": "~700 products", "note": "15%, 25% and 50% rates; planned 8 September start."},
+    {"label": "Seafood status", "value": "Removed", "note": "Reuters reported seafood and fish left the list after economic-harm feedback."},
+    {"label": "Auto tariff clock", "value": "1 Jan 2027", "note": "Threatened 50% U.S. tariff on Canadian vehicles, parts and trucks."},
+    {"label": "VW board date", "value": "4 Sept", "note": "Potential restructuring, job cuts or factory decisions."},
+    {"label": "Drewry WCI", "value": "$4,473 / FEU", "note": "Down 1% on 27 August; separate freight context."},
+    {"label": "FAO food index", "value": "131.1", "note": "July index up 0.6%, with categories moving in different directions."}
+  ],
+  "operator_watchlist": [
+    "Final Canadian product coverage before the 8 September retaliation start date.",
+    "Any further product removals after seafood and fish.",
+    "Official U.S.-Mexico language on cheese names and geographic indications.",
+    "Canada auto talks on assembly, parts capacity, content rules and the 1 January clock.",
+    "VW's 4 September supervisory board outcome.",
+    "Drewry, Xeneta, Freightos and port data kept as separate freight families.",
+    "Follow-on evidence from CXMT, Lenovo and polysilicon policy before treating strategic inputs as the main thesis."
+  ],
+  "newsletter_insert": {
+    "title": "Supply Chain Weather",
+    "headline": "Moving product boundaries under sticky capacity clouds",
+    "body": "This week's weather is not one blended risk score. It is seven separate stations: Canada's editable product list before 8 September, cheese-name market-access fog, the 1 January Canadian auto capacity clock, VW's 4 September industrial decision point, easing freight rates as separate context, category-specific food pressure, and strategic-input localization watch lanes.",
+    "operator_translation": "Before acting on a tariff rate or market headline, name the product boundary, the capacity that cannot move as quickly, the owner of the file, and the external clock that would prove the boundary has changed."
+  },
+  "sources": [
+    "Reuters Canada retaliatory tariffs and support package, 2026-08-25",
+    "Reuters Canada excludes U.S. seafood from retaliatory tariffs, 2026-08-27",
+    "Reuters U.S.-Mexico cheese-name dispute, 2026-08-28",
+    "Reuters threatened U.S. tariff on Canadian vehicles, auto parts and trucks, 2026-08-24",
+    "Reuters Canada auto deal / Canadian assembly and parts capacity reporting, 2026-08-26 and 2026-08-27",
+    "Reuters VW restructuring board meeting reporting, 2026-08-29",
+    "Drewry World Container Index, 2026-08-27",
+    "FreightWaves/Xeneta container spot-rate reporting, accessed 2026-08-28",
+    "FAO Food Price Index, July 2026 release dated 2026-08-07",
+    "Signal Translation source-map for 2026-W35 product-boundaries-before-capacity-moves"
+  ]
+}

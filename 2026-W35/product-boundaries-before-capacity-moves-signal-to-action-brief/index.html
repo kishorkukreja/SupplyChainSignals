@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supply Chain Signals | W35 Signal-to-Action Brief</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <p class="kicker">2026-W35 · Signal-to-Action Brief</p>
+        <h1>Supply Chain <span>Signals</span></h1>
+        <p class="tagline">Product boundaries before capacity moves</p>
+      </div>
+      <div class="signal-band" aria-hidden="true">
+        <svg viewBox="0 0 1200 90" preserveAspectRatio="none"><path d="M0 48 L88 48 L112 18 L154 72 L196 24 L246 48 L354 48 L386 18 L430 70 L478 32 L536 48 L644 48 L688 14 L742 78 L808 48 L918 48 L954 28 L1008 62 L1058 36 L1120 48 L1200 48" /></svg>
+      </div>
+    </header>
+
+    <nav class="view-tabs" aria-label="Brief views">
+      <button class="view-tab is-active" data-view="start">Start</button>
+      <button class="view-tab" data-view="brief-builder">Brief Builder</button>
+      <button class="view-tab" data-view="output-readout">Output</button>
+      <button class="view-tab" data-view="agent-workflow">Agent Workflow</button>
+      <button class="view-tab" data-view="guide">Guide</button>
+    </nav>
+
+    <section id="start" class="view start-view">
+      <div class="hero-copy">
+        <p class="eyebrow">Executive Signal</p>
+        <h2>The product boundary moved before the product did.</h2>
+        <p>Canada's retaliation list changed before its 8 September start, cheese names became a market-access fight, Canadian auto parts moved onto a 1 January 2027 capacity clock, and VW added a 4 September industrial decision point.</p>
+        <button class="primary-action" data-view-target="brief-builder">Build my 72-hour action brief</button>
+      </div>
+      <div class="boundary-map" aria-label="Moving product boundary visual">
+        <div class="boundary-line"><span>moving boundary</span></div>
+        <article><strong>Seafood</strong><span>removed from list</span></article>
+        <article><strong>Cheese names</strong><span>access depends on label</span></article>
+        <article><strong>Auto parts</strong><span>capacity-preservation clock</span></article>
+        <article><strong>Packaging</strong><span>materials under coverage review</span></article>
+        <article><strong>Capacity</strong><span>plants, suppliers, labels, inventory</span></article>
+      </div>
+      <div class="reference-grid">
+        <article><span>Canada list</span><strong>~700 products</strong><p>15%, 25% and 50% rates; planned 8 September start.</p></article>
+        <article><span>Relief signal</span><strong>Seafood removed</strong><p>Boundary changed after economic-harm feedback.</p></article>
+        <article><span>Auto clock</span><strong>1 Jan 2027</strong><p>Threatened 50% U.S. tariff on Canadian vehicles, parts and trucks.</p></article>
+        <article><span>Freight context</span><strong>$4,473 / FEU</strong><p>Drewry WCI down 1%; keep separate from product exposure.</p></article>
+      </div>
+    </section>
+
+    <section id="brief-builder" class="view builder-view" hidden>
+      <div class="panel-heading">
+        <p class="eyebrow">Brief Builder</p>
+        <h2>Answer business-context questions, not raw operating metrics.</h2>
+        <p>The signal logic is already translated. Your job is to identify which local decision needs an owner before the boundary changes again.</p>
+      </div>
+      <form id="briefForm" class="question-grid">
+        <label>Which exposed family is most live for you?
+          <select id="family"><option value="auto">Auto parts / assembly</option><option value="food">Food or agriculture categories</option><option value="packaging">Packaging materials</option><option value="industrial">Industrial inputs or components</option><option value="mixed">Mixed portfolio</option></select>
+        </label>
+        <label>What decision is due in the next 72 hours?
+          <select id="decision"><option value="classify">Confirm coverage and source of record</option><option value="supplier">Protect supplier or plant capacity</option><option value="pricing">Update customer price or availability language</option><option value="inventory">Pull forward, hold or release inventory</option><option value="cash">Separate tariff cost, refund cash and reserves</option></select>
+        </label>
+        <label>Which constraint matters most?
+          <select id="constraint"><option value="service">Service level</option><option value="margin">Margin</option><option value="working-capital">Working capital</option><option value="compliance">Compliance certainty</option><option value="resilience">Resilience / capacity protection</option><option value="speed">Speed to decide</option></select>
+        </label>
+        <label>Who can actually move the file?
+          <select id="owner"><option value="trade compliance">Trade compliance</option><option value="product master data">Product master data</option><option value="sourcing">Sourcing / industrial strategy</option><option value="finance">Finance</option><option value="commercial">Commercial / customer team</option><option value="cross-functional">Cross-functional war room</option></select>
+        </label>
+        <label>What is the biggest implementation friction?
+          <select id="friction"><option value="stale-list">Teams are using a stale product list</option><option value="data-gap">Product names, HTS, labels or origin fields are incomplete</option><option value="capacity-sticky">Supplier or plant capacity cannot move quickly</option><option value="customer-promise">Customer commitments were made too early</option><option value="finance-unclear">Refund, reserve and cost treatment are mixed together</option></select>
+        </label>
+        <label>Which external clock matters first?
+          <select id="clock"><option value="vw">4 September VW restructuring board</option><option value="canada">8 September Canada tariff start</option><option value="auto">1 January 2027 auto tariff threat</option><option value="cheese">U.S.-Mexico cheese-name language</option><option value="freight">Separate freight and port readings</option></select>
+        </label>
+      </form>
+      <div class="builder-actions"><button class="primary-action" id="buildBrief" type="button">Generate action brief</button><button class="secondary-action" data-view-target="guide" type="button">How to use this signal</button></div>
+    </section>
+
+    <section id="output-readout" class="view output-view" hidden>
+      <div class="readout-card">
+        <p class="eyebrow">Personalized readout</p>
+        <h2 id="recommendationTitle">Boundary-first capacity check</h2>
+        <p id="recommendationBody">Use the builder to generate a decision brief.</p>
+      </div>
+      <div class="queue-grid">
+        <article><span>Decision</span><strong id="decisionOut">Confirm the current product boundary.</strong></article>
+        <article><span>Primary owner</span><strong id="ownerOut">Trade compliance</strong></article>
+        <article><span>Failure mode</span><strong id="failureOut">Capacity is protected against the wrong product definition.</strong></article>
+      </div>
+      <section class="owner-queue">
+        <h3>Next 72-hour owner queue</h3>
+        <ol id="ownerQueue"></ol>
+      </section>
+      <section class="watchlist">
+        <h3>What to watch next (external only)</h3>
+        <ul id="watchList"></ul>
+      </section>
+    </section>
+
+    <section id="agent-workflow" class="view workflow-view" hidden>
+      <div class="panel-heading"><p class="eyebrow">Agent Workflow</p><h2>Signal Reader → Business Matcher → Decision Coach</h2></div>
+      <div class="workflow-grid">
+        <article><span>01</span><h3>Signal Reader</h3><p>Separates source facts from interpretation: Canada list, seafood removal, cheese-name dispute, auto clock, VW board date, and separate freight/food indicators.</p></article>
+        <article><span>02</span><h3>Business Matcher</h3><p>Maps the external product boundary to your product family, local owner, customer promise and capacity constraint.</p></article>
+        <article><span>03</span><h3>Decision Coach</h3><p>Turns the match into a 72-hour owner queue: source-of-record check, master-data reconciliation, capacity protection, finance treatment and customer caveats.</p></article>
+      </div>
+    </section>
+
+    <section id="guide" class="view guide-view" hidden>
+      <div class="panel-heading"><p class="eyebrow">Guide</p><h2>Use the signal without doing the signal translation yourself.</h2></div>
+      <div class="guide-grid">
+        <article><span>Do first</span><h3>Start with the boundary</h3><p>Ask whether the product is covered, removed, renamed, exempt, refundable, deferred or exposed before modeling the rate.</p></article>
+        <article><span>Then map</span><h3>Connect definition to capacity</h3><p>Map the boundary to suppliers, plants, labels, packaging materials, inventory and customer commitments.</p></article>
+        <article><span>Keep separate</span><h3>Do not average weather stations</h3><p>Freight, food, tariff and capacity indicators are reference cards. They are not a single composite risk score.</p></article>
+        <article><span>Use owners</span><h3>Assign the file</h3><p>Trade compliance owns authority; product master data owns names and attributes; sourcing owns alternatives; finance owns treatment; commercial owns customer language.</p></article>
+      </div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
