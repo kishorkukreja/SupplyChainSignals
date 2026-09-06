@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supply Chain Signals — Attribution Before Allocation</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="masthead">
+      <div class="brand-lockup">
+        <p class="kicker">2026-W36 · Signal-to-Action Brief</p>
+        <h1>Supply Chain <span>Signals</span></h1>
+        <p class="tagline">Attribution before allocation</p>
+      </div>
+      <div class="signal-band" aria-hidden="true">
+        <svg viewBox="0 0 1200 90" preserveAspectRatio="none"><path class="wave" d="M0 48 L80 48 L115 18 L150 72 L185 48 L285 48 L325 32 L365 60 L405 48 L520 48 L560 12 L600 78 L640 48 L760 48 L800 36 L840 60 L880 48 L1000 48 L1040 22 L1080 68 L1120 48 L1200 48"/></svg>
+      </div>
+      <nav class="view-tabs" aria-label="Brief views">
+        <button class="view-tab is-active" data-view="startView">Start</button>
+        <button class="view-tab" data-view="briefBuilderView">Brief Builder</button>
+        <button class="view-tab" data-view="outputReadoutView">Readout</button>
+        <button class="view-tab" data-view="agentWorkflowView">Agent Workflow</button>
+        <button class="view-tab" data-view="guideView">Guide</button>
+      </nav>
+    </header>
+
+    <main class="workspace">
+      <section class="view start-view" id="startView">
+        <div class="hero-panel">
+          <p class="eyebrow">Executive signal</p>
+          <h2>The dangerous move this week is acting on the average.</h2>
+          <p>W36 produced credible pressure signals across manufacturing, services, food, freight, fuel and AI infrastructure. They do not share one cause. Before protecting capacity, changing supplier priority, hedging fuel, building inventory or rewriting price language, the operator has to prove what caused the pressure.</p>
+          <button class="primary-action" data-jump="briefBuilderView">Build my 72-hour brief</button>
+        </div>
+        <aside class="reference-grid" aria-label="Current facts">
+          <article><span>ISM Manufacturing</span><strong>Supplier deliveries 59.3</strong><p>Slow delivery pressure remained while manufacturing cooled; survey diffusion, not shipment volume.</p></article>
+          <article><span>ISM Services</span><strong>Prices 72.6</strong><p>Highest services price reading since August 2022, with supplier deliveries easing to 51.3.</p></article>
+          <article><span>FAO Food</span><strong>Index 133.3</strong><p>All five groups rose; sugar +11.9% and cereals +2.2% need different playbooks.</p></article>
+          <article><span>Freight</span><strong>Split September signal</strong><p>FreightWaves/McCown warned of an import air pocket; NRF/Hackett was less severe.</p></article>
+          <article><span>AI hardware</span><strong>Physical constraints</strong><p>Chip export strength sits beside transformers, cooling, components and grid-connection delays.</p></article>
+          <article><span>Hidden problem</span><strong>Wrong owner acts</strong><p>A headline pressure signal can send procurement, logistics, finance or compliance in the wrong direction.</p></article>
+        </aside>
+      </section>
+
+      <section class="view" id="briefBuilderView" hidden>
+        <div class="section-head">
+          <p class="eyebrow">Brief Builder</p>
+          <h2>Answer with business context, not raw operating metrics.</h2>
+          <p>Pick the exposed lane/category, the decision due, the suspected cause, the owner and the failure mode. The signal logic is already encoded.</p>
+        </div>
+        <form id="briefForm" class="builder-grid">
+          <label>Where is this showing up?
+            <select name="exposure"><option>Food ingredient or commodity category</option><option>Manufacturing input / supplier delivery</option><option>Services supplier or indirect spend</option><option>Ocean freight / import lane</option><option>AI hardware / power equipment project</option><option>Auto/localization program</option></select>
+          </label>
+          <label>What decision is due in the next 72 hours?
+            <select name="decision"><option>Protect scarce supplier capacity</option><option>Build or hold inventory</option><option>Approve premium freight</option><option>Change customer price language</option><option>Escalate a compliance or tariff treatment</option><option>Defer spend until the cause is proven</option></select>
+          </label>
+          <label>Which cause family is most plausible right now?
+            <select name="cause"><option>Demand / order mix</option><option>Supplier lead time or allocation</option><option>Weather or commodity shock</option><option>Route disruption or lane pricing</option><option>Fuel or energy policy</option><option>Power equipment / grid timing</option><option>Policy timing or product treatment</option></select>
+          </label>
+          <label>Who can act on the cause?
+            <select name="owner"><option>Procurement</option><option>Logistics</option><option>Finance</option><option>Compliance</option><option>Category team</option><option>S&OP / planning</option><option>Infrastructure procurement</option></select>
+          </label>
+          <label>What constraint matters most?
+            <select name="constraint"><option>Service level</option><option>Margin</option><option>Working capital</option><option>Compliance certainty</option><option>Resilience</option><option>Speed</option></select>
+          </label>
+          <label>What could prove this attribution wrong?
+            <select name="falsifier"><option>Next source update points to a different metric family</option><option>Supplier evidence contradicts the headline</option><option>Customer order pattern changes</option><option>Lane or carrier quote normalizes</option><option>Commodity/category data diverges</option><option>Policy or utility timing slips</option></select>
+          </label>
+          <div class="form-actions"><button type="submit" class="primary-action">Generate readout</button><button type="button" class="secondary-action" id="resetBrief">Reset</button></div>
+        </form>
+      </section>
+
+      <section class="view" id="outputReadoutView" hidden>
+        <div class="section-head">
+          <p class="eyebrow">Output readout</p>
+          <h2>Your cause-attribution brief</h2>
+          <p id="readoutIntro">Generate the brief from the builder to assign the action before scarce capacity or cash moves.</p>
+        </div>
+        <div class="readout-grid">
+          <article><span>Decision</span><h3 id="decisionText">Hold allocation until the cause is named.</h3><p id="rationaleText">Do not clear capacity protection, premium freight, inventory build, fuel hedge or tariff pass-through from a headline alone.</p></article>
+          <article><span>Next 72-hour owner queue</span><ul id="ownerQueue"><li>Name symptom, metric family and owner.</li><li>Collect one source-of-record proof and one falsifier.</li><li>Approve only the action tied to the cause.</li></ul></article>
+          <article><span>External watchlist</span><ul id="watchlist"><li>Port/import data confirming or rejecting a September air pocket.</li><li>FAO/category updates on sugar, cereals, drought, Black Sea and fertilizer flows.</li><li>Utility/permitting evidence on AI load requests and power equipment lead times.</li></ul></article>
+          <article><span>Failure mode</span><h3 id="failureText">Wrong owner acts from an average.</h3><p>Procurement expedites what logistics should price; finance passes through a cost that belongs to a category action; compliance chases a treatment issue that is really timing.</p></article>
+        </div>
+      </section>
+
+      <section class="view" id="agentWorkflowView" hidden>
+        <div class="section-head"><p class="eyebrow">Agent Workflow</p><h2>Signal Reader → Business Matcher → Decision Coach</h2></div>
+        <div class="workflow-grid">
+          <article><span>01</span><h3>Signal Reader</h3><p>Separates public evidence families: ISM manufacturing, ISM services, FAO food categories, freight forecasts, AI hardware constraints, energy and policy.</p></article>
+          <article><span>02</span><h3>Business Matcher</h3><p>Maps the operator’s exposed category, lane, project or customer promise to the likely cause family and action owner.</p></article>
+          <article><span>03</span><h3>Decision Coach</h3><p>Turns the attribution into a 72-hour queue: action, owner, proof needed, falsifier and the external signal to watch next.</p></article>
+        </div>
+      </section>
+
+      <section class="view" id="guideView" hidden>
+        <div class="section-head"><p class="eyebrow">Guide</p><h2>Use the weekly signal as an approval gate.</h2></div>
+        <div class="guide-grid">
+          <article><h3>What changed</h3><p>Current public evidence is mixed, not directionally clean: manufacturing, services, food, freight, AI infrastructure and fuel each carry separate causes.</p></article>
+          <article><h3>The operator read</h3><p>Pressure is not a cause. Allocation decisions need a named symptom, metric family, cause, owner, action and falsifier.</p></article>
+          <article><h3>What to do this week</h3><p>Require cause attribution before moving scarce capacity, supplier priority, working capital, customer-price language or premium freight.</p></article>
+          <article><h3>Chain lens</h3><p>Field to fork makes the mechanism concrete: sugar weather is not cereal logistics; Black Sea risk is not dairy; fertilizer-flow strain is not meat demand.</p></article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

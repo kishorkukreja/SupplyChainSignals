@@ -1,0 +1,81 @@
+{
+  "week": "2026-W36",
+  "source_mode": "signal-translation",
+  "chain_candidate": "field to fork",
+  "headline": "Mixed pressure clouds make cause attribution the operating forecast.",
+  "dek": "Manufacturing, services, food, freight, AI infrastructure and fuel are sending separate signals. Treat them as separate weather stations before moving capacity, cash or supplier priority.",
+  "forecast_horizon": "72 hours to 8 weeks",
+  "confidence": "medium-high",
+  "zones": [
+    {
+      "name": "Manufacturing input pressure",
+      "weather": "Slow-delivery cloud deck",
+      "severity": "orange",
+      "operator_meaning": "ISM Manufacturing cooled, but Supplier Deliveries rose to 59.3 and Prices stayed at 71.1. Keep lead-time and price pressure separate from broad demand direction.",
+      "watch": "Next ISM manufacturing Prices, Supplier Deliveries, Imports and Backlog readings; supplier confirmation of lead-time cause."
+    },
+    {
+      "name": "Services price pressure",
+      "weather": "Demand heat with clearing delivery skies",
+      "severity": "orange",
+      "operator_meaning": "ISM Services rose to 55.4, New Orders reached 60.9 and Prices reached 72.6, while Supplier Deliveries eased to 51.3. The owner may be commercial/finance, not expediting.",
+      "watch": "Next services price and new-order data; renewal acceptance and service-category pass-through evidence."
+    },
+    {
+      "name": "Food commodity categories",
+      "weather": "Category squalls, not one inflation front",
+      "severity": "red",
+      "operator_meaning": "FAO's Food Price Index rose to 133.3 with all five groups higher, but sugar rose 11.9% and cereals 2.2% for different drivers. Category owners need separate supplier and inventory decisions.",
+      "watch": "FAO/country updates on sugar, cereals, drought, Black Sea routes, El Nino risk and fertilizer flows."
+    },
+    {
+      "name": "Freight and import timing",
+      "weather": "Post-frontload fog bank",
+      "severity": "yellow",
+      "operator_meaning": "FreightWaves/McCown warned of a September air pocket while NRF/Hackett's forecast was less severe. Booking, TEU and lane-rate evidence should not be blended.",
+      "watch": "Port/import data from Los Angeles, Descartes, NRF/Hackett or customs; clean dated lane evidence before charting spot-rate claims."
+    },
+    {
+      "name": "AI hardware and power equipment",
+      "weather": "Grid-connection pressure ridge",
+      "severity": "orange",
+      "operator_meaning": "Korean semiconductor strength is chip-specific; Reuters also points to transformers, cooling, grid connections and components as separate physical bottlenecks.",
+      "watch": "Utility collateral, study-fee, permitting and power-equipment lead-time evidence that distinguishes bankable demand from speculative reservations."
+    },
+    {
+      "name": "Fuel and energy policy",
+      "weather": "Cost-floor crosswind",
+      "severity": "yellow",
+      "operator_meaning": "Fuel uncertainty can persist even when OPEC+ policy does not change. Do not infer delivered-cost relief from import-volume weakness alone.",
+      "watch": "Carrier/forwarder evidence on fuel and canal surcharges; Reuters energy-policy updates."
+    }
+  ],
+  "reference_cards": [
+    {"label": "ISM Manufacturing Supplier Deliveries", "value": "59.3", "note": "Slow-delivery diffusion signal; separate from shipment volume."},
+    {"label": "ISM Manufacturing Prices", "value": "71.1", "note": "High input-price breadth even as manufacturing cooled."},
+    {"label": "ISM Services Prices", "value": "72.6", "note": "Highest reading since August 2022; supplier deliveries eased."},
+    {"label": "FAO Food Price Index", "value": "133.3", "note": "All five commodity groups rose; category action must remain separate."},
+    {"label": "FAO Sugar", "value": "+11.9%", "note": "Do not treat as the same action as cereals."},
+    {"label": "FAO Cereals", "value": "+2.2%", "note": "Different driver family from sugar weather."}
+  ],
+  "operator_watchlist": [
+    "Require a named symptom, metric family, cause, owner, action and falsifier before moving scarce capacity or cash.",
+    "Keep freight booking evidence, forecast TEU and spot-rate metadata in separate cards.",
+    "Separate sugar, cereals, oils, dairy and meat before changing category inventory or customer price assumptions.",
+    "Separate AI chip demand from transformer, cooling, component and grid-connection constraints."
+  ],
+  "newsletter_insert": {
+    "title": "Supply Chain Weather",
+    "headline": "Mixed pressure clouds make cause attribution the operating forecast.",
+    "body": "The W36 weather map is not one storm. Manufacturing shows slow-delivery pressure, services show price heat with easier deliveries, food shows category-specific squalls, freight sits in post-frontload fog, AI hardware faces a grid-connection pressure ridge, and fuel remains a cost-floor crosswind.",
+    "operator_translation": "Before moving capacity, cash, supplier priority, premium freight or customer price language, require the team to name the symptom, metric family, likely cause, owner, action and falsifier."
+  },
+  "sources": [
+    "Signal Translation 2026-W36 attribution-before-allocation README/research/source-map/visuals/substack",
+    "ISM August Manufacturing PMI source notes",
+    "ISM August Services PMI source notes",
+    "FAO August Food Price Index source notes",
+    "Reuters food, Korea exports, data-center power/cooling and OPEC+ source notes",
+    "FreightWaves/McCown and NRF/Hackett Global Port Tracker source notes"
+  ]
+}

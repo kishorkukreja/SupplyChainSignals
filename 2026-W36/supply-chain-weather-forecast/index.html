@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supply Chain Weather — 2026-W36</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="masthead">
+      <p class="kicker">2026-W36 · Supply Chain Weather</p>
+      <h1>Supply Chain <span>Weather</span></h1>
+      <p class="tagline">Separate stations. No composite score.</p>
+      <div class="signal-band" aria-hidden="true"><svg viewBox="0 0 1200 90" preserveAspectRatio="none"><path class="wave" d="M0 50 L70 50 L105 25 L140 72 L175 50 L290 50 L330 35 L370 61 L410 50 L520 50 L560 18 L600 76 L640 50 L760 50 L800 38 L840 63 L880 50 L1000 50 L1040 26 L1080 69 L1120 50 L1200 50"/></svg></div>
+    </header>
+
+    <main>
+      <section class="hero" id="mapView">
+        <div><p class="eyebrow">Forecast headline</p><h2 id="headline">Loading forecast…</h2><p id="dek"></p></div>
+        <aside class="meta"><p><span>Horizon</span><strong id="horizon"></strong></p><p><span>Confidence</span><strong id="confidence"></strong></p><p><span>Source mode</span><strong id="sourceMode"></strong></p></aside>
+      </section>
+
+      <section class="weather-grid" id="zonesGrid" aria-label="Weather stations"></section>
+
+      <section class="operator" id="operatorView">
+        <div class="section-head"><p class="eyebrow">Operator station</p><h2>Use the weather as an attribution gate.</h2></div>
+        <div class="cards" id="referenceCards"></div>
+        <div class="watch"><h3>Operator watchlist</h3><ul id="operatorWatchlist"></ul></div>
+      </section>
+
+      <section class="newsletter" id="newsletterView">
+        <p class="eyebrow">Newsletter insert source</p>
+        <h2 id="insertTitle"></h2>
+        <p id="insertBody"></p>
+        <blockquote id="insertTranslation"></blockquote>
+      </section>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
