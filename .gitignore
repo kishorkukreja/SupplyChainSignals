@@ -1,0 +1,4 @@
+# hyperresearch runtime SQLite files (regenerated automatically on next run)
+.hyperresearch/*.db
+.hyperresearch/*.db-wal
+.hyperresearch/*.db-shm
