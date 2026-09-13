@@ -11,5 +11,6 @@
         ]
       }
     ]
-  }
+  },
+  "permissions": { "allow": ["Bash(git push:*)", "Bash(git remote:*)", "Bash(git fetch:*)", "Bash(git ls-remote:*)"] } 
 }
