@@ -1,0 +1,51 @@
+{
+  "manifest_version": 1,
+  "vault_tag": "soy-oil-sugar-diwali-ff53a2",
+  "profile": "full",
+  "profile_steps": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16"
+  ],
+  "status": "blocked",
+  "started_at": "2026-09-13T00:26:25.917814+00:00",
+  "updated_at": "2026-09-13T00:36:19.712343+00:00",
+  "budget_usd": null,
+  "blocked_on": "egress-policy-block: hyperresearch fetch (crawl4ai/patchright browser + curl CONNECT) receives 403 policy denial for every external host; vault cannot be populated; WebSearch works but fetch does not",
+  "steps": {
+    "1": {
+      "status": "done",
+      "started_at": "2026-09-13T00:27:16.436543+00:00",
+      "finished_at": "2026-09-13T00:28:50.343475+00:00"
+    },
+    "2": {
+      "status": "running",
+      "started_at": "2026-09-13T00:28:50.597577+00:00"
+    }
+  },
+  "chapters": {},
+  "spend": {
+    "estimated_usd": 0.0,
+    "sources_fetched": 0,
+    "notes_written": 0,
+    "agents_spawned": 0
+  },
+  "levers": {
+    "register": "analyze",
+    "inference_depth": "deep",
+    "domain_notes": "Primary/official documents FIRST and as the tie-breaker: PIB press releases, CBIC customs tariff notifications (notification number + effective date), RBI reference-rate archive, ICE Brent settlement, ISMA/AISTA/NFCSF production releases, DFPD balance sheets, ISO quarterly reports, and company investor presentations / earnings-call transcripts / annual reports (BSE/NSE filings). The core deliverable is figure RECONCILIATION, so always capture the estimating body, the exact figure, whether it is gross or net-of-ethanol, and the estimate date. Recency window is strict: sugar figures must be SS 2025-26; rate/crude figures must be 2026 calendar. Measured/official figures outrank aggregator or secondary-press numbers; when only secondary press is available, flag it as unverified. Indian business-press domains (Business Standard, CNBC-TV18, ThePrint, Tribune, Goodreturns) are frequently egress-blocked, so chase the primary source the article cites rather than the article. Where a figure cannot be resolved to a primary source, say so explicitly rather than picking one."
+  }
+}

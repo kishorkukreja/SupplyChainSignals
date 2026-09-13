@@ -1,0 +1,75 @@
+{
+  "sub_questions": [
+    "What is the authoritative 2025-26 India sugar production figure, and why do published estimates range 28.3-34.9 MMT (ISMA vs AISTA vs NFCSF vs government), gross vs net-of-ethanol?",
+    "What is Bikaji Foods' actual edible-oil / raw-material cost inflation, verified against a primary source (investor presentation, earnings-call transcript, or annual report), reconciling the conflicting 12-14% vs 63% figures?",
+    "What is the precise edible-oil import-duty timeline (the May 2025 cut and the reportedly January 2026 increase) as documented by primary PIB press releases and CBIC customs tariff notifications?",
+    "Is there any hard mithai/sweets-specific sales-VOLUME (unit) data following the 2025/2026 price hikes, as opposed to spend-intent survey data?",
+    "What are the current 2026 RBI reference rate (INR/USD) and ICE Brent crude levels, verified against RBI and ICE primary data (testing the secondary figures INR 94-97/USD and Brent $111-121)?",
+    "What is the combined effect of the sugar shock and the edible-oil cost run-up on the gross margins of festival-goods manufacturers (mithai, snacks, packaged confectionery) ahead of Diwali 2026?",
+    "How does cost pass-through / absorption capacity differ between organized branded manufacturers and unorganized mithai/halwai makers, and what levers (MRP hikes, grammage/shrinkflation, hedged procurement, GST 2.0) explain the asymmetry?",
+    "What is the status of the India-US trade deal soybean-oil tariff / TRQ provisions as a potential margin-relief wildcard?"
+  ],
+  "entities": [
+    {"name": "India 2025-26 sugar production", "type": "metric", "required_fields": ["gross_MMT", "net_of_ethanol_MMT", "estimating_body", "date_of_estimate"]},
+    {"name": "ISMA (Indian Sugar & Bio-energy Manufacturers Association)", "type": "organization", "required_fields": ["production_estimate", "estimate_date", "surplus_deficit_framing"]},
+    {"name": "AISTA (All India Sugar Trade Association)", "type": "organization", "required_fields": ["production_estimate", "estimate_date"]},
+    {"name": "NFCSF / government (DFPD, ISO)", "type": "organization", "required_fields": ["production_estimate", "ethanol_diversion", "policy_action"]},
+    {"name": "Bikaji Foods International", "type": "company", "required_fields": ["edible_oil_cost_inflation_pct", "primary_source", "period", "gross_margin"]},
+    {"name": "Britannia Industries", "type": "company", "required_fields": ["input_cost_inflation", "pricing_grammage_levers", "gross_margin"]},
+    {"name": "Nestle India", "type": "company", "required_fields": ["input_cost_commentary"]},
+    {"name": "edible-oil import duty (PIB / CBIC)", "type": "policy", "required_fields": ["crude_duty_pct", "refined_duty_pct", "effective_date", "notification_number"]},
+    {"name": "RBI reference rate INR/USD", "type": "metric", "required_fields": ["rate_2026", "source_date"]},
+    {"name": "ICE Brent crude", "type": "metric", "required_fields": ["price_usd_bbl_2026", "source_date"]},
+    {"name": "unorganized mithai / halwai sector", "type": "category", "required_fields": ["price_hike_pct", "cost_structure", "stockholding_limit_status"]},
+    {"name": "GST 2.0 (sweets/snacks rate)", "type": "policy", "required_fields": ["old_rate", "new_rate", "effective_date"]},
+    {"name": "Sugar Stockholding Limit Order 2026", "type": "policy", "required_fields": ["window", "restricted_parties"]},
+    {"name": "India-US trade deal soybean-oil TRQ", "type": "policy", "required_fields": ["tariff_or_trq_terms", "operational_status"]},
+    {"name": "Diwali 2026", "type": "event", "required_fields": ["date_2026-11-08"]}
+  ],
+  "required_formats": [
+    "reconciliation table for the 2025-26 sugar production estimates (body, figure, gross/net, date)",
+    "duty-timeline table (date, crude %, refined %, notification/PIB reference)"
+  ],
+  "required_sections": [
+    "## Opinionated Synthesis"
+  ],
+  "required_section_headings": [
+    "## 1. The 2025-26 Sugar Production Figure: Reconciling the 28.3-34.9 MMT Spread",
+    "## 2. Bikaji Foods' Edible-Oil Cost Inflation: Primary-Source Verification",
+    "## 3. The Edible-Oil Import-Duty Timeline (PIB/CBIC Primary Sources)",
+    "## 4. Mithai Sales-Volume Evidence After the Price Hikes",
+    "## 5. RBI Reference Rate and ICE Brent Crude for 2026",
+    "## 6. Combined Margin Pressure on Festival-Goods Manufacturers",
+    "## 7. Organized vs Unorganized: The Pass-Through Asymmetry",
+    "## 8. Forward Outlook for Diwali 2026 and the India-US Trade-Deal Wildcard",
+    "## Opinionated Synthesis"
+  ],
+  "time_horizons": ["2025-26 sugar season (Oct 2025-Sep 2026)", "forward to Diwali 2026 (Nov 8, 2026)", "2026 calendar year"],
+  "time_periods": [
+    {"period": "SS 2025-26", "type": "sugar-season", "primary_source": "ISMA/AISTA/NFCSF production releases and DFPD/ISO balance sheets for the 2025-26 season", "issuer": "ISMA, AISTA, NFCSF, DFPD"},
+    {"period": "Q1 FY26 / Q2 FY26", "type": "fiscal-quarter", "primary_source": "Bikaji Foods investor presentation and earnings-call transcript for the quarters ended Jun 30 2025 and Sep 30 2025", "issuer": "Bikaji Foods International"},
+    {"period": "May 2025", "type": "event-anchored", "primary_source": "PIB release and CBIC customs notification cutting edible-oil import duty (20%->10%)", "issuer": "PIB / CBIC (Ministry of Finance)"},
+    {"period": "January 2026", "type": "event-anchored", "primary_source": "PIB release and CBIC customs notification reportedly raising crude/refined edible-oil duty", "issuer": "PIB / CBIC (Ministry of Finance)"},
+    {"period": "2026 YTD", "type": "reference-rate", "primary_source": "RBI reference rate archive (INR/USD) and ICE Brent settlement data for 2026", "issuer": "RBI, ICE"}
+  ],
+  "scope_conditions": [
+    "India specifically (not global sugar/oilseed markets except as drivers)",
+    "festival-goods manufacturers: mithai, snacks, packaged confectionery (not staple foods broadly)",
+    "primary/official sources take precedence over secondary Indian business press",
+    "must be comparable and gap-filling versus Bot 1 evidence pack, not duplicative"
+  ],
+  "pipeline_tier": "full",
+  "response_format": "argumentative",
+  "citation_style": "wikilink",
+  "levers": {
+    "register": "analyze",
+    "register_confidence": "high",
+    "domain_notes": "Primary/official documents FIRST and as the tie-breaker: PIB press releases, CBIC customs tariff notifications (notification number + effective date), RBI reference-rate archive, ICE Brent settlement, ISMA/AISTA/NFCSF production releases, DFPD balance sheets, ISO quarterly reports, and company investor presentations / earnings-call transcripts / annual reports (BSE/NSE filings). The core deliverable is figure RECONCILIATION, so always capture the estimating body, the exact figure, whether it is gross or net-of-ethanol, and the estimate date. Recency window is strict: sugar figures must be SS 2025-26; rate/crude figures must be 2026 calendar. Measured/official figures outrank aggregator or secondary-press numbers; when only secondary press is available, flag it as unverified. Indian business-press domains (Business Standard, CNBC-TV18, ThePrint, Tribune, Goodreturns) are frequently egress-blocked, so chase the primary source the article cites rather than the article. Where a figure cannot be resolved to a primary source, say so explicitly rather than picking one.",
+    "inference_depth": "deep",
+    "rationale": {
+      "register": "query is explicitly evaluation/resolution-shaped ('resolve the authoritative figure', 'primary-source verification', 'verify') plus a forward margin forecast",
+      "inference_depth": "the load-bearing numbers live in primary filings, customs notifications and rate archives that secondary press garbled; multiple irreconcilable secondary figures require deep primary-source chasing and inference over gross-vs-net and date-of-estimate distinctions",
+      "tier": "FORCED full per Bot 2 mandate regardless of auto-classification; five contested figures with irreconcilable spreads require the contradiction-graph, depth-investigation and full adversarial critic suite"
+    }
+  }
+}
