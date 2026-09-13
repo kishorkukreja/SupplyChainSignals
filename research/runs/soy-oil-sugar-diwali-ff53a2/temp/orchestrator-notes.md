@@ -55,3 +55,12 @@ All fetchers (1-8 now reported) confirm the egress block; 0 notes fetched. Two s
 - GAP #4 (mithai volumes) — WebSearch corroborates the ABSENCE: only market-size/CAGR + spend-intent (CAIT Rs 4.75 lakh crore Diwali-2025 forecast, IMARC packaged-sweets CAGR) found; no unit-volume / kg-sold / footfall series. Audited absence, consistent with Bot 1.
 
 These are leads for a working-egress re-run, NOT citable facts. Run remains BLOCKED; no final report produced.
+
+## 00:47Z — Addendum 2: GAP #8 trade-deal wildcard (batch 6, WebSearch-only, UNVERIFIED)
+Most decision-relevant lead of the run; reframes Bot 1's "plausible relief" wildcard:
+- CORRECTION: the FAS URL titled "India Allocates TRQ 2 MMT each crude soybean/sunflower oil" is a STALE 2022-23/2023-24 program, DISCONTINUED eff 1 Apr 2023 (5.5% duty thereafter). The "2 MMT" is NOT the 2026 deal — do not conflate.
+- 2026 India-US deal soybean-oil TRQ: reported 200,000-300,000 MT/yr, ~15-pt duty cut from MFN — PRESS-ONLY (Bloomberg/Fastmarkets/Business Standard/Lexology/Khaitan); no primary White House/PIB/CBIC numeric confirmation surfaced.
+- STATUS: announced framework only (Feb 6-9 2026), NOT in force and NOT signed. Signing slipped past targeted mid-Mar 2026; a US Supreme Court ruling (~20 Feb 2026) struck the reciprocal-tariff legal basis; new USTR Section 301 probes (11 Mar 2026); still UNSIGNED as of 4 Sep 2026 (Bloomberg) hinging on MFN-vs-executive-tariff architecture. Goyal: "only given a quota in soya bean oil... not opened up soya bean."
+- Bottom line for drafter: ~5 weeks before Diwali (8 Nov 2026), the soybean-oil TRQ is announced-but-unsigned/unimplemented — NO CBIC notification, NO operational relief for edible-oil buyers this festival season. Frame as "stalled, no relief before Diwali 2026," not a positive wildcard. [needs PIB doc202629783101.pdf + White House fact sheet fetch to confirm]
+
+All 8 fetchers now reported; every one confirms the egress block; vault = 0 notes. Run stays BLOCKED.
